@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.inner-link {
+  @apply font-semibold underline decoration-2 decoration-primary;
+}

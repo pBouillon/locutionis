@@ -1,13 +1,12 @@
 <script>
-import "../app.css";
+  import '../app.css';
+  import 'bootstrap-icons/font/bootstrap-icons.css';
+
+  import Navbar from '../components/navbar/navbar.svelte';
 </script>
 
-<div class="flex gap-5 p-5 items-baseline">
-  <p class="text-6xl">
-    Locutionis
-  </p>
+<Navbar />
 
-  <p>Petit référentiel des figures de style</p>
+<div class="px-5 pt-2">
+  <slot />
 </div>
-
-<slot />
