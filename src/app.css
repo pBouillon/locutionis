@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.inner-link {
-  @apply font-semibold underline decoration-2 decoration-primary;
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+em {
+  @apply not-italic font-semibold text-primary;
+}
+
+.link {
+  @apply underline decoration-2 decoration-primary hover:text-primary;
 }

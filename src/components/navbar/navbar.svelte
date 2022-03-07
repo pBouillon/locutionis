@@ -1,7 +1,7 @@
-<nav class="p-3 border-b-2 border-primary">
+<nav class="p-5">
 
   <div class="flex items-baseline gap-3">
-    <a href="/" class="text-3xl font-bold tracking-wide md:text-4xl bg-gradient">
+    <a href="/" class="text-2xl font-bold tracking-wide md:text-4xl bg-gradient">
       <i class="bi bi-journal-text"></i>
       Locutionis
     </a>
