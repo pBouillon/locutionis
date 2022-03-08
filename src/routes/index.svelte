@@ -8,12 +8,14 @@
     françaises visant à vulgariser leurs définitions et usages.
   </p>
 
-  <a href="/glossary" class="flex items-center justify-center w-full h-12 px-6 font-semibold text-white rounded-lg bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-auto">
-    Voir le glossaire
-  </a>
+  <div class="flex justify-center">
+    <a href="/glossary" class="flex items-center justify-center w-full h-12 px-6 font-semibold text-white rounded-lg bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-1/4">
+      Voir le glossaire
+    </a>
+  </div>
 </section>
 
-<section>
+<section class="max-w-7xl mx-auto sm:px-6 md:px-8">
   <h2 class="subtitle">
     Objectif
   </h2>
@@ -35,7 +37,7 @@
   </p>
 </section>
 
-<section>
+<section class="max-w-7xl mx-auto sm:px-6 md:px-8">
   <h2 class="subtitle">
     Pourquoi Locutionis
   </h2>
@@ -47,25 +49,20 @@
   </p>
 
   <p class="description">
-    Ayant des difficultés à les garder en mémoire, j'ai d'abord opté pour noter
-    mes découvertes sur un carnet, avant d'abandonner à cause de son caractère
-    peu pratique et mon manque de rigueur.
-  </p>
-
-  <p class="description">
-    C'est finalement en souhaitant mêler ma passion pour ces dernières et pour
-    l'informatique que j'ai choisi d'en faire un site accessible à tous, en
-    espérant aussi naïvement qu'un jour cela puisse aider quelqu'un !
+    Ayant des difficultés à les garder en mémoire, c'est en mêlant ma passion
+    pour ces dernières et pour l'informatique que j'ai choisi d'en faire un site
+    accessible à tous, en espérant naïvement qu'un jour cela puisse aider
+    quelqu'un !
   </p>
 </section>
 
 <style>
   section {
-    @apply my-12;
+    @apply my-12 ;
   }
 
   .description {
-    @apply mt-3 text-slate-600;
+    @apply mt-3 text-slate-600 max-w-3xl space-y-6 tracking-wide;
   }
 
   .subtitle {
