@@ -17,28 +17,22 @@
 
   <button type="button" class="md:hidden rounded flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary/25 focus:ring-offset-2 focus:ring-offset-slate-50"
     on:click={() => (showMobileMenu = true)}>
-    <i class="bi bi-list text-2xl px-1"></i>
+    <i class="bi bi-list text-3xl px-1"></i>
   </button>
 
-  <ul class="gap-5 hidden md:flex">
-    <li>
-      <a href="/" class="navbar-link hover:underline">
-        Accueil
-      </a>
-    </li>
+  <div class="gap-5 hidden md:flex">
+    <a href="/" class="navbar-link hover:underline">
+      Accueil
+    </a>
 
-    <li>
-      <a href="/glossary" class="navbar-link hover:underline">
-        Glossaire
-      </a>
-    </li>
+    <a href="/glossary" class="navbar-link hover:underline">
+      Glossaire
+    </a>
 
-    <li>
-      <a href="/sources" class="navbar-link hover:underline">
-        Sources
-      </a>
-    </li>
-  </ul>
+    <a href="/sources" class="navbar-link hover:underline">
+      Sources
+    </a>
+  </div>
 
   {#if showMobileMenu}
     <div class="fixed z-50 inset-0 md:hidden">
@@ -46,7 +40,24 @@
       </div>
 
       <div class="mobile-menu-container">
-        xxx
+
+        <div class="flex justify-between">
+          <a href="/" class="navbar-link hover:underline">
+            Accueil
+          </a>
+
+          <button type="button" on:click={() => (showMobileMenu = false)}>
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <a href="/glossary" class="navbar-link hover:underline">
+          Glossaire
+        </a>
+
+        <a href="/sources" class="navbar-link hover:underline">
+          Sources
+        </a>
       </div>
     </div>
   {/if}
@@ -58,7 +69,7 @@
   }
 
   .mobile-menu-container {
-    @apply fixed top-4 right-4 w-full max-w-xs bg-white rounded-lg shadow-lg p-6 text-base font-semibold text-slate-900;
+    @apply flex flex-col gap-5 fixed top-4 right-4 w-full max-w-xs bg-white rounded-lg shadow-lg p-6 text-base font-semibold text-slate-900;
   }
 
   .navbar-link {

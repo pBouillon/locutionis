@@ -33,7 +33,7 @@
   <p class="description">
     N'étant qu'hobyiste, les informations ici sont majoritairement agrégées
     depuis <a href="/sources" class="link">diverses ressources</a>. Pensez-donc
-    à vérifier les informations mentionnées !
+    à les vérifier !
   </p>
 </section>
 
