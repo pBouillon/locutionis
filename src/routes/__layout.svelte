@@ -2,7 +2,7 @@
   import '../app.css';
   import 'bootstrap-icons/font/bootstrap-icons.css';
 
-  import Navbar from '../components/navbar/navbar.svelte';
+  import Navbar from '$lib/components/navbar.svelte';
 </script>
 
 <Navbar />
