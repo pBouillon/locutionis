@@ -19,7 +19,7 @@
   </div>
 </section>
 
-<section class="max-w-7xl mx-auto sm:px-6 md:px-8">
+<section>
   <h2 class="subtitle">
     Objectif
   </h2>
@@ -41,7 +41,7 @@
   </p>
 </section>
 
-<section class="max-w-7xl mx-auto sm:px-6 md:px-8">
+<section>
   <h2 class="subtitle">
     Pourquoi Locutionis
   </h2>
@@ -62,7 +62,7 @@
 
 <style>
   section {
-    @apply my-12 ;
+    @apply my-12 max-w-7xl mx-auto sm:px-6 md:px-8;
   }
 
   .description {

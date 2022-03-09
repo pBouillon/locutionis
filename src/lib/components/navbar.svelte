@@ -4,8 +4,7 @@
   let showMobileMenu = false;
 </script>
 
-<nav class="p-5 flex items-baseline justify-between">
-
+<nav>
   <div class="flex items-baseline gap-3">
     <a href="{base}/" class="text-2xl font-bold tracking-wide md:text-4xl bg-gradient">
       <i class="bi bi-journal-text"></i>
@@ -17,34 +16,33 @@
     </p>
   </div>
 
-  <button type="button" class="md:hidden rounded flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary/25 focus:ring-offset-2 focus:ring-offset-slate-50"
-    on:click={() => (showMobileMenu = true)}>
-    <i class="bi bi-list text-3xl px-1"></i>
+  <button type="button" class="main-button" on:click={() => (showMobileMenu = true)}>
+    <i class="px-1 text-3xl bi bi-list"></i>
   </button>
 
-  <div class="gap-5 hidden md:flex">
-    <a href="{base}/" class="navbar-link hover:underline">
+  <div class="hidden gap-5 md:flex">
+    <a href="{base}/" class="navbar-link">
       Accueil
     </a>
 
-    <a href="{base}/glossary" class="navbar-link hover:underline">
+    <a href="{base}/glossary" class="navbar-link">
       Glossaire
     </a>
 
-    <a href="{base}/sources" class="navbar-link hover:underline">
+    <a href="{base}/sources" class="navbar-link">
       Sources
     </a>
   </div>
 
   {#if showMobileMenu}
-    <div class="fixed z-50 inset-0 md:hidden">
+    <div class="fixed inset-0 z-50 md:hidden">
       <div class="overlay" on:click={() => (showMobileMenu = false)}>
       </div>
 
       <div class="mobile-menu-container">
 
         <div class="flex justify-between">
-          <a href="{base}/" class="navbar-link hover:underline">
+          <a href="{base}/" class="navbar-link">
             Accueil
           </a>
 
@@ -53,11 +51,11 @@
           </button>
         </div>
 
-        <a href="{base}/glossary" class="navbar-link hover:underline">
+        <a href="{base}/glossary" class="navbar-link">
           Glossaire
         </a>
 
-        <a href="{base}/sources" class="navbar-link hover:underline">
+        <a href="{base}/sources" class="navbar-link">
           Sources
         </a>
       </div>
@@ -66,8 +64,16 @@
 </nav>
 
 <style>
+  nav {
+    @apply flex items-baseline justify-between p-5;
+  }
+
   .bg-gradient {
     @apply text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-primary;
+  }
+
+  .main-button {
+    @apply md:hidden rounded flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary/25 focus:ring-offset-2 focus:ring-offset-slate-50;
   }
 
   .mobile-menu-container {
@@ -75,7 +81,7 @@
   }
 
   .navbar-link {
-    @apply text-lg tracking-wide decoration-2 decoration-primary;
+    @apply text-lg tracking-wide decoration-2 decoration-primary hover:underline;
   }
 
   .overlay {
