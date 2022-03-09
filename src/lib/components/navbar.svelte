@@ -1,11 +1,13 @@
 <script>
+  import { base } from '$app/paths';
+
   let showMobileMenu = false;
 </script>
 
 <nav class="p-5 flex items-baseline justify-between">
 
   <div class="flex items-baseline gap-3">
-    <a href="/" class="text-2xl font-bold tracking-wide md:text-4xl bg-gradient">
+    <a href="{base}/" class="text-2xl font-bold tracking-wide md:text-4xl bg-gradient">
       <i class="bi bi-journal-text"></i>
       Locutionis
     </a>
@@ -21,15 +23,15 @@
   </button>
 
   <div class="gap-5 hidden md:flex">
-    <a href="/" class="navbar-link hover:underline">
+    <a href="{base}/" class="navbar-link hover:underline">
       Accueil
     </a>
 
-    <a href="/glossary" class="navbar-link hover:underline">
+    <a href="{base}/glossary" class="navbar-link hover:underline">
       Glossaire
     </a>
 
-    <a href="/sources" class="navbar-link hover:underline">
+    <a href="{base}/sources" class="navbar-link hover:underline">
       Sources
     </a>
   </div>
@@ -42,7 +44,7 @@
       <div class="mobile-menu-container">
 
         <div class="flex justify-between">
-          <a href="/" class="navbar-link hover:underline">
+          <a href="{base}/" class="navbar-link hover:underline">
             Accueil
           </a>
 
@@ -51,11 +53,11 @@
           </button>
         </div>
 
-        <a href="/glossary" class="navbar-link hover:underline">
+        <a href="{base}/glossary" class="navbar-link hover:underline">
           Glossaire
         </a>
 
-        <a href="/sources" class="navbar-link hover:underline">
+        <a href="{base}/sources" class="navbar-link hover:underline">
           Sources
         </a>
       </div>

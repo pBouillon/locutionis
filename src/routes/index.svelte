@@ -1,3 +1,7 @@
+<script>
+  import { base } from '$app/paths';
+</script>
+
 <section class="flex flex-col gap-10">
   <h1 class="text-4xl font-bold tracking-tight text-center sm:text-5xl lg:text-6xl">
     Petit référentiel des figures de style.
@@ -9,7 +13,7 @@
   </p>
 
   <div class="flex justify-center">
-    <a href="/glossary" class="flex items-center justify-center w-full h-12 px-6 font-semibold text-white rounded-lg bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-1/4">
+    <a href="{base}/glossary" class="flex items-center justify-center w-full h-12 px-6 font-semibold text-white rounded-lg bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-1/4">
       Voir le glossaire
     </a>
   </div>
