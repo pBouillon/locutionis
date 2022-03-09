@@ -1,3 +1,7 @@
+<script>
+  import { base } from '$app/paths';
+</script>
+
 <section class="flex flex-col gap-8 mt-8">
   <h1 class="text-4xl font-bold text-center text-primary">
     Page introuvable
@@ -8,6 +12,6 @@
   </p>
 
   <div class="text-lg text-center">
-    <a href="/" class="font-semibold link">Retourner à l'accueil</a>
+    <a href="{base}/" class="font-semibold link">Retourner à l'accueil</a>
   </div>
 </section>
