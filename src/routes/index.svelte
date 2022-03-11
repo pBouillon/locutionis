@@ -1,4 +1,4 @@
-<script>
+<script lang='ts'>
   import { base } from '$app/paths';
 </script>
 
@@ -36,8 +36,7 @@
 
   <p class="description">
     N'étant qu'hobyiste, les informations ici sont majoritairement agrégées
-    depuis <a href="/sources" class="link">diverses ressources</a>. Pensez-donc
-    à les vérifier !
+    depuis diverses ressources, pensez-donc à les vérifier !
   </p>
 </section>
 
