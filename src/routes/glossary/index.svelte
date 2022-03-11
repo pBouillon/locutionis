@@ -1,27 +1,34 @@
 <script lang="ts">
-  import GlossaryEntry from "$lib/components/glossary-entry.svelte";
+  import GlossarySection from "$lib/components/glossary-section.svelte";
   import { normalize } from "$lib/functions/utils";
-
   import type { FigureOfSpeech } from "$lib/models/figure-of-speech";
-
 
   export let definitions: FigureOfSpeech[];
 
-  $: glossary = definitions.reduce(
-    (map, definition) => {
+  $: glossary = definitions
+    .map(definition => {
       let key = definition.name[0].toLocaleLowerCase();
       key = normalize(key);
 
-      map[key] = [...map.get(key) ?? [], definition];
+      return { key, definition };
+    })
+    .reduce((map, { key, definition }) => {
+      map[key] = map.hasOwnProperty(key)
+        ? [ ...map[key], definition ]
+        : [ definition ];
+
       return map;
-    },
-    new Map<string, FigureOfSpeech[]>());
+    }, { });
+
+  console.log(glossary);
 </script>
 
-<h1 class="text-primary text-xl mb-5">
+<h1 class="mb-3 text-2xl font-extrabold tracking-tight text-primary">
   Glossaire
 </h1>
 
-{#each Object.entries(glossary) as [key, definitions]}
-  <GlossaryEntry {key} {definitions} />
-{/each}
+<div class="flex flex-col gap-6">
+  {#each Object.entries(glossary) as [key, definitions]}
+    <GlossarySection {key} {definitions} />
+  {/each}
+</div>

@@ -5,4 +5,6 @@
   export let definition: FigureOfSpeech;
 </script>
 
-<h1>{definition.name}</h1>
+<h1 class="mb-3 text-2xl font-semibold text-primary">
+  {definition.name}
+</h1>
