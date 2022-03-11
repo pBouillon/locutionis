@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import '../app.css';
   import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -7,6 +7,6 @@
 
 <Navbar />
 
-<div class="px-5 pt-2">
+<main class="px-5 pt-2">
   <slot />
-</div>
+</main>
