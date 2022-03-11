@@ -1,6 +1,7 @@
 <script lang='ts'>
   import { base } from '$app/paths';
 
+
   let showMobileMenu = false;
 
   const links = [
