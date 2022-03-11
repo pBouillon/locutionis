@@ -1,0 +1,11 @@
+{
+  "name": "Épanorthose",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!",
+  "goal": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!",
+  "examples": [
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!"
+  ],
+  "sources": [
+    { "name": "Wikipedia", "link": "https://fr.wikipedia.org" }
+  ]
+}
