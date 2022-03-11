@@ -7,7 +7,7 @@
 </script>
 
 <div>
-  <h2 class="text-lg font-semibold text-primary">
+  <h2 class="text-lg font-semibold md:text-2xl md:mb-3 text-primary">
     {key.toUpperCase()}
   </h2>
 

@@ -19,15 +19,14 @@
 
       return map;
     }, { });
-
-  console.log(glossary);
 </script>
 
-<h1 class="mb-3 text-2xl font-extrabold tracking-tight text-primary">
+
+<h1 class="mb-3 text-2xl font-extrabold tracking-tight md:text-4xl sm:text-center text-primary">
   Glossaire
 </h1>
 
-<div class="flex flex-col gap-6">
+<div class="container flex flex-col gap-3 md:gap-6">
   {#each Object.entries(glossary) as [key, definitions]}
     <GlossarySection {key} {definitions} />
   {/each}
