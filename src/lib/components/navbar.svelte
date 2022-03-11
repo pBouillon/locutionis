@@ -38,15 +38,15 @@
       </div>
 
       <div class="mobile-menu-container">
-        <div class="flex flex-col gap-5 w-2/3">
+        <div class="flex flex-col w-2/3 gap-5">
           {#each links as { href, label }}
             <a {href} class="navbar-link">{label}</a>
           {/each}
         </div>
 
-        <div class="w-1/3 flex justify-end items-start">
+        <div class="flex items-start justify-end w-1/3">
           <button type="button" on:click={() => (showMobileMenu = false)}>
-            <i class="bi bi-x-lg text-xl text-gray-400"></i>
+            <i class="text-xl text-gray-400 bi bi-x-lg"></i>
           </button>
         </div>
       </div>
