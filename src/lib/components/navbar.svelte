@@ -1,7 +1,12 @@
-<script>
+<script lang='ts'>
   import { base } from '$app/paths';
 
   let showMobileMenu = false;
+
+  const links = [
+    { href: `${base}/`, label: 'Accueil' },
+    { href: `${base}/glossary`, label: 'Glossaire' },
+  ];
 </script>
 
 <nav>
@@ -21,17 +26,9 @@
   </button>
 
   <div class="hidden gap-5 md:flex">
-    <a href="{base}/" class="navbar-link">
-      Accueil
-    </a>
-
-    <a href="{base}/glossary" class="navbar-link">
-      Glossaire
-    </a>
-
-    <a href="{base}/sources" class="navbar-link">
-      Sources
-    </a>
+    {#each links as { href, label }}
+      <a {href} class="navbar-link">{label}</a>
+    {/each}
   </div>
 
   {#if showMobileMenu}
@@ -40,24 +37,17 @@
       </div>
 
       <div class="mobile-menu-container">
-
-        <div class="flex justify-between">
-          <a href="{base}/" class="navbar-link">
-            Accueil
-          </a>
-
-          <button type="button" on:click={() => (showMobileMenu = false)}>
-            <i class="bi bi-x-lg"></i>
-          </button>
+        <div class="flex flex-col gap-5 w-2/3">
+          {#each links as { href, label }}
+            <a {href} class="navbar-link">{label}</a>
+          {/each}
         </div>
 
-        <a href="{base}/glossary" class="navbar-link">
-          Glossaire
-        </a>
-
-        <a href="{base}/sources" class="navbar-link">
-          Sources
-        </a>
+        <div class="w-1/3 flex justify-end items-start">
+          <button type="button" on:click={() => (showMobileMenu = false)}>
+            <i class="bi bi-x-lg text-xl text-gray-400"></i>
+          </button>
+        </div>
       </div>
     </div>
   {/if}
@@ -77,7 +67,7 @@
   }
 
   .mobile-menu-container {
-    @apply flex flex-col gap-5 fixed top-4 right-4 w-full max-w-xs bg-white rounded-lg shadow-lg p-6 text-base font-semibold text-slate-900;
+    @apply flex fixed top-4 right-4 w-full max-w-xs bg-white rounded-lg shadow-lg p-6 text-base font-semibold text-slate-900;
   }
 
   .navbar-link {
