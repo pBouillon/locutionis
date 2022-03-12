@@ -1,7 +1,9 @@
 <script lang="ts">
-  import type { FigureOfSpeech } from '$lib/models/figure-of-speech';
+  import Quote from '$lib/components/quote.svelte';
+import type { FigureOfSpeech } from '$lib/models/figure-of-speech';
 
   export let definition: FigureOfSpeech;
+  $: firstExample = definition.examples.shift();
 </script>
 
 <svelte:head>
@@ -9,6 +11,12 @@
     {definition.name} | Locutionis - Petit référentiel des figures de style
   </title>
 </svelte:head>
+
+{#if firstExample}
+  <div class="md:mb-12 md:mt-5 mb-8">
+    <Quote text={firstExample} />
+  </div>
+{/if}
 
 <div class="container">
   <h1 class="title">
@@ -18,13 +26,11 @@
   <div class="flex flex-col gap-5">
     <section>
       <h2 class="subtitle">Description</h2>
-
       <p>{definition.description}</p>
     </section>
 
     <section>
       <h2 class="subtitle">Dans quel but ?</h2>
-
       <p>{definition.goal}</p>
     </section>
 
