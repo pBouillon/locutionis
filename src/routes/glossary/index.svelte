@@ -21,6 +21,12 @@
     }, { });
 </script>
 
+<svelte:head>
+  <title>
+    Glossaire | Locutionis - Petit référentiel des figures de style
+  </title>
+</svelte:head>
+
 <h1 class="mb-3 text-2xl font-extrabold tracking-tight md:text-4xl sm:text-center text-primary">
   Glossaire
 </h1>
