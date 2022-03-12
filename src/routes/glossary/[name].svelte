@@ -50,7 +50,7 @@
 
       <div class="flex flex-col gap-3">
         {#each definition.examples as example}
-          <p class="text-sm">- {example}</p>
+          <p>- {example}</p>
         {/each}
       </div>
     </section>
@@ -61,7 +61,7 @@
       <div class="flex flex-col gap-3">
         {#each definition.sources as { name, href }}
           <p>
-            - <a {href} class="link">{name}</a>
+            - <a {href} target="_blank" class="link">{name}</a>
           </p>
         {/each}
       </div>
