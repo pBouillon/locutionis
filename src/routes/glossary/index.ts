@@ -2,7 +2,7 @@ import type { FigureOfSpeech } from "$lib/models/figure-of-speech";
 
 /** @type {import('./index').RequestHandler} */
 export const get = async () => {
-  const figuresOfSpeechFiles = import.meta.glob('../../lib/data/*.json');
+  const figuresOfSpeechFiles = import.meta.glob('/**/data/*.json');
 
   const definitions = await Promise.all(
     Object
