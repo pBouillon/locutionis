@@ -1,3 +1,13 @@
+<script context="module">
+  import * as FiguresOfSpeechApi from '$lib/functions/api';
+
+  /** @type {import('./[name]').Load} */
+  export async function load({ params }) {
+    const [ definition ] = FiguresOfSpeechApi.get(params.name);
+    return { props: { definition } };
+  }
+</script>
+
 <script lang="ts">
   import Quote from '$lib/components/quote.svelte';
   import type { FigureOfSpeech } from '$lib/models/figure-of-speech';

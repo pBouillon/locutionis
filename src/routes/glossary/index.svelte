@@ -1,3 +1,13 @@
+<script lang="ts" context="module">
+  import * as FiguresOfSpeechApi from '$lib/functions/api';
+
+  /** @type {import('./index').Load} */
+  export async function load() {
+    const definitions = FiguresOfSpeechApi.get();
+    return { props: { definitions } };
+  }
+</script>
+
 <script lang="ts">
   import GlossarySection from '$lib/components/glossary-section.svelte';
   import { normalize } from '$lib/functions/utils';
