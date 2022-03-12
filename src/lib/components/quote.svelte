@@ -3,8 +3,8 @@
 </script>
 
 <blockquote class="flex flex-col items-center">
-  <i class="bi bi-quote text-3xl font-extrabold text-gray-400"></i>
-  <p class="md:max-w-3xl md:text-2xl text-gray-600 text-center text-lg italic">
+  <i class="text-3xl font-extrabold text-gray-400 bi bi-quote" />
+  <p class="text-lg italic text-center text-gray-600 md:max-w-3xl md:text-2xl">
     {text}
   </p>
 </blockquote>
