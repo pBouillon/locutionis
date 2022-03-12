@@ -46,7 +46,7 @@
     </section>
 
     <section>
-      <h2 class="subtitle">Quelques examples</h2>
+      <h2 class="subtitle">Quelques exemples</h2>
 
       <div class="flex flex-col gap-3">
         {#each definition.examples as example}
