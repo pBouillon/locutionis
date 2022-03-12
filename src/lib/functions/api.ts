@@ -6,10 +6,11 @@ const figuresOfSpeech: FigureOfSpeech[] = [{
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!',
   goal: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!',
   examples: [
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!'
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit',
   ],
   sources: [
-    { 'name': 'Wikipedia', 'link': 'https://fr.wikipedia.org' },
+    { name: 'Wikipedia', href: 'https://fr.wikipedia.org' },
   ],
 }]
 
