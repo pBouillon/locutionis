@@ -2,6 +2,12 @@
   import { base } from '$app/paths';
 </script>
 
+<svelte:head>
+  <title>
+    Locutionis - Petit référentiel des figures de style
+  </title>
+</svelte:head>
+
 <section class="flex flex-col gap-10">
   <h1 class="text-4xl font-bold tracking-tight text-center sm:text-5xl lg:text-6xl">
     Petit référentiel des figures de style.

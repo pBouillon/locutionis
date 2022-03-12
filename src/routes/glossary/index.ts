@@ -1,17 +1,8 @@
-import type { FigureOfSpeech } from "$lib/models/figure-of-speech";
+import * as FiguresOfSpeechApi from '$lib/functions/api';
 
 /** @type {import('./index').RequestHandler} */
-export const get = async () => {
-  const figuresOfSpeechFiles = import.meta.glob('/**/data/*.json');
-
-  const definitions = await Promise.all(
-    Object
-      .values(figuresOfSpeechFiles)
-      .map(async resolver => await resolver() as FigureOfSpeech));
-
-  const sortedDefinitions = definitions.sort((a, b) => a.name.localeCompare(b.name));
-
+export const get = () => {
   return {
-    body: { definitions: sortedDefinitions },
+    body: { definitions: FiguresOfSpeechApi.get() },
   };
 };

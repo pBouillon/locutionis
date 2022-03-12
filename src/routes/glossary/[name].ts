@@ -1,16 +1,10 @@
-import type { FigureOfSpeech } from "$lib/models/figure-of-speech";
+import * as FiguresOfSpeechApi from '$lib/functions/api';
 
-/** @type {import('./[name]').RequestHandler} */
-export const get = async ({ params }) => {
-  const figuresOfSpeechFiles = import.meta.glob('/**/data/*.json');
-
-  const [ definition ] = (await Promise.all(
-    Object
-      .values(figuresOfSpeechFiles)
-      .map(async resolver => await resolver() as FigureOfSpeech)))
-    .filter(definition => definition.name === params?.name);
+/** @type {import('./index').RequestHandler} */
+export const get = ({ params }) => {
+  const [definition] = FiguresOfSpeechApi.get(params.name);
 
   return definition
-    ? { body: { definition }}
+    ? { body: { definition } }
     : { status: 404 };
 };
