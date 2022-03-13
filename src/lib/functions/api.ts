@@ -17,7 +17,10 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       `J'espère, que dis-je ? Je suis sûr qu'on vous rendra justice`,
       `Votre prudence ou plutôt votre lâcheté nous ont perdu`,
     ],
-    sources: [{ name: 'Wikipedia', href: 'https://fr.wikipedia.org/wiki/Épanorthose' }],
+    sources: [
+      { name: 'Wikipedia', href: 'https://fr.wikipedia.org/wiki/Épanorthose' },
+      { name: 'Wiktionnaire', href: 'https://fr.wiktionary.org/wiki/épanorthose' },
+    ],
   },
 ];
 
