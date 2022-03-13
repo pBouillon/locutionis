@@ -3,14 +3,21 @@ import type { FigureOfSpeech } from '$lib/models/figure-of-speech';
 const figuresOfSpeech: FigureOfSpeech[] = [
   {
     name: 'Épanorthose',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!',
-    goal: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!',
+    description:`
+    L'épanorthose est une figure de style qui consiste à corriger ses propres
+    propos afin d'accentuer ce qu'il vient d'être affirmé, renforçant ainsi le
+    sentiment exprimé.
+    `,
+    goal: `
+    Il s'agit d'une figure de style souvent utilisée pour donner un sentiment de
+    sincérité dans son discours. En se corrigeant, le locuteur donne l'impression
+    de rechercher la précision.
+    `,
     examples: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+      `J'espère, que dis-je ? Je suis sûr qu'on vous rendra justice`,
+      `Votre prudence ou plutôt votre lâcheté nous ont perdu`,
     ],
-    sources: [{ name: 'Wikipedia', href: 'https://fr.wikipedia.org' }],
+    sources: [{ name: 'Wikipedia', href: 'https://fr.wikipedia.org/wiki/Épanorthose' }],
   },
 ];
 
