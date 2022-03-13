@@ -2,15 +2,103 @@ import type { FigureOfSpeech } from '$lib/models/figure-of-speech';
 
 const figuresOfSpeech: FigureOfSpeech[] = [
   {
-    name: 'Épanorthose',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!',
-    goal: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, natus dolor voluptatibus architecto distinctio velit inventore reiciendis perspiciatis magni rerum dignissimos quidem repudiandae illum explicabo animi doloribus error atque!',
+    name: 'Antanaclase',
+    description: `
+    On parle d'antanaclase lorsque l'on emploie deux fois un même mot mais avec
+    un sens différent: on parle alors de polysémie (plusieurs sens). Si le mot
+    n'est pas répété il est alors question d'antanaclase elliptique.
+    `,
+    goal: `
+    Il s'agit d'une figure de style qui se prête très bien aux jeux de mots,
+    elle est donc fréquemment utilisée pour faire de l'humour.
+
+    En dehors du côté comique, elle permet de souligner le second sens du mot en
+    surprenant le lecteur qui doit s'arrêter un instant pour le saisir après
+    l'avoir avoir compris le premier.
+    `,
     examples: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+      `Le cœur a ses raisons que la raison ne connaît ignore.`,
+      `Adieu, monsieur l'homme d'affaires, qui n'avez fait celles de personne.`,
+      `Les étudiants, c'est comme le linge, quand il fait beau, ça sèche.`,
     ],
-    sources: [{ name: 'Wikipedia', href: 'https://fr.wikipedia.org' }],
+    sources: [
+      {
+        name: 'Wikipedia',
+        href: 'https://fr.wikipedia.org/wiki/Antanaclase',
+      },
+      {
+        name: 'Larousse',
+        href: 'https://www.larousse.fr/dictionnaires/francais/antanaclase/10911044',
+      },
+      {
+        name: 'La Culture Générale',
+        href: 'https://www.laculturegenerale.com/antanaclase-diaphore-definition-exemples/',
+      },
+    ],
+  },
+  {
+    name: 'Comparaison',
+    description: `
+    Une comparaison est la mise en relation de deux éléments différents
+    partageant un point commun. Elle est constituée d'un comparé (l'objet de
+    la comparaison), d'un comparant (le "thème" utilisé pour imager le comparé)
+    et d'un outil de comparaison (c'est ce qui met en liaison le comparé et le
+    comparant).
+    `,
+    goal: `
+    En mettant deux termes sur le même plan littéraire, la comparaison permet de
+    souligner leurs points communs pour imager ses propos.
+    `,
+    examples: [
+      `Et cette terre était proche, et elle lui apparaissait comme un bouclier sur la mer sombre.`,
+      `Tu es fait comme un rat!`,
+      `Sa barbe était d'argent comme un ruisseau d'avril.`,
+    ],
+    sources: [
+      {
+        name: 'Wikipedia',
+        href: 'https://fr.wikipedia.org/wiki/Comparaison_(rhétorique)',
+      },
+      {
+        name: 'La langue française',
+        href: 'https://www.lalanguefrancaise.com/linguistique/la-comparaison-figure-de-style',
+      },
+      {
+        name: 'alloprof',
+        href: 'https://www.alloprof.qc.ca/fr/eleves/bv/francais/la-comparaison-f1369',
+      },
+      {
+        name: 'Youtube - Point Culture',
+        href: 'https://youtu.be/ByDNEsBNf24?t=478',
+      },
+    ],
+  },
+  {
+    name: 'Épanorthose',
+    description: `
+    L'épanorthose est une figure de style qui consiste à corriger ses propres
+    propos afin d'accentuer ce qu'il vient d'être affirmé, renforçant ainsi le
+    sentiment exprimé.
+    `,
+    goal: `
+    Il s'agit d'une figure de style souvent utilisée pour donner un sentiment de
+    sincérité dans son discours. En se corrigeant, le locuteur donne l'impression
+    de rechercher la précision.
+    `,
+    examples: [
+      `J'espère, que dis-je ? Je suis sûr qu'on vous rendra justice.`,
+      `Votre prudence ou plutôt votre lâcheté nous ont perdu.`,
+    ],
+    sources: [
+      {
+        name: 'Wikipedia',
+        href: 'https://fr.wikipedia.org/wiki/Épanorthose',
+      },
+      {
+        name: 'Wiktionnaire',
+        href: 'https://fr.wiktionary.org/wiki/épanorthose',
+      },
+    ],
   },
 ];
 
