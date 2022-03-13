@@ -35,6 +35,12 @@ def generate_bundle() -> NoReturn:
         stdout=subprocess.DEVNULL,
         cwd=root)
 
+    subprocess.call(
+        ['cp', 'index.html', '404.html'],
+        shell=True,
+        stdout=subprocess.DEVNULL,
+        cwd=root)
+
 
 def push_bundle() -> NoReturn:
     target = get_project_root().joinpath('docs')
