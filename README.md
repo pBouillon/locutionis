@@ -53,6 +53,8 @@ You can now navigate to [localhost:3000](http://localhost:3000/) and start codin
 ## Architecture
 
 - **Hosting** - [GitHub Pages](https://pages.github.com/)
-- **Styling** - [Tailwind CSS](https://tailwindcss.com/)
+- **Styling**
+  - [Tailwind CSS](https://tailwindcss.com/)
+  - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - **Framework** - [Svelte](svelte.dev/) with [SvelteKit](https://kit.svelte.dev/) using [TypeScript](https://www.typescriptlang.org/)
 - **Tools** - Deployment script made in Python
