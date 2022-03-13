@@ -46,6 +46,12 @@ def push_bundle() -> NoReturn:
         stdout=subprocess.DEVNULL,
         cwd=target)
 
+    subprocess.call(
+        ['git', 'commit', '-m', 'Regenerate the application\'s bundle'],
+        shell=True,
+        stdout=subprocess.DEVNULL,
+        cwd=target)
+
     logging.debug('Bundle committed')
 
     subprocess.call(
