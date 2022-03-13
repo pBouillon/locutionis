@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-f825690a.js",
+    "file": "start-81344f60.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -16,7 +16,7 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-a5ae3abd.js",
+    "file": "pages/__layout.svelte-efa7cf9c.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -25,7 +25,7 @@
       "_paths-396f020f.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-8a9fbd2c.css"
+      "assets/pages/__layout.svelte-3608561e.css"
     ],
     "assets": [
       "assets/bootstrap-icons-c874e14c.woff2",
@@ -43,7 +43,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-02d7438f.js",
+    "file": "pages/index.svelte-0ea7b105.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -56,24 +56,24 @@
     ]
   },
   "src/routes/glossary/index.svelte": {
-    "file": "pages/glossary/index.svelte-f09c5626.js",
+    "file": "pages/glossary/index.svelte-e8850a39.js",
     "src": "src/routes/glossary/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1b59dde5.js",
-      "_api-0e1e0a27.js",
+      "_api-0905b312.js",
       "_paths-396f020f.js"
     ]
   },
   "src/routes/glossary/[name].svelte": {
-    "file": "pages/glossary/_name_.svelte-de464de2.js",
+    "file": "pages/glossary/_name_.svelte-943cb98a.js",
     "src": "src/routes/glossary/[name].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1b59dde5.js",
-      "_api-0e1e0a27.js"
+      "_api-0905b312.js"
     ],
     "css": [
       "assets/pages/glossary/_name_.svelte-b44ebfdc.css"
@@ -85,7 +85,7 @@
   "_paths-396f020f.js": {
     "file": "chunks/paths-396f020f.js"
   },
-  "_api-0e1e0a27.js": {
-    "file": "chunks/api-0e1e0a27.js"
+  "_api-0905b312.js": {
+    "file": "chunks/api-0905b312.js"
   }
 }
