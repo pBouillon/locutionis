@@ -2,6 +2,41 @@ import type { FigureOfSpeech } from '$lib/models/figure-of-speech';
 
 const figuresOfSpeech: FigureOfSpeech[] = [
   {
+    name: 'Antanaclase',
+    description: `
+    On parle d'antanaclase lorsque l'on emploie deux fois un même mot mais avec
+    un sens différent: on parle alors de polysémie (plusieurs sens). Si le mot
+    n'est pas répété il est alors question d'antanaclase elliptique.
+    `,
+    goal: `
+    Il s'agit d'une figure de style qui se prête très bien aux jeux de mots,
+    elle est donc fréquemment utilisée pour faire de l'humour.
+
+    En dehors du côté comique, elle permet de souligner le second sens du mot en
+    surprenant le lecteur qui doit s'arrêter un instant pour le saisir après
+    l'avoir avoir compris le premier.
+    `,
+    examples: [
+      `Le cœur a ses raisons que la raison ne connaît ignore.`,
+      `Adieu, monsieur l'homme d'affaires, qui n'avez fait celles de personne.`,
+      `Les étudiants, c'est comme le linge, quand il fait beau, ça sèche.`,
+    ],
+    sources: [
+      {
+        name: 'Wikipedia',
+        href: 'https://fr.wikipedia.org/wiki/Antanaclase',
+      },
+      {
+        name: 'Larousse',
+        href: 'https://www.larousse.fr/dictionnaires/francais/antanaclase/10911044',
+      },
+      {
+        name: 'La Culture Générale',
+        href: 'https://www.laculturegenerale.com/antanaclase-diaphore-definition-exemples/',
+      },
+    ],
+  },
+  {
     name: 'Comparaison',
     description: `
     Une comparaison est la mise en relation de deux éléments différents
@@ -25,15 +60,15 @@ const figuresOfSpeech: FigureOfSpeech[] = [
         href: 'https://fr.wikipedia.org/wiki/Comparaison_(rhétorique)',
       },
       {
-        name: 'Comparaison - Figure de style',
+        name: 'La langue française',
         href: 'https://www.lalanguefrancaise.com/linguistique/la-comparaison-figure-de-style',
       },
       {
-        name: 'La comparaison (figure de style)',
+        name: 'alloprof',
         href: 'https://www.alloprof.qc.ca/fr/eleves/bv/francais/la-comparaison-f1369',
       },
       {
-        name: 'Point Culture : les figures de style',
+        name: 'Youtube - Point Culture',
         href: 'https://youtu.be/ByDNEsBNf24?t=478',
       },
     ],
@@ -51,8 +86,8 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     de rechercher la précision.
     `,
     examples: [
-      `J'espère, que dis-je ? Je suis sûr qu'on vous rendra justice`,
-      `Votre prudence ou plutôt votre lâcheté nous ont perdu`,
+      `J'espère, que dis-je ? Je suis sûr qu'on vous rendra justice.`,
+      `Votre prudence ou plutôt votre lâcheté nous ont perdu.`,
     ],
     sources: [
       {
