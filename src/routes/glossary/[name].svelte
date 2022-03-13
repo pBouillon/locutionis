@@ -58,7 +58,7 @@
     <section>
       <h2 class="subtitle">Sources</h2>
 
-      <div class="flex flex-col gap-1">
+      <div class="flex flex-col gap-1 text-sm">
         {#each definition.sources as { name, href }}
           <p>
             - <a {href} target="_blank" class="link">{name}</a>
