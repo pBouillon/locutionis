@@ -53,15 +53,14 @@
 
   <p class="description">
     Amateur des figures de style que j'ai pu découvrir au cours des années, je
-    me suis toujours amusé tant de leur phonétique que de leur capacité à
+    me suis toujours amusé tant de leur phonétique que de leurs capacités à
     qualifier la structure de nos phrases.
   </p>
 
   <p class="description">
     Ayant des difficultés à les garder en mémoire, c'est en mêlant ma passion
-    pour ces dernières et pour l'informatique que j'ai choisi d'en faire un site
-    accessible à tous, en espérant naïvement qu'un jour cela puisse aider
-    quelqu'un !
+    pour ces dernières et pour l'informatique que j'ai choisi de créer
+    <em>Locutionis</em>, en espérant qu'un jour cela puisse aider quelqu'un !
   </p>
 </section>
 
