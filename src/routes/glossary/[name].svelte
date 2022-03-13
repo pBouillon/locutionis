@@ -14,7 +14,7 @@
 
   export let definition: FigureOfSpeech;
 
-  $: firstExample = definition.examples.shift();
+  $: firstExample = [...definition.examples].shift();
 </script>
 
 <svelte:head>
@@ -48,7 +48,7 @@
     <section>
       <h2 class="subtitle">Quelques exemples</h2>
 
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-1">
         {#each definition.examples as example}
           <p>- {example}</p>
         {/each}
