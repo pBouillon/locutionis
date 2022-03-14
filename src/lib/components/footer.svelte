@@ -7,7 +7,7 @@
 
     -
 
-    <a href="https://github.com/pBouillon/locutionis/issues/new">
+    <a href="https://github.com/pBouillon/locutionis/issues/new/choose">
       Signaler une erreur
     </a>
   </p>

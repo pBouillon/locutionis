@@ -35,11 +35,9 @@ def generate_bundle() -> NoReturn:
         stdout=subprocess.DEVNULL,
         cwd=root)
 
-    subprocess.call(
-        ['cp', 'index.html', '404.html'],
-        shell=True,
-        stdout=subprocess.DEVNULL,
-        cwd=root)
+    shutil.copy(
+        root.joinpath('docs/index.html'),
+        root.joinpath('docs/404.html'))
 
 
 def push_bundle() -> NoReturn:
@@ -77,5 +75,5 @@ if __name__ == '__main__':
     generate_bundle()
     logging.info('App bundle created')
 
-    push_bundle()
+    # push_bundle()
     logging.info('Bundle pushed to git')
