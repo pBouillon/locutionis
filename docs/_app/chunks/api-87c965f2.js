@@ -9,7 +9,7 @@ const s=[{name:"Antanaclase",description:`
     En dehors du c\xF4t\xE9 comique, elle permet de souligner le second sens du mot en
     surprenant le lecteur qui doit s'arr\xEAter un instant pour le saisir apr\xE8s
     l'avoir avoir compris le premier.
-    `,examples:["Le c\u0153ur a ses raisons que la raison ne conna\xEEt ignore.","Adieu, monsieur l'homme d'affaires, qui n'avez fait celles de personne.","Les \xE9tudiants, c'est comme le linge, quand il fait beau, \xE7a s\xE8che."],sources:[{name:"Wikipedia",href:"https://fr.wikipedia.org/wiki/Antanaclase"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/antanaclase/10911044"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/antanaclase-diaphore-definition-exemples/"}]},{name:"Comparaison",description:`
+    `,examples:["Le c\u0153ur a ses raisons que la raison ne conna\xEEt point.","Adieu, monsieur l'homme d'affaires, qui n'avez fait celles de personne.","Les \xE9tudiants, c'est comme le linge, quand il fait beau, \xE7a s\xE8che."],sources:[{name:"Wikipedia",href:"https://fr.wikipedia.org/wiki/Antanaclase"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/antanaclase/10911044"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/antanaclase-diaphore-definition-exemples/"}]},{name:"Comparaison",description:`
     Une comparaison est la mise en relation de deux \xE9l\xE9ments diff\xE9rents
     partageant un point commun. Elle est constitu\xE9e d'un compar\xE9 (l'objet de
     la comparaison), d'un comparant (le "th\xE8me" utilis\xE9 pour imager le compar\xE9)
