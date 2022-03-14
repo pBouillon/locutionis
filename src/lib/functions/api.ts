@@ -17,7 +17,7 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     l'avoir avoir compris le premier.
     `,
     examples: [
-      `Le cœur a ses raisons que la raison ne connaît ignore.`,
+      `Le cœur a ses raisons que la raison ne connaît point.`,
       `Adieu, monsieur l'homme d'affaires, qui n'avez fait celles de personne.`,
       `Les étudiants, c'est comme le linge, quand il fait beau, ça sèche.`,
     ],
