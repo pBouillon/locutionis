@@ -75,5 +75,5 @@ if __name__ == '__main__':
     generate_bundle()
     logging.info('App bundle created')
 
-    # push_bundle()
+    push_bundle()
     logging.info('Bundle pushed to git')
