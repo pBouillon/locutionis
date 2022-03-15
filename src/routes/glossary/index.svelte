@@ -15,17 +15,11 @@
 
   export let definitions: FigureOfSpeech[];
 
-  $: glossary = definitions
-    .map((definition) => {
+  $: glossary = definitions.reduce((map, definition) => {
       let key = definition.name[0].toLocaleLowerCase();
       key = normalize(key);
 
-      return { key, definition };
-    })
-    .reduce((map, { key, definition }) => {
-      map[key] = map.hasOwnProperty(key)
-        ? [...map[key], definition]
-        : [definition];
+      map[key] = [...map[key] ?? [], definition];
 
       return map;
     }, { });
