@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-2e7e218d.js",
+    "file": "start-da003b12.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -56,24 +56,24 @@
     ]
   },
   "src/routes/glossary/index.svelte": {
-    "file": "pages/glossary/index.svelte-a0e6c45e.js",
+    "file": "pages/glossary/index.svelte-1ff7fc42.js",
     "src": "src/routes/glossary/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1b59dde5.js",
-      "_api-87c965f2.js",
+      "_api-f2383c97.js",
       "_paths-396f020f.js"
     ]
   },
   "src/routes/glossary/[name].svelte": {
-    "file": "pages/glossary/_name_.svelte-fb5bb2bc.js",
+    "file": "pages/glossary/_name_.svelte-c118e633.js",
     "src": "src/routes/glossary/[name].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-1b59dde5.js",
-      "_api-87c965f2.js"
+      "_api-f2383c97.js"
     ],
     "css": [
       "assets/pages/glossary/_name_.svelte-b44ebfdc.css"
@@ -85,7 +85,7 @@
   "_paths-396f020f.js": {
     "file": "chunks/paths-396f020f.js"
   },
-  "_api-87c965f2.js": {
-    "file": "chunks/api-87c965f2.js"
+  "_api-f2383c97.js": {
+    "file": "chunks/api-f2383c97.js"
   }
 }
