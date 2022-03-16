@@ -23,7 +23,14 @@
     return map.set(key, [...(map[key] ?? []), definition]);
   }, new Map<string, FigureOfSpeech[]>());
 
-  // $: filtered = glossary.filter();
+  $: filtered = Array.from(glossary.entries())
+    .map(([key, definitions]) => {
+      const matchingDefinitions = definitions.filter((definition) =>
+        definition.name.includes(searchText)
+      );
+      return [key, matchingDefinitions];
+    })
+    .filter(([_key, definitions]) => definitions.length > 0);
 </script>
 
 <svelte:head>
@@ -39,7 +46,7 @@
 </div>
 
 <div class="container flex flex-col gap-3 md:gap-6">
-  {#each Array.from(glossary.entries()) as [key, definitions]}
+  {#each filtered as [key, definitions]}
     <GlossarySection {key} {definitions} />
   {/each}
 </div>
