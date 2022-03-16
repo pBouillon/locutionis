@@ -14,7 +14,7 @@ const figuresOfSpeech: FigureOfSpeech[] = [
 
     En dehors du côté comique, elle permet de souligner le second sens du mot en
     surprenant le lecteur qui doit s'arrêter un instant pour le saisir après
-    l'avoir avoir compris le premier.
+    avoir compris le premier.
     `,
     examples: [
       `Le cœur a ses raisons que la raison ne connaît point.`,
