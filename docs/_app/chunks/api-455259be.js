@@ -1,4 +1,4 @@
-const i=[{name:"Antanaclase",description:`
+const s=[{name:"Antanaclase",description:`
     On parle d'antanaclase lorsque l'on emploie deux fois un m\xEAme mot mais avec
     un sens diff\xE9rent: on parle alors de polys\xE9mie (plusieurs sens). Si le mot
     n'est pas r\xE9p\xE9t\xE9 il est alors question d'antanaclase elliptique.
@@ -35,4 +35,4 @@ const i=[{name:"Antanaclase",description:`
     Le but de la m\xE9taphore est d'imager ses propos pour souligner l'intensit\xE9
     ou la connotation de ce qui est imag\xE9 en lui donnant le sens d'un autre mot
     ou expression.
-    `,examples:["\xC9tre d\xE9vor\xE9 par les remords.","Il me casse les pieds.","Il est mort dans la fleur de l'\xE2ge."],sources:[{name:"linternaute",href:"https://www.linternaute.fr/dictionnaire/fr/definition/metaphore/"},{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M%C3%A9taphore"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=478"}]}],t=(a=void 0)=>{let e=i;return a&&(e=e.filter(r=>r.name===a)),e.sort((r,s)=>r.name.localeCompare(s.name))};export{t as g};
+    `,examples:["Il n'est plus que l'ombre de lui-m\xEAme.","Il me casse les pieds.","Il est mort dans la fleur de l'\xE2ge."],sources:[{name:"linternaute",href:"https://www.linternaute.fr/dictionnaire/fr/definition/metaphore/"},{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M%C3%A9taphore"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=478"}]}],t=(a=void 0)=>{let e=s;return a&&(e=e.filter(r=>r.name===a)),e.sort((r,i)=>r.name.localeCompare(i.name))};export{t as g};

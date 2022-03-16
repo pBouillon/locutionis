@@ -1,4 +1,4 @@
-import{S as F,i as H,s as L,e as m,t as q,k as D,c as g,a as b,d as i,h as A,m as P,b as o,g as T,F as a,G as B,H as S,I as le,J as se,K as ae,w as K,x as R,y as Q,L as re,M as ne,N as oe,q as M,o as O,B as W}from"../chunks/vendor-1b59dde5.js";import{b as C}from"../chunks/paths-396f020f.js";function ie(c){let e,t,l,r,n,f,u,I,d,s,$,x,h;return{c(){e=m("footer"),t=m("p"),l=m("a"),r=m("i"),n=q(`\r
+import{S as F,i as H,s as L,e as m,t as q,k as D,c as g,a as b,d as i,h as A,m as P,b as o,g as T,F as a,G as B,H as S,I as le,J as se,K as ae,w as K,x as R,y as Q,L as re,M as ne,N as oe,q as M,o as O,B as W}from"../chunks/vendor-f1b3f258.js";import{b as C}from"../chunks/paths-396f020f.js";function ie(c){let e,t,l,r,n,f,u,I,d,s,$,x,h;return{c(){e=m("footer"),t=m("p"),l=m("a"),r=m("i"),n=q(`\r
       Voir sur GitHub`),f=q(`\r
 \r
     -\r
