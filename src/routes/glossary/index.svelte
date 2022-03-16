@@ -45,8 +45,14 @@
   <SearchBar bind:searchText />
 </div>
 
-<div class="container flex flex-col gap-3 md:gap-6">
-  {#each filtered as [key, definitions]}
-    <GlossarySection {key} {definitions} />
-  {/each}
-</div>
+{#if filtered.length > 0}
+  <div class="container flex flex-col gap-3 md:gap-6">
+    {#each filtered as [key, definitions]}
+      <GlossarySection {key} {definitions} />
+    {/each}
+  </div>
+{:else}
+  <p class="text-xl font-semibold tracking-wide text-center text-gray-400">
+    Aucun résultat pour votre recherche
+  </p>
+{/if}
