@@ -23,7 +23,7 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     ],
     sources: [
       {
-        name: 'Wikipedia',
+        name: 'Wikipédia',
         href: 'https://fr.wikipedia.org/wiki/Antanaclase',
       },
       {
@@ -56,7 +56,7 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     ],
     sources: [
       {
-        name: 'Wikipedia',
+        name: 'Wikipédia',
         href: 'https://fr.wikipedia.org/wiki/Comparaison_(rhétorique)',
       },
       {
@@ -91,12 +91,45 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     ],
     sources: [
       {
-        name: 'Wikipedia',
+        name: 'Wikipédia',
         href: 'https://fr.wikipedia.org/wiki/Épanorthose',
       },
       {
         name: 'Wiktionnaire',
         href: 'https://fr.wiktionary.org/wiki/épanorthose',
+      },
+    ],
+  },
+  {
+    name: 'Métaphore',
+    description: `
+    Une métaphore est similaire à une comparaison à la différence près qu'elle
+    n'utilise pas d'outil de comparaison pour souligner le rapprochement de deux
+    termes. C'est alors au lecteur d'essayer de deviner pourquoi l'auteur les a
+    rapprochés pour créer cette image.
+    `,
+    goal: `
+    Le but de la métaphore est d'imager ses propos pour souligner l'intensité
+    ou la connotation de ce qui est imagé en lui donnant le sens d'un autre mot
+    ou expression.
+    `,
+    examples: [
+      'Étre dévoré par les remords.',
+      'Il me casse les pieds.',
+      'Il est mort dans la fleur de l\'âge.',
+    ],
+    sources: [
+      {
+        name: 'linternaute',
+        href: 'https://www.linternaute.fr/dictionnaire/fr/definition/metaphore/',
+      },
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/M%C3%A9taphore',
+      },
+      {
+        name: 'Youtube - Point Culture',
+        href: 'https://youtu.be/ByDNEsBNf24?t=478',
       },
     ],
   },
