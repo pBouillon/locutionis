@@ -12,6 +12,8 @@
   </p>
 
   <div class="text-lg text-center">
-    <a href="{base}/" class="font-semibold link">Retourner à l'accueil</a>
+    <a href="{base}/" class="font-semibold link">
+      Retourner à l'accueil
+    </a>
   </div>
 </section>
