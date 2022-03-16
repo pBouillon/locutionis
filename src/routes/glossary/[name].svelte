@@ -3,7 +3,7 @@
 
   /** @type {import('./[name]').Load} */
   export async function load({ params }) {
-    const [ definition ] = FiguresOfSpeechApi.get(params.name);
+    const [definition] = FiguresOfSpeechApi.get(params.name);
     return { props: { definition } };
   }
 </script>
@@ -14,7 +14,7 @@
 
   export let definition: FigureOfSpeech;
 
-  $: firstExample = [...definition.examples].shift();
+  $: [firstExample] = definition.examples;
 </script>
 
 <svelte:head>

@@ -114,7 +114,7 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     ou expression.
     `,
     examples: [
-      'Étre dévoré par les remords.',
+      'Il n\'est plus que l\'ombre de lui-même.',
       'Il me casse les pieds.',
       'Il est mort dans la fleur de l\'âge.',
     ],
