@@ -143,7 +143,7 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     goal: `
     Utiliser une métonymie permet d'alléger la structure de la phrase comme par
     exemple dire "Je n'ai plus de batterie" au lieu de "Je n'ai plus d'énergie
-    dans mon téléphone portable").
+    dans mon téléphone portable".
 
     Elle a aussi l'avantage d'englober toute la population désignée et donc peut
     renforcer un argumentaire. Lors d'un débat, si l'on désigne "les français"
