@@ -42,7 +42,7 @@ const n=[{name:"Antanaclase",description:`
     `,goal:`
     Utiliser une m\xE9tonymie permet d'all\xE9ger la structure de la phrase comme par
     exemple dire "Je n'ai plus de batterie" au lieu de "Je n'ai plus d'\xE9nergie
-    dans mon t\xE9l\xE9phone portable").
+    dans mon t\xE9l\xE9phone portable".
 
     Elle a aussi l'avantage d'englober toute la population d\xE9sign\xE9e et donc peut
     renforcer un argumentaire. Lors d'un d\xE9bat, si l'on d\xE9signe "les fran\xE7ais"
