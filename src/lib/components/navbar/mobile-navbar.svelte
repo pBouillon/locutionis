@@ -27,7 +27,7 @@
     <!-- Closing button -->
     <div class="absolute top-5 right-5">
       <button type="button" on:click={closeMobileMenu}>
-        <i class="text-xl text-gray-400 dark:text-slate-300 dark:hover:text-slate-200 bi bi-x-lg" />
+        <i class="text-xl text-gray-400 dark:text-slate-300 bi bi-x-lg" />
       </button>
     </div>
 
@@ -35,7 +35,7 @@
     <ul class="space-y-5">
       {#each links as { href, label }}
         <li>
-          <a {href} class="navbar-link dark:text-slate-300 dark:hover:text-slate-200">{label}</a>
+          <a {href} class="text-lg tracking-wide decoration-2 decoration-primary dark:text-slate-300">{label}</a>
         </li>
       {/each}
     </ul>
@@ -44,7 +44,7 @@
     <div class="pt-6 mt-6 border-t border-gray-400">
       <div class="flex items-center justify-between">
         <label
-          class="text-lg tracking-wide dark:text-slate-300 dark:hover:text-slate-200"
+          class="text-lg tracking-wide dark:text-slate-300"
           for="theme">Thème</label
         >
         <div

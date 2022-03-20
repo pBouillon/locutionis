@@ -37,7 +37,7 @@
 
   <div class="hidden gap-5 md:flex">
     {#each links as { href, label }}
-      <a {href} class="navbar-link dark:text-slate-300">{label}</a>
+      <a {href} class="text-lg tracking-wide decoration-2 decoration-primary hover:underline dark:text-slate-300">{label}</a>
     {/each}
 
     <div class="pl-5 border-l">
@@ -51,9 +51,3 @@
     <MobileNavbar on:close={() => showMobileMenu = false} {links} />
   {/if}
 </nav>
-
-<style>
-  .navbar-link {
-    @apply text-lg tracking-wide decoration-2 decoration-primary hover:underline;
-  }
-</style>
