@@ -48,4 +48,14 @@ const n=[{name:"Antanaclase",description:`
     renforcer un argumentaire. Lors d'un d\xE9bat, si l'on d\xE9signe "les fran\xE7ais"
     au lieu de cibler la tranche de population, on donne alors l'impression que
     notre discours concerne l'enti\xE8ret\xE9 des habitants de France.
-    `,examples:["Tu veux boire un verre ?","Je n'ai plus de batterie.","La France a obtenu une m\xE9daille d'or aux Jeux Olympiques."],sources:[{name:"linternaute",href:"https://www.linternaute.fr/dictionnaire/fr/definition/metonymie/"},{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M%C3%A9tonymie"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=521"}]}],t=(a=void 0)=>{let e=n;return a&&(e=e.filter(r=>r.name===a)),e.sort((r,i)=>r.name.localeCompare(i.name))};export{t as g};
+    `,examples:["Tu veux boire un verre ?","Je n'ai plus de batterie.","La France a obtenu une m\xE9daille d'or aux Jeux Olympiques."],sources:[{name:"linternaute",href:"https://www.linternaute.fr/dictionnaire/fr/definition/metonymie/"},{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M%C3%A9tonymie"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=521"}]},{name:"Catachr\xE8se",description:`
+    Une catachr\xE8se est l'utilisation d'un mot pour d\xE9signer autre chose que ce
+    qu'il d\xE9fini initialement. Dans certains cas il s'agit d'une m\xE9taphore qui
+    est pass\xE9 dans la langue courante (ex: les pieds d'une table).
+    `,goal:`
+    Une catachr\xE8se est utilis\xE9e la plupart du temps pour d\xE9signer quelque chose
+    pour lequel la langue n'a pas de mot d\xE9finissant ce dont on veut parler.
+    C'est par exemple le cas pour le "verre" lorsque l'on propose de "boire un
+    verre": le fran\xE7ais n'a pas de mot pour d\xE9signer simplement le contenu d'un
+    verre.
+    `,examples:["J'ai ab\xEEm\xE9 la plume de mon stylo en appuyant trop fort.","Les ailes de cet avion sont sales !","Le pied de la table a \xE9t\xE9 rong\xE9 par les thermites."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Catachr\xE8se"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/catachr%C3%A8se/13695"},{name:"Wiktionnaire",href:"https://fr.wiktionary.org/wiki/catachr%C3%A8see"}]}],t=(r=void 0)=>{let e=n;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,i)=>a.name.localeCompare(i.name))};export{t as g};
