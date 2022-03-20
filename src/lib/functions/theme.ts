@@ -7,9 +7,24 @@ function createThemeStore() {
 
   return {
     subscribe,
-    setDark: () => update(() => 'dark'),
-    setLight: () => update(() => 'light'),
+    setDark: () => update(() => setTheme('dark')),
+    setLight: () => update(() => setTheme('light')),
   };
+}
+
+/**
+ * Set the theme as a CSS class of the root element
+ * @param theme The theme to use
+ * @returns The theme that has been set
+ */
+function setTheme(theme: Theme): Theme {
+  if (theme === 'dark') {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+
+  return theme;
 }
 
 export const theme = createThemeStore();
