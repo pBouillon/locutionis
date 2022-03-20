@@ -1,4 +1,4 @@
-const s=[{name:"Antanaclase",description:`
+const n=[{name:"Antanaclase",description:`
     On parle d'antanaclase lorsque l'on emploie deux fois un m\xEAme mot mais avec
     un sens diff\xE9rent: on parle alors de polys\xE9mie (plusieurs sens). Si le mot
     n'est pas r\xE9p\xE9t\xE9 il est alors question d'antanaclase elliptique.
@@ -12,7 +12,7 @@ const s=[{name:"Antanaclase",description:`
     `,examples:["Le c\u0153ur a ses raisons que la raison ne conna\xEEt point.","Adieu, monsieur l'homme d'affaires, qui n'avez fait celles de personne.","Les \xE9tudiants, c'est comme le linge, quand il fait beau, \xE7a s\xE8che."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Antanaclase"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/antanaclase/10911044"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/antanaclase-diaphore-definition-exemples/"}]},{name:"Comparaison",description:`
     Une comparaison est la mise en relation de deux \xE9l\xE9ments diff\xE9rents
     partageant un point commun. Elle est constitu\xE9e d'un compar\xE9 (l'objet de
-    la comparaison), d'un comparant (le "th\xE8me" utilis\xE9 pour imager le compar\xE9)
+    la comparaison), d'un comparant (le 'th\xE8me' utilis\xE9 pour imager le compar\xE9)
     et d'un outil de comparaison (c'est ce qui met en liaison le compar\xE9 et le
     comparant).
     `,goal:`
@@ -35,4 +35,17 @@ const s=[{name:"Antanaclase",description:`
     Le but de la m\xE9taphore est d'imager ses propos pour souligner l'intensit\xE9
     ou la connotation de ce qui est imag\xE9 en lui donnant le sens d'un autre mot
     ou expression.
-    `,examples:["Il n'est plus que l'ombre de lui-m\xEAme.","Il me casse les pieds.","Il est mort dans la fleur de l'\xE2ge."],sources:[{name:"linternaute",href:"https://www.linternaute.fr/dictionnaire/fr/definition/metaphore/"},{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M%C3%A9taphore"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=478"}]}],t=(a=void 0)=>{let e=s;return a&&(e=e.filter(r=>r.name===a)),e.sort((r,i)=>r.name.localeCompare(i.name))};export{t as g};
+    `,examples:["Il n'est plus que l'ombre de lui-m\xEAme.","Il me casse les pieds.","Il est mort dans la fleur de l'\xE2ge."],sources:[{name:"linternaute",href:"https://www.linternaute.fr/dictionnaire/fr/definition/metaphore/"},{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M%C3%A9taphore"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=478"}]},{name:"M\xE9tonymie",description:`
+    La m\xE9tonymie consiste en le remplacement d'un terme d\xE9signant un tout par un
+    autre en d\xE9signant une partie. Le rapport entre les deux est implicite et,
+    s'il n'est pris qu'au premier degr\xE9, la phrase devient alors incoh\xE9rente.
+    `,goal:`
+    Utiliser une m\xE9tonymie permet d'all\xE9ger la structure de la phrase comme par
+    exemple dire "Je n'ai plus de batterie" au lieu de "Je n'ai plus d'\xE9nergie
+    dans mon t\xE9l\xE9phone portable").
+
+    Elle a aussi l'avantage d'englober toute la population d\xE9sign\xE9e et donc peut
+    renforcer un argumentaire. Lors d'un d\xE9bat, si l'on d\xE9signe "les fran\xE7ais"
+    au lieu de cibler la tranche de population, on donne alors l'impression que
+    notre discours concerne l'enti\xE8ret\xE9 des habitants de France.
+    `,examples:["Tu veux boire un verre ?","Je n'ai plus de batterie.","La France a obtenu une m\xE9daille d'or aux Jeux Olympiques."],sources:[{name:"linternaute",href:"https://www.linternaute.fr/dictionnaire/fr/definition/metonymie/"},{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M%C3%A9tonymie"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=521"}]}],t=(a=void 0)=>{let e=n;return a&&(e=e.filter(r=>r.name===a)),e.sort((r,i)=>r.name.localeCompare(i.name))};export{t as g};
