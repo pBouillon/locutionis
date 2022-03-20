@@ -25,9 +25,13 @@
 
   $: filtered = Array.from(glossary.entries())
     .map(([key, definitions]) => {
-      const matchingDefinitions = definitions.filter((definition) =>
-        definition.name.includes(searchText)
-      );
+      const matchingDefinitions = definitions.filter((definition) => {
+        const query = searchText.toLocaleLowerCase();
+
+        return definition.name
+          .toLocaleLowerCase()
+          .includes(query);
+      });
       return [key, matchingDefinitions];
     })
     .filter(([_key, definitions]) => definitions.length > 0);
