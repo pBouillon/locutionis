@@ -41,7 +41,7 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     description: `
     Une comparaison est la mise en relation de deux éléments différents
     partageant un point commun. Elle est constituée d'un comparé (l'objet de
-    la comparaison), d'un comparant (le "thème" utilisé pour imager le comparé)
+    la comparaison), d'un comparant (le 'thème' utilisé pour imager le comparé)
     et d'un outil de comparaison (c'est ce qui met en liaison le comparé et le
     comparant).
     `,
@@ -130,6 +130,43 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       {
         name: 'Youtube - Point Culture',
         href: 'https://youtu.be/ByDNEsBNf24?t=478',
+      },
+    ],
+  },
+  {
+    name: 'Métonymie',
+    description: `
+    La métonymie consiste en le remplacement d'un terme désignant un tout par un
+    autre en désignant une partie. Le rapport entre les deux est implicite et,
+    s'il n'est pris qu'au premier degré, la phrase devient alors incohérente.
+    `,
+    goal: `
+    Utiliser une métonymie permet d'alléger la structure de la phrase comme par
+    exemple dire "Je n'ai plus de batterie" au lieu de "Je n'ai plus d'énergie
+    dans mon téléphone portable").
+
+    Elle a aussi l'avantage d'englober toute la population désignée et donc peut
+    renforcer un argumentaire. Lors d'un débat, si l'on désigne "les français"
+    au lieu de cibler la tranche de population, on donne alors l'impression que
+    notre discours concerne l'entièreté des habitants de France.
+    `,
+    examples: [
+      'Tu veux boire un verre ?',
+      'Je n\'ai plus de batterie.',
+      'La France a obtenu une médaille d\'or aux Jeux Olympiques.',
+    ],
+    sources: [
+      {
+        name: 'linternaute',
+        href: 'https://www.linternaute.fr/dictionnaire/fr/definition/metonymie/'
+      },
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/M%C3%A9tonymie',
+      },
+      {
+        name: 'Youtube - Point Culture',
+        href: 'https://youtu.be/ByDNEsBNf24?t=521',
       },
     ],
   },
