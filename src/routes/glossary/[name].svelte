@@ -37,12 +37,12 @@
   <div class="flex flex-col gap-5">
     <section>
       <h2 class="subtitle">Description</h2>
-      <p>{definition.description}</p>
+      <p class="dark:text-slate-300">{definition.description}</p>
     </section>
 
     <section>
       <h2 class="subtitle">Dans quel but ?</h2>
-      <p>{definition.goal}</p>
+      <p class="dark:text-slate-300">{definition.goal}</p>
     </section>
 
     <section>
@@ -50,7 +50,7 @@
 
       <div class="flex flex-col gap-3 text-sm">
         {#each definition.examples as example}
-          <p>- {example}</p>
+          <p class="dark:text-slate-300">- {example}</p>
         {/each}
       </div>
     </section>
@@ -60,7 +60,7 @@
 
       <div class="flex flex-col gap-1 text-sm">
         {#each definition.sources as { name, href }}
-          <p>
+          <p class="dark:text-slate-300">
             - <a {href} target="_blank" class="link">{name}</a>
           </p>
         {/each}
