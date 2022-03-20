@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 import { browser } from "$app/env"
 
-type Theme = 'dark' | 'light';
+export type Theme = 'dark' | 'light';
 
 function createThemeStore() {
   const initialTheme = (browser && localStorage.theme) ?? 'light';
@@ -11,9 +11,9 @@ function createThemeStore() {
 
   return {
     subscribe,
-    setDark: () => update(() => setTheme('dark')),
-    setLight: () => update(() => setTheme('light')),
+    set: (theme: Theme) => update(() => setTheme(theme)),
     toggle: () => update((current) => setTheme(current === 'light' ? 'dark' : 'light')),
+    update,
   };
 }
 
