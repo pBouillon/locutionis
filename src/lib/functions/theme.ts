@@ -6,6 +6,7 @@ type Theme = 'dark' | 'light';
 function createThemeStore() {
   const initialTheme = (browser && localStorage.theme) ?? 'light';
 
+  setTheme(initialTheme);
   const { subscribe, update } = writable<Theme>(initialTheme);
 
   return {
@@ -21,9 +22,11 @@ function createThemeStore() {
  * @returns The theme that has been set
  */
 function setTheme(theme: Theme): Theme {
-  if (browser) {
-    localStorage.theme = theme;
+  if (!browser) {
+    return;
   }
+
+  localStorage.theme = theme;
 
   if (theme === 'dark') {
     document.documentElement.classList.add('dark')
