@@ -1,7 +1,8 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import { theme } from '$lib/functions/theme';
+  import { theme, type Theme } from '$lib/functions/theme';
 
+  let selectedTheme: Theme = $theme;
   const dispatch = createEventDispatcher();
 
   export let links: Array<{ href: string, label: string}>;
@@ -21,7 +22,7 @@
 
   <!-- Mobile menu -->
   <div
-    class="fixed w-full max-w-xs p-6 text-base font-semibold bg-white rounded-lg shadow-lg top-4 right-4 dark:bg-gray-900 text-slate-900"
+    class="fixed w-full max-w-xs p-6 text-base font-semibold bg-white rounded-lg shadow-lg top-4 right-4 dark:border dark:border-gray-400 dark:bg-gray-800 text-slate-900"
   >
 
     <!-- Closing button -->
@@ -61,9 +62,13 @@
             <i class="bi bi-chevron-down" />
           </span>
 
-          <select id="theme" class="absolute inset-0 w-full h-full opacity-0 appearance-none">
-            <option value="light" on:click={theme.setLight}>Clair</option>
-            <option value="dark" on:click={theme.setDark}>Sombre</option>
+          <select id="theme"
+            class="absolute inset-0 w-full h-full opacity-0 appearance-none"
+            bind:value={selectedTheme}
+            on:change={() => theme.set(selectedTheme)}
+          >
+            <option value="light">Clair</option>
+            <option value="dark">Sombre</option>
           </select>
         </div>
       </div>
