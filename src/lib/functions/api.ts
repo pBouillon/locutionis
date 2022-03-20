@@ -170,6 +170,40 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       },
     ],
   },
+  {
+    name: 'Catachrèse',
+    description: `
+    Une catachrèse est l'utilisation d'un mot pour désigner autre chose que ce
+    qu'il défini initialement. Dans certains cas il s'agit d'une métaphore qui
+    est passé dans la langue courante (ex: les pieds d'une table).
+    `,
+    goal: `
+    Une catachrèse est utilisée la plupart du temps pour désigner quelque chose
+    pour lequel la langue n'a pas de mot définissant ce dont on veut parler.
+    C'est par exemple le cas pour le "verre" lorsque l'on propose de "boire un
+    verre": le français n'a pas de mot pour désigner simplement le contenu d'un
+    verre.
+    `,
+    examples: [
+      'J\'ai abîmé la plume de mon stylo en appuyant trop fort.',
+      'Les ailes de cet avion sont sales !',
+      'Le pied de la table a été rongé par les thermites.',
+    ],
+    sources: [
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/Catachrèse',
+      },
+      {
+        name: 'Larousse',
+        href: 'https://www.larousse.fr/dictionnaires/francais/catachr%C3%A8se/13695',
+      },
+      {
+        name: 'Wiktionnaire',
+        href: 'https://fr.wiktionary.org/wiki/catachr%C3%A8see',
+      },
+    ],
+  },
 ];
 
 export const get = (name: string | undefined = undefined): FigureOfSpeech[] => {
