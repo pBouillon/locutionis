@@ -7,6 +7,7 @@
   const links = [
     { href: `${base}/`, label: 'Accueil' },
     { href: `${base}/glossary`, label: 'Glossaire' },
+    { href: 'https://github.com/pbouillon/locutionis', label: 'GitHub' },
   ];
 </script>
 
@@ -30,13 +31,19 @@
     class="flex items-center justify-center rounded md:hidden focus:outline-none focus:ring-2 focus:ring-primary/25 focus:ring-offset-2 focus:ring-offset-slate-50"
     on:click={() => (showMobileMenu = true)}
   >
-    <i class="px-1 text-3xl bi bi-list" />
+    <i class="px-1 text-3xl bi bi-list dark:text-slate-300" />
   </button>
 
   <div class="hidden gap-5 md:flex">
     {#each links as { href, label }}
       <a {href} class="navbar-link dark:text-slate-300">{label}</a>
     {/each}
+
+    <div class="pl-5 border-l">
+      <button on:click={theme.toggle}>
+        <i class="bi {$theme === 'light' ? 'bi-sun' : 'bi-moon-stars'} text-lg dark:text-slate-300 hover:text-primary" />
+      </button>
+    </div>
   </div>
 
   {#if showMobileMenu}

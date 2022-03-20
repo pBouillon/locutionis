@@ -13,6 +13,7 @@ function createThemeStore() {
     subscribe,
     setDark: () => update(() => setTheme('dark')),
     setLight: () => update(() => setTheme('light')),
+    toggle: () => update((current) => setTheme(current === 'light' ? 'dark' : 'light')),
   };
 }
 
