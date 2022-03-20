@@ -20,7 +20,7 @@
     let key = definition.name[0].toLocaleLowerCase();
     key = normalize(key);
 
-    return map.set(key, [...(map[key] ?? []), definition]);
+    return map.set(key, [...(map.get(key) ?? []), definition]);
   }, new Map<string, FigureOfSpeech[]>());
 
   $: filtered = Array.from(glossary.entries())
