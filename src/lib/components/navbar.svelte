@@ -1,5 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths';
+  import { theme } from '$lib/functions/theme';
 
   let showMobileMenu = false;
 
@@ -48,6 +49,12 @@
       <div
         class="fixed top-4 right-4 w-full max-w-xs bg-white rounded-lg shadow-lg p-6 text-base font-semibold text-slate-900"
       >
+        <div class="absolute top-5 right-5">
+          <button type="button" on:click={() => (showMobileMenu = false)}>
+            <i class="text-xl text-gray-400 bi bi-x-lg" />
+          </button>
+        </div>
+
         <ul class="space-y-5">
           {#each links as { href, label }}
             <li>
@@ -56,10 +63,30 @@
           {/each}
         </ul>
 
-        <div class="absolute top-5 right-5">
-          <button type="button" on:click={() => (showMobileMenu = false)}>
-            <i class="text-xl text-gray-400 bi bi-x-lg" />
-          </button>
+        <div class="mt-6 pt-6 border-t border-gray-400">
+          <div class="flex items-center justify-between">
+            <label class="text-lg tracking-wide" for="theme">Thème</label>
+
+            <div
+              class="relative flex items-center ring-1 ring-gray-400 rounded-lg shadow-sm p-2 font-semibold"
+            >
+              <span class="flex gap-3">
+                {#if $theme === 'light'}
+                  <i class="bi bi-sun" />
+                  Clair
+                {:else}
+                  <i class="bi bi-moon-stars" />
+                  Sombre
+                {/if}
+                <i class="bi bi-chevron-down" />
+              </span>
+
+              <select id="theme" class="absolute appearance-none inset-0 w-full h-full opacity-0">
+                <option value="light" on:click={theme.setLight}>Clair</option>
+                <option value="dark" on:click={theme.setDark}>Sombre</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </div>
