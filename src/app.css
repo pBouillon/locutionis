@@ -17,5 +17,5 @@ em {
 }
 
 .link {
-  @apply underline decoration-2 decoration-primary hover:text-primary;
+  @apply underline decoration-2 decoration-primary hover:text-primary dark:text-gray-200;
 }

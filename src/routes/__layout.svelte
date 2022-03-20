@@ -5,7 +5,7 @@
   import Navbar from '$lib/components/navbar.svelte';
 </script>
 
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen dark:bg-gray-900">
   <Navbar />
 
   <main class="flex-grow px-5 pt-2 my-5">

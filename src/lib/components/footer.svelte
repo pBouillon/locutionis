@@ -1,28 +1,18 @@
-<footer class="flex flex-col items-center gap-2 py-3 border-t">
-  <p class="flex gap-1">
-    <a href="https://github.com/pbouillon/locutionis">
-      <i class="bi bi-github"></i>
+<footer class="flex flex-col items-center gap-2 py-3 border-t md:mx-80 dark:border-slate-600">
+  <p class="flex gap-1 text-xs text-slate-600 dark:text-slate-300">
+    <a href="https://github.com/pbouillon/locutionis" class="text-primary">
+      <i class="bi bi-github" />
       Voir sur GitHub
     </a>
 
     -
 
-    <a href="https://github.com/pBouillon/locutionis/issues/new/choose">
+    <a href="https://github.com/pBouillon/locutionis/issues/new/choose" class="text-primary">
       Signaler une erreur
     </a>
   </p>
 
-  <p>
-    Créé par <a href="pbouillon.github.io">Pierre Bouillon</a>
+  <p class="text-xs text-slate-600 dark:text-slate-300">
+    Créé par <a href="pbouillon.github.io" class="text-primary">Pierre Bouillon</a>
   </p>
 </footer>
-
-<style>
-  a {
-    @apply text-primary;
-  }
-
-  p {
-    @apply text-xs text-gray-500;
-  }
-</style>

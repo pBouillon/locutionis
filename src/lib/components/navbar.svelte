@@ -14,7 +14,7 @@
   <div class="flex items-baseline gap-3">
     <a
       href="{base}/"
-      class="text-2xl font-bold tracking-wide md:text-4xl text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-primary"
+      class="text-2xl font-bold tracking-wide text-transparent md:text-4xl bg-clip-text bg-gradient-to-br from-indigo-600 to-primary"
     >
       <i class="bi bi-journal-text" />
       Locutionis
@@ -27,7 +27,7 @@
 
   <button
     type="button"
-    class="md:hidden rounded flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-primary/25 focus:ring-offset-2 focus:ring-offset-slate-50"
+    class="flex items-center justify-center rounded md:hidden focus:outline-none focus:ring-2 focus:ring-primary/25 focus:ring-offset-2 focus:ring-offset-slate-50"
     on:click={() => (showMobileMenu = true)}
   >
     <i class="px-1 text-3xl bi bi-list" />
@@ -35,7 +35,7 @@
 
   <div class="hidden gap-5 md:flex">
     {#each links as { href, label }}
-      <a {href} class="navbar-link">{label}</a>
+      <a {href} class="navbar-link dark:text-slate-300">{label}</a>
     {/each}
   </div>
 
@@ -47,30 +47,36 @@
       />
 
       <div
-        class="fixed top-4 right-4 w-full max-w-xs bg-white rounded-lg shadow-lg p-6 text-base font-semibold text-slate-900"
+        class="fixed w-full max-w-xs p-6 text-base font-semibold bg-white rounded-lg shadow-lg top-4 right-4 dark:bg-gray-900 text-slate-900"
       >
         <div class="absolute top-5 right-5">
           <button type="button" on:click={() => (showMobileMenu = false)}>
-            <i class="text-xl text-gray-400 bi bi-x-lg" />
+            <i
+              class="text-xl text-gray-400 dark:text-slate-300 dark:hover:text-slate-200 bi bi-x-lg"
+            />
           </button>
         </div>
 
         <ul class="space-y-5">
           {#each links as { href, label }}
             <li>
-              <a {href} class="navbar-link">{label}</a>
+              <a {href} class="navbar-link dark:text-slate-300 dark:hover:text-slate-200">{label}</a
+              >
             </li>
           {/each}
         </ul>
 
-        <div class="mt-6 pt-6 border-t border-gray-400">
+        <div class="pt-6 mt-6 border-t border-gray-400">
           <div class="flex items-center justify-between">
-            <label class="text-lg tracking-wide" for="theme">Thème</label>
+            <label
+              class="text-lg tracking-wide dark:text-slate-300 dark:hover:text-slate-200"
+              for="theme">Thème</label
+            >
 
             <div
-              class="relative flex items-center ring-1 ring-gray-400 rounded-lg shadow-sm p-2 font-semibold"
+              class="relative flex items-center p-2 font-semibold rounded-lg shadow-sm ring-1 ring-gray-400"
             >
-              <span class="flex gap-3">
+              <span class="flex gap-3 px-2 dark:text-slate-300 dark:hover:text-slate-200">
                 {#if $theme === 'light'}
                   <i class="bi bi-sun" />
                   Clair
@@ -81,7 +87,7 @@
                 <i class="bi bi-chevron-down" />
               </span>
 
-              <select id="theme" class="absolute appearance-none inset-0 w-full h-full opacity-0">
+              <select id="theme" class="absolute inset-0 w-full h-full opacity-0 appearance-none">
                 <option value="light" on:click={theme.setLight}>Clair</option>
                 <option value="dark" on:click={theme.setDark}>Sombre</option>
               </select>

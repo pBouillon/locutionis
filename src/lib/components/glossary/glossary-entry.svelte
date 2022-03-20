@@ -9,7 +9,7 @@
   <a href="{base}/glossary/{definition.name}" class="tracking-wide link">
     {definition.name}
   </a>
-  <p class="text-sm text-gray-600 truncate">
+  <p class="text-sm text-gray-600 truncate dark:text-slate-400">
     {definition.description}
   </p>
 </div>
