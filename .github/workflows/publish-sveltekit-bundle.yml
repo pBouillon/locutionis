@@ -23,21 +23,19 @@ jobs:
       run: |
         npm install
 
-    - name: Fetch changes on gh-pages
-      run: |
-        git checkout gh-pages
-        git merge master
-
     - name: Remove the precedent bundle
+      if: contains(github.ref, 'main')
       run: |
         rm -rf docs/*
 
     - name: Rebuild the bundle
+      if: contains(github.ref, 'main')
       run: |
         npm run build
         cp docs/index.html docs/404.html
 
     - name: Publish the new bundle
+      if: contains(github.ref, 'main')
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
