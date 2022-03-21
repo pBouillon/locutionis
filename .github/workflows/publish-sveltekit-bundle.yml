@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3.0.0
-    
+
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.0.0
       with:
@@ -25,13 +25,13 @@ jobs:
 
     - name: Remove the precedent bundle
       run: |
-        rm docs/*
-    
+        rm -rf docs/*
+
     - name: Rebuild the bundle
       run: |
         npm run build
         cp docs/index.html docs/404.html
-        
+
     - name: Publish the new bundle
       if: contains(github.ref, 'main')
       run: |
@@ -40,4 +40,3 @@ jobs:
         git add docs/
         git commit -m "[GitHub Actions] Regenerate the application's bundle"
         git push
-    
