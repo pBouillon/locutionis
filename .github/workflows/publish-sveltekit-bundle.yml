@@ -1,0 +1,43 @@
+name: Publish SvelteKit bundle
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-sveltekit-bundle:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3.0.0
+    
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3.0.0
+      with:
+        node-version: 16.x
+
+    - name: Install the dependencies
+      run: |
+        npm install
+
+    - name: Remove the precedent bundle
+      run: |
+        rm docs/*
+    
+    - name: Rebuild the bundle
+      run: |
+        npm run build
+        cp docs/index.html docs/404.html
+        
+    - name: Publish the new bundle
+      if: contains(github.ref, 'main')
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add docs/
+        git commit -m "[GitHub Actions] Regenerate the application's bundle"
+        git push
+    
