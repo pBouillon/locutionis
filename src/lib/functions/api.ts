@@ -204,6 +204,27 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       },
     ],
   },
+  {
+    name: 'Chleuasme',
+    description: `
+    Le chleuasme est le fait de se dévaloriser en faisant preuve de fausse
+    modestie.
+    `,
+    goal: `
+    En se critiquant, le locuteur cherche à s'attirer la sympathie de la
+    personne qui l'écoute.
+    `,
+    examples: [
+      'Je ne suis vraiment pas beau ce matin ...',
+      'Je ne maîtrise pas très bien le sujet mais je peux quand même regarder.',
+    ],
+    sources: [
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/Chleuasme',
+      },
+    ],
+  },
 ];
 
 export const get = (name: string | undefined = undefined): FigureOfSpeech[] => {
