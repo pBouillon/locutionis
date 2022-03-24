@@ -1,4 +1,4 @@
-const n=[{name:"Antanaclase",description:`
+const t=[{name:"Antanaclase",description:`
     On parle d'antanaclase lorsque l'on emploie deux fois un m\xEAme mot mais avec
     un sens diff\xE9rent: on parle alors de polys\xE9mie (plusieurs sens). Si le mot
     n'est pas r\xE9p\xE9t\xE9 il est alors question d'antanaclase elliptique.
@@ -58,4 +58,10 @@ const n=[{name:"Antanaclase",description:`
     C'est par exemple le cas pour le "verre" lorsque l'on propose de "boire un
     verre": le fran\xE7ais n'a pas de mot pour d\xE9signer simplement le contenu d'un
     verre.
-    `,examples:["J'ai ab\xEEm\xE9 la plume de mon stylo en appuyant trop fort.","Les ailes de cet avion sont sales !","Le pied de la table a \xE9t\xE9 rong\xE9 par les thermites."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Catachr\xE8se"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/catachr%C3%A8se/13695"},{name:"Wiktionnaire",href:"https://fr.wiktionary.org/wiki/catachr%C3%A8see"}]}],t=(r=void 0)=>{let e=n;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,i)=>a.name.localeCompare(i.name))};export{t as g};
+    `,examples:["J'ai ab\xEEm\xE9 la plume de mon stylo en appuyant trop fort.","Les ailes de cet avion sont sales !","Le pied de la table a \xE9t\xE9 rong\xE9 par les thermites."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Catachr\xE8se"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/catachr%C3%A8se/13695"},{name:"Wiktionnaire",href:"https://fr.wiktionary.org/wiki/catachr%C3%A8see"}]},{name:"Chleuasme",description:`
+    Le chleuasme est le fait de se d\xE9valoriser en faisant preuve de fausse
+    modestie.
+    `,goal:`
+    En se critiquant, le locuteur cherche \xE0 s'attirer la sympathie de la
+    personne qui l'\xE9coute.
+    `,examples:["Je ne suis vraiment pas beau ce matin ...","Je ne ma\xEEtrise pas tr\xE8s bien le sujet mais je peux quand m\xEAme regarder."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Chleuasme"}]}],s=(r=void 0)=>{let e=t;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,i)=>a.name.localeCompare(i.name))};export{s as g};
