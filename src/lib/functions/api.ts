@@ -225,6 +225,38 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       },
     ],
   },
+  {
+    name: 'Hyperhypotaxe',
+    description: `
+    On parle d'hyperhypotaxe lorsqu'une phrase est construite avec un nombre
+    excessif de prépositions.
+    `,
+    goal: `
+    L'hyperhypotaxe permet souvent de mettre démesurément en avant les détails
+    d'un argumentaire, perdant ainsi la personne qui l'écoute ou l'empêchant de
+    formuler facilement un contre-argument, ces derniers n'en finissant pas.
+    `,
+    examples: [
+      `Martial est fils de noble, puisque son père est quasi-baron, étant donné
+      que sa mère était une fille Angenaux, qui étaient reconnus comme maîtres
+      des terres, et que sa belle-mère avait des accointances avec les De
+      Bellot, à qui appartient le château...`,
+    ],
+    sources: [
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/Hyperhypotaxe',
+      },
+      {
+        name: 'Wiktionnaire',
+        href: 'https://fr.wiktionary.org/wiki/hyperhypotaxe',
+      },
+      {
+        name: 'WebLettres',
+        href: 'https://www.weblettres.net/spip/article.php3?id_article=122',
+      },
+    ],
+  },
 ];
 
 export const get = (name: string | undefined = undefined): FigureOfSpeech[] => {
