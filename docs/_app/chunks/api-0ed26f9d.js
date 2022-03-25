@@ -1,4 +1,4 @@
-const t=[{name:"Antanaclase",description:`
+const i=[{name:"Antanaclase",description:`
     On parle d'antanaclase lorsque l'on emploie deux fois un m\xEAme mot mais avec
     un sens diff\xE9rent: on parle alors de polys\xE9mie (plusieurs sens). Si le mot
     n'est pas r\xE9p\xE9t\xE9 il est alors question d'antanaclase elliptique.
@@ -64,4 +64,14 @@ const t=[{name:"Antanaclase",description:`
     `,goal:`
     En se critiquant, le locuteur cherche \xE0 s'attirer la sympathie de la
     personne qui l'\xE9coute.
-    `,examples:["Je ne suis vraiment pas beau ce matin ...","Je ne ma\xEEtrise pas tr\xE8s bien le sujet mais je peux quand m\xEAme regarder."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Chleuasme"}]}],s=(r=void 0)=>{let e=t;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,i)=>a.name.localeCompare(i.name))};export{s as g};
+    `,examples:["Je ne suis vraiment pas beau ce matin ...","Je ne ma\xEEtrise pas tr\xE8s bien le sujet mais je peux quand m\xEAme regarder."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Chleuasme"}]},{name:"Hyperhypotaxe",description:`
+    On parle d'hyperhypotaxe lorsqu'une phrase est construite avec un nombre
+    excessif de pr\xE9positions.
+    `,goal:`
+    L'hyperhypotaxe permet souvent de mettre d\xE9mesur\xE9ment en avant les d\xE9tails
+    d'un argumentaire, perdant ainsi la personne qui l'\xE9coute ou l'emp\xEAchant de
+    formuler facilement un contre-argument, ces derniers n'en finissant pas.
+    `,examples:[`Martial est fils de noble, puisque son p\xE8re est quasi-baron, \xE9tant donn\xE9
+      que sa m\xE8re \xE9tait une fille Angenaux, qui \xE9taient reconnus comme ma\xEEtres
+      des terres, et que sa belle-m\xE8re avait des accointances avec les De
+      Bellot, \xE0 qui appartient le ch\xE2teau...`],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Hyperhypotaxe"},{name:"Wiktionnaire",href:"https://fr.wiktionary.org/wiki/hyperhypotaxe"},{name:"WebLettres",href:"https://www.weblettres.net/spip/article.php3?id_article=122"}]}],n=(r=void 0)=>{let e=i;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,t)=>a.name.localeCompare(t.name))};export{n as g};
