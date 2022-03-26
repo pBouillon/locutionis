@@ -257,6 +257,33 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       },
     ],
   },
+  {
+    name: 'Parataxe',
+    description: `
+    La parataxe consiste en la juxtaposition de deux mots ou phrases sans mots
+    de liaison. Dans une phrase, cette dernière semblera alors coupé alors que
+    dans le cadre de mots, ces derniers donneront une impression télégraphique.
+    `,
+    goal: `
+    Puisque la relation entre les termes n'est pas définie, l'utilisation de la
+    parataxe fait sonner la seconde partie comme la conséquence de la première.
+    `,
+    examples: [
+      'Vous n\'êtes point gentilhomme, vous n\'aurez pas ma fille.',
+      `Il faisait beau. Le Soleil illuminait la pièce. Au dehors, le chant des
+      oiseaux résonnait dans la clairière.`,
+    ],
+    sources: [
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/Parataxe',
+      },
+      {
+        name: 'La Culture Générale',
+        href: 'https://www.laculturegenerale.com/parataxe-definition-simple-exemples/',
+      },
+    ],
+  },
 ];
 
 export const get = (name: string | undefined = undefined): FigureOfSpeech[] => {
