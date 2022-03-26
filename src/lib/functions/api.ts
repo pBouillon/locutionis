@@ -284,6 +284,38 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       },
     ],
   },
+  {
+    name: 'Antonomase',
+    description: `
+    L'antonomase est lorsque l'on utilise un nom commun comme nom propre ou bien
+    l'inverse.
+    `,
+    goal: `
+    L'antonomase permet de souligner une aspect de ce que l'on désigne
+    en l'assimilant à autre chose souvent connue pour une caractéristique
+    spécifique.
+    `,
+    examples: [
+      'J\'irais acheter des sandwichs pour notre pique-nique de demain midi.',
+      'L\'Arc de Triomphe a été rénové.',
+      'Peux-tu me passer le Sopalin ?',
+      'Encore un rendez-vous amoureux ? Quel Don Juan !',
+    ],
+    sources: [
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/Antonomase',
+      },
+      {
+        name: 'Larousse',
+        href: 'https://www.larousse.fr/dictionnaires/francais/antonomase/4354',
+      },
+      {
+        name: 'Youtube - Point Culture',
+        href: 'https://youtu.be/ByDNEsBNf24?t=1278',
+      },
+    ],
+  },
 ];
 
 export const get = (name: string | undefined = undefined): FigureOfSpeech[] => {
