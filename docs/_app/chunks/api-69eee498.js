@@ -1,4 +1,4 @@
-const i=[{name:"Antanaclase",description:`
+const t=[{name:"Antanaclase",description:`
     On parle d'antanaclase lorsque l'on emploie deux fois un m\xEAme mot mais avec
     un sens diff\xE9rent: on parle alors de polys\xE9mie (plusieurs sens). Si le mot
     n'est pas r\xE9p\xE9t\xE9 il est alors question d'antanaclase elliptique.
@@ -74,4 +74,12 @@ const i=[{name:"Antanaclase",description:`
     `,examples:[`Martial est fils de noble, puisque son p\xE8re est quasi-baron, \xE9tant donn\xE9
       que sa m\xE8re \xE9tait une fille Angenaux, qui \xE9taient reconnus comme ma\xEEtres
       des terres, et que sa belle-m\xE8re avait des accointances avec les De
-      Bellot, \xE0 qui appartient le ch\xE2teau...`],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Hyperhypotaxe"},{name:"Wiktionnaire",href:"https://fr.wiktionary.org/wiki/hyperhypotaxe"},{name:"WebLettres",href:"https://www.weblettres.net/spip/article.php3?id_article=122"}]}],n=(r=void 0)=>{let e=i;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,t)=>a.name.localeCompare(t.name))};export{n as g};
+      Bellot, \xE0 qui appartient le ch\xE2teau...`],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Hyperhypotaxe"},{name:"Wiktionnaire",href:"https://fr.wiktionary.org/wiki/hyperhypotaxe"},{name:"WebLettres",href:"https://www.weblettres.net/spip/article.php3?id_article=122"}]},{name:"Parataxe",description:`
+    La parataxe consiste en la juxtaposition de deux mots ou phrases sans mots
+    de liaison. Dans une phrase, cette derni\xE8re semblera alors coup\xE9 alors que
+    dans le cadre de mots, ces derniers donneront une impression t\xE9l\xE9graphique.
+    `,goal:`
+    Puisque la relation entre les termes n'est pas d\xE9finie, l'utilisation de la
+    parataxe fait sonner la seconde partie comme la cons\xE9quence de la premi\xE8re.
+    `,examples:["Vous n'\xEAtes point gentilhomme, vous n'aurez pas ma fille.",`Il faisait beau. Le Soleil illuminait la pi\xE8ce. Au dehors, le chant des
+      oiseaux r\xE9sonnait dans la clairi\xE8re.`],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Parataxe"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/parataxe-definition-simple-exemples/"}]}],s=(r=void 0)=>{let e=t;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,i)=>a.name.localeCompare(i.name))};export{s as g};
