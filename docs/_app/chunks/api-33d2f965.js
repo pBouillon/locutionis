@@ -1,4 +1,4 @@
-const t=[{name:"Antanaclase",description:`
+const n=[{name:"Antanaclase",description:`
     On parle d'antanaclase lorsque l'on emploie deux fois un m\xEAme mot mais avec
     un sens diff\xE9rent: on parle alors de polys\xE9mie (plusieurs sens). Si le mot
     n'est pas r\xE9p\xE9t\xE9 il est alors question d'antanaclase elliptique.
@@ -82,4 +82,11 @@ const t=[{name:"Antanaclase",description:`
     Puisque la relation entre les termes n'est pas d\xE9finie, l'utilisation de la
     parataxe fait sonner la seconde partie comme la cons\xE9quence de la premi\xE8re.
     `,examples:["Vous n'\xEAtes point gentilhomme, vous n'aurez pas ma fille.",`Il faisait beau. Le Soleil illuminait la pi\xE8ce. Au dehors, le chant des
-      oiseaux r\xE9sonnait dans la clairi\xE8re.`],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Parataxe"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/parataxe-definition-simple-exemples/"}]}],s=(r=void 0)=>{let e=t;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,i)=>a.name.localeCompare(i.name))};export{s as g};
+      oiseaux r\xE9sonnait dans la clairi\xE8re.`],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Parataxe"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/parataxe-definition-simple-exemples/"}]},{name:"Antonomase",description:`
+    L'antonomase est lorsque l'on utilise un nom commun comme nom propre ou bien
+    l'inverse.
+    `,goal:`
+    L'antonomase permet de souligner une aspect de ce que l'on d\xE9signe
+    en l'assimilant \xE0 autre chose souvent connue pour une caract\xE9ristique
+    sp\xE9cifique.
+    `,examples:["J'irais acheter des sandwichs pour notre pique-nique de demain midi.","L'Arc de Triomphe a \xE9t\xE9 r\xE9nov\xE9.","Peux-tu me passer le Sopalin ?","Encore un rendez-vous amoureux ? Quel Don Juan !"],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Antonomase"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/antonomase/4354"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=1278"}]}],s=(i=void 0)=>{let e=n;return i&&(e=e.filter(a=>a.name===i)),e.sort((a,r)=>a.name.localeCompare(r.name))};export{s as g};
