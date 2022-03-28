@@ -316,6 +316,34 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       },
     ],
   },
+  {
+    name: 'Prétérition',
+    description: `
+    La prétérition consiste à parler de quelque chose juste après avoir annoncé
+    que nous n'allions pas le faire.
+    `,
+    goal: `
+    L'emploi de la prétérition permet d'aborder des sujets sensibles en
+    déresponsabilisant l'orateur.
+    Elle est également employée lorsque l'auteur souhaite aborder un sujet qu'il
+    se refuse à décrire.
+    `,
+    examples: [
+      'Je n\'ai pas besoin de te rappeler que je dois envoyer ce document ce soir.',
+      'Je ne vous dirais pas que le coût de la vie est trop élevé (...)',
+      'Madame Y, pour ne pas la citer, (...)',
+    ],
+    sources: [
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/Prétérition',
+      },
+      {
+        name: 'La Culture Générale',
+        href: 'https://www.laculturegenerale.com/preterition-definition-exemples/',
+      },
+    ],
+  },
 ];
 
 export const get = (name: string | undefined = undefined): FigureOfSpeech[] => {
