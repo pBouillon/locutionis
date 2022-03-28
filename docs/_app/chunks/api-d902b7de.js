@@ -89,4 +89,12 @@ const n=[{name:"Antanaclase",description:`
     L'antonomase permet de souligner une aspect de ce que l'on d\xE9signe
     en l'assimilant \xE0 autre chose souvent connue pour une caract\xE9ristique
     sp\xE9cifique.
-    `,examples:["J'irais acheter des sandwichs pour notre pique-nique de demain midi.","L'Arc de Triomphe a \xE9t\xE9 r\xE9nov\xE9.","Peux-tu me passer le Sopalin ?","Encore un rendez-vous amoureux ? Quel Don Juan !"],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Antonomase"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/antonomase/4354"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=1278"}]}],s=(i=void 0)=>{let e=n;return i&&(e=e.filter(a=>a.name===i)),e.sort((a,r)=>a.name.localeCompare(r.name))};export{s as g};
+    `,examples:["J'irais acheter des sandwichs pour notre pique-nique de demain midi.","L'Arc de Triomphe a \xE9t\xE9 r\xE9nov\xE9.","Peux-tu me passer le Sopalin ?","Encore un rendez-vous amoureux ? Quel Don Juan !"],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Antonomase"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/antonomase/4354"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=1278"}]},{name:"Pr\xE9t\xE9rition",description:`
+    La pr\xE9t\xE9rition consiste \xE0 parler de quelque chose juste apr\xE8s avoir annonc\xE9
+    que nous n'allions pas le faire.
+    `,goal:`
+    L'emploi de la pr\xE9t\xE9rition permet d'aborder des sujets sensibles en
+    d\xE9responsabilisant l'orateur.
+    Elle est \xE9galement employ\xE9e lorsque l'auteur souhaite aborder un sujet qu'il
+    se refuse \xE0 d\xE9crire.
+    `,examples:["Je n'ai pas besoin de te rappeler que je dois envoyer ce document ce soir.","Je ne vous dirais pas que le co\xFBt de la vie est trop \xE9lev\xE9 (...)","Madame Y, pour ne pas la citer, (...)"],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Pr\xE9t\xE9rition"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/preterition-definition-exemples/"}]}],s=(r=void 0)=>{let e=n;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,i)=>a.name.localeCompare(i.name))};export{s as g};
