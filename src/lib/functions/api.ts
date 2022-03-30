@@ -344,6 +344,65 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       },
     ],
   },
+  {
+    name: 'Litote',
+    description: `
+    La litote est une figure de style par laquelle on exprime l'inverse de ce
+    que l'on souhaite faire comprendre. Elle peut également être exprimée par
+    une double négation.
+    `,
+    goal: `
+    En en laissant entendre moins que ce que l'on veut, on renforce l'idée que
+    l'on souhaite faire passer. Par exemple, dire qu'un repas n'était "pas
+    mauvais" signifie bien généralement qu'il était très bon.
+    `,
+    examples: [
+      'Pas mauvais ce repas !',
+      'Vous n\'êtes pas sans savoir (...)',
+      'Ça n\'était pas le match du siècle.',
+    ],
+    sources: [
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/Litote',
+      },
+      {
+        name: 'Youtube - Point Culture',
+        href: 'https://youtu.be/ByDNEsBNf24?t=207',
+      },
+    ],
+  },
+  {
+    name: 'Euphémisme',
+    description: `
+    L'euphémisme est le fait d'exprimer une idée en atténuant la réalité en
+    employant un mot moins fort.
+    `,
+    goal: `
+    Le but de l'euphémisme est d'adoucir des propos qui pourraient être
+    blessants ou choquant. Elle peut également avoir un effet comique en étant
+    utilisée de manière sarcastique.
+    `,
+    examples: [
+      'La Russie a engagé une opération militaire spéciale en Ukraine.',
+      'Je ne roule pas sur l\'or.',
+      'Il a passé l\'arme à gauche il y a trois ans.',
+    ],
+    sources: [
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/Euphémisme',
+      },
+      {
+        name: 'Youtube - Point Culture',
+        href: 'https://youtu.be/ByDNEsBNf24?t=207',
+      },
+      {
+        name: 'Office québécois de la langue française',
+        href: 'http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=3202',
+      },
+    ],
+  },
 ];
 
 export const get = (name: string | undefined = undefined): FigureOfSpeech[] => {
