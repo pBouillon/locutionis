@@ -16,7 +16,11 @@
   export let searchText: string = '';
 
   $: glossary = definitions.reduce((map, definition) => {
-    let key = definition.name[0].toLocaleLowerCase();
+    const key = definition.name[0]
+      .toLocaleLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+
     return map.set(key, [...(map.get(key) ?? []), definition]);
   }, new Map<string, FigureOfSpeech[]>());
 
