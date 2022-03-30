@@ -1,4 +1,4 @@
-const n=[{name:"Antanaclase",description:`
+const t=[{name:"Antanaclase",description:`
     On parle d'antanaclase lorsque l'on emploie deux fois un m\xEAme mot mais avec
     un sens diff\xE9rent: on parle alors de polys\xE9mie (plusieurs sens). Si le mot
     n'est pas r\xE9p\xE9t\xE9 il est alors question d'antanaclase elliptique.
@@ -97,4 +97,19 @@ const n=[{name:"Antanaclase",description:`
     d\xE9responsabilisant l'orateur.
     Elle est \xE9galement employ\xE9e lorsque l'auteur souhaite aborder un sujet qu'il
     se refuse \xE0 d\xE9crire.
-    `,examples:["Je n'ai pas besoin de te rappeler que je dois envoyer ce document ce soir.","Je ne vous dirais pas que le co\xFBt de la vie est trop \xE9lev\xE9 (...)","Madame Y, pour ne pas la citer, (...)"],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Pr\xE9t\xE9rition"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/preterition-definition-exemples/"}]}],s=(r=void 0)=>{let e=n;return r&&(e=e.filter(a=>a.name===r)),e.sort((a,i)=>a.name.localeCompare(i.name))};export{s as g};
+    `,examples:["Je n'ai pas besoin de te rappeler que je dois envoyer ce document ce soir.","Je ne vous dirais pas que le co\xFBt de la vie est trop \xE9lev\xE9 (...)","Madame Y, pour ne pas la citer, (...)"],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Pr\xE9t\xE9rition"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/preterition-definition-exemples/"}]},{name:"Litote",description:`
+    La litote est une figure de style par laquelle on exprime l'inverse de ce
+    que l'on souhaite faire comprendre. Elle peut \xE9galement \xEAtre exprim\xE9e par
+    une double n\xE9gation.
+    `,goal:`
+    En en laissant entendre moins que ce que l'on veut, on renforce l'id\xE9e que
+    l'on souhaite faire passer. Par exemple, dire qu'un repas n'\xE9tait "pas
+    mauvais" signifie bien g\xE9n\xE9ralement qu'il \xE9tait tr\xE8s bon.
+    `,examples:["Pas mauvais ce repas !","Vous n'\xEAtes pas sans savoir (...)","\xC7a n'\xE9tait pas le match du si\xE8cle."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Litote"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=207"}]},{name:"Euph\xE9misme",description:`
+    L'euph\xE9misme est le fait d'exprimer une id\xE9e en att\xE9nuant la r\xE9alit\xE9 en
+    employant un mot moins fort.
+    `,goal:`
+    Le but de l'euph\xE9misme est d'adoucir des propos qui pourraient \xEAtre
+    blessants ou choquant. Elle peut \xE9galement avoir un effet comique en \xE9tant
+    utilis\xE9e de mani\xE8re sarcastique.
+    `,examples:["La Russie a engag\xE9 une op\xE9ration militaire sp\xE9ciale en Ukraine.","Je ne roule pas sur l'or.","Il a pass\xE9 l'arme \xE0 gauche il y a trois ans."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Euph\xE9misme"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=207"},{name:"Office qu\xE9b\xE9cois de la langue fran\xE7aise",href:"http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=3202"}]}],s=(i=void 0)=>{let e=t;return i&&(e=e.filter(a=>a.name===i)),e.sort((a,r)=>a.name.localeCompare(r.name))};export{s as g};
