@@ -1,4 +1,4 @@
-const t=[{name:"Antanaclase",description:`
+const s=[{name:"Antanaclase",description:`
     On parle d'antanaclase lorsque l'on emploie deux fois un m\xEAme mot mais avec
     un sens diff\xE9rent: on parle alors de polys\xE9mie (plusieurs sens). Si le mot
     n'est pas r\xE9p\xE9t\xE9 il est alors question d'antanaclase elliptique.
@@ -112,4 +112,10 @@ const t=[{name:"Antanaclase",description:`
     Le but de l'euph\xE9misme est d'adoucir des propos qui pourraient \xEAtre
     blessants ou choquant. Elle peut \xE9galement avoir un effet comique en \xE9tant
     utilis\xE9e de mani\xE8re sarcastique.
-    `,examples:["La Russie a engag\xE9 une op\xE9ration militaire sp\xE9ciale en Ukraine.","Je ne roule pas sur l'or.","Il a pass\xE9 l'arme \xE0 gauche il y a trois ans."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Euph\xE9misme"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=207"},{name:"Office qu\xE9b\xE9cois de la langue fran\xE7aise",href:"http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=3202"}]}],s=(i=void 0)=>{let e=t;return i&&(e=e.filter(a=>a.name===i)),e.sort((a,r)=>a.name.localeCompare(r.name))};export{s as g};
+    `,examples:["La Russie a engag\xE9 une op\xE9ration militaire sp\xE9ciale en Ukraine.","Je ne roule pas sur l'or.","Il a pass\xE9 l'arme \xE0 gauche il y a trois ans."],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Euph\xE9misme"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=207"},{name:"Office qu\xE9b\xE9cois de la langue fran\xE7aise",href:"http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=3202"}]},{name:"M\xE9talepse",description:`
+    Une m\xE9talepse est une figure de style dans laquelle on remplace la cause
+    par la cons\xE9quence et inversement.
+    `,goal:`
+    La m\xE9talepse permet de passer sous silence une id\xE9e et de laisser
+    le lecteur se repr\xE9senter ce qui est r\xE9ellement entendu.
+    `,examples:["Ce soir, nous d\xEEnons en Enfer !","Il ne sera pas l\xE0 ce matin, il a trop bu hier.","Comme tu as grandi !"],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M\xE9talepse"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/m%C3%A9talepse/50831"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=1344"}]}],t=(i=void 0)=>{let e=s;return i&&(e=e.filter(a=>a.name===i)),e.sort((a,r)=>a.name.localeCompare(r.name))};export{t as g};
