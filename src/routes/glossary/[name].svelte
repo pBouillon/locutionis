@@ -25,7 +25,7 @@
 
 {#if firstExample}
   <div class="mb-8 md:mb-12 md:mt-5">
-    <Quote text={firstExample} />
+    <Quote quote={firstExample} />
   </div>
 {/if}
 
@@ -50,7 +50,12 @@
 
       <div class="flex flex-col gap-3 text-sm">
         {#each definition.examples as example}
-          <p class="dark:text-slate-300">- {example}</p>
+          <p class="flex flex-col">
+            <span class="dark:text-slate-300">- {example.text}</span>
+            {#if example.source}
+              <span class="text-slate-500">{example.source}</span>
+            {/if}
+          </p>
         {/each}
       </div>
     </section>
