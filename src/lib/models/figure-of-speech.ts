@@ -1,3 +1,4 @@
+import type { Quote } from "./quote";
 import type { Source } from "./source";
 
 /**
@@ -14,7 +15,7 @@ export interface FigureOfSpeech {
   goal: string;
 
   /** Sentences using this figure of speech */
-  examples: string[];
+  examples: Quote[];
 
   /** External sources from which the previous information where gathered */
   sources: Source[];
