@@ -114,9 +114,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     ou expression.
     `,
     examples: [
-      'Il n\'est plus que l\'ombre de lui-même.',
-      'Il me casse les pieds.',
-      'Il est mort dans la fleur de l\'âge.',
+      `Il n'est plus que l'ombre de lui-même.`,
+      `Il me casse les pieds.`,
+      `Il est mort dans la fleur de l'âge.`,
     ],
     sources: [
       {
@@ -151,9 +151,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     notre discours concerne l'entièreté des habitants de France.
     `,
     examples: [
-      'Tu veux boire un verre ?',
-      'Je n\'ai plus de batterie.',
-      'La France a obtenu une médaille d\'or aux Jeux Olympiques.',
+      `Tu veux boire un verre ?`,
+      `Je n'ai plus de batterie.`,
+      `La France a obtenu une médaille d'or aux Jeux Olympiques.`,
     ],
     sources: [
       {
@@ -185,9 +185,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     verre.
     `,
     examples: [
-      'J\'ai abîmé la plume de mon stylo en appuyant trop fort.',
-      'Les ailes de cet avion sont sales !',
-      'Le pied de la table a été rongé par les thermites.',
+      `J'ai abîmé la plume de mon stylo en appuyant trop fort.`,
+      `Les ailes de cet avion sont sales !`,
+      `Le pied de la table a été rongé par les thermites.`,
     ],
     sources: [
       {
@@ -215,8 +215,8 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     personne qui l'écoute.
     `,
     examples: [
-      'Je ne suis vraiment pas beau ce matin ...',
-      'Je ne maîtrise pas très bien le sujet mais je peux quand même regarder.',
+      `Je ne suis vraiment pas beau ce matin ...`,
+      `Je ne maîtrise pas très bien le sujet mais je peux quand même regarder.`,
     ],
     sources: [
       {
@@ -269,7 +269,7 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     parataxe fait sonner la seconde partie comme la conséquence de la première.
     `,
     examples: [
-      'Vous n\'êtes point gentilhomme, vous n\'aurez pas ma fille.',
+      `Vous n'êtes point gentilhomme, vous n'aurez pas ma fille.`,
       `Il faisait beau. Le Soleil illuminait la pièce. Au dehors, le chant des
       oiseaux résonnait dans la clairière.`,
     ],
@@ -296,10 +296,10 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     spécifique.
     `,
     examples: [
-      'J\'irais acheter des sandwichs pour notre pique-nique de demain midi.',
-      'L\'Arc de Triomphe a été rénové.',
-      'Peux-tu me passer le Sopalin ?',
-      'Encore un rendez-vous amoureux ? Quel Don Juan !',
+      `J'irais acheter des sandwichs pour notre pique-nique de demain midi.`,
+      `L'Arc de Triomphe a été rénové.`,
+      `Peux-tu me passer le Sopalin ?`,
+      `Encore un rendez-vous amoureux ? Quel Don Juan !`,
     ],
     sources: [
       {
@@ -329,9 +329,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     se refuse à décrire.
     `,
     examples: [
-      'Je n\'ai pas besoin de te rappeler que je dois envoyer ce document ce soir.',
-      'Je ne vous dirais pas que le coût de la vie est trop élevé (...)',
-      'Madame Y, pour ne pas la citer, (...)',
+      `Je n'ai pas besoin de te rappeler que je dois envoyer ce document ce soir.`,
+      `Je ne vous dirais pas que le coût de la vie est trop élevé (...)`,
+      `Madame Y, pour ne pas la citer, (...)`,
     ],
     sources: [
       {
@@ -357,9 +357,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     mauvais" signifie bien généralement qu'il était très bon.
     `,
     examples: [
-      'Pas mauvais ce repas !',
-      'Vous n\'êtes pas sans savoir (...)',
-      'Ça n\'était pas le match du siècle.',
+      `Pas mauvais ce repas !`,
+      `Vous n'êtes pas sans savoir (...)`,
+      `Ça n'était pas le match du siècle.`,
     ],
     sources: [
       {
@@ -384,9 +384,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     utilisée de manière sarcastique.
     `,
     examples: [
-      'La Russie a engagé une opération militaire spéciale en Ukraine.',
-      'Je ne roule pas sur l\'or.',
-      'Il a passé l\'arme à gauche il y a trois ans.',
+      `La Russie a engagé une opération militaire spéciale en Ukraine.`,
+      `Je ne roule pas sur l'or.`,
+      `Il a passé l'arme à gauche il y a trois ans.`,
     ],
     sources: [
       {
@@ -400,6 +400,35 @@ const figuresOfSpeech: FigureOfSpeech[] = [
       {
         name: 'Office québécois de la langue française',
         href: 'http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=3202',
+      },
+    ],
+  },{
+    name: 'Métalepse',
+    description: `
+    Une métalepse est une figure de style dans laquelle on remplace la cause
+    par la conséquence et inversement.
+    `,
+    goal: `
+    La métalepse permet de passer sous silence une idée et de laisser
+    le lecteur se représenter ce qui est réellement entendu.
+    `,
+    examples: [
+      `Ce soir, nous dînons en Enfer !`,
+      `Il ne sera pas là ce matin, il a trop bu hier.`,
+      `Comme tu as grandi !`,
+    ],
+    sources: [
+      {
+        name: 'Wikipédia',
+        href: 'https://fr.wikipedia.org/wiki/Métalepse',
+      },
+      {
+        name: 'Larousse',
+        href: 'https://www.larousse.fr/dictionnaires/francais/m%C3%A9talepse/50831',
+      },
+      {
+        name: 'Youtube - Point Culture',
+        href: 'https://youtu.be/ByDNEsBNf24?t=1344',
       },
     ],
   },
