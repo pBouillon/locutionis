@@ -55,9 +55,13 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     examples: [
       {
         text: `Et cette terre était proche, et elle lui apparaissait comme un bouclier sur la mer sombre.`,
+        source: `Homère, L'Odyssée, Chapitre 5`,
       },
       { text: `Tu es fait comme un rat!` },
-      { text: `Sa barbe était d'argent comme un ruisseau d'avril.` },
+      {
+        text: `Sa barbe était d'argent comme un ruisseau d'avril.`,
+        source: `Victor Hugo, Booz endormi`,
+      },
     ],
     sources: [
       {
@@ -91,7 +95,10 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     de rechercher la précision.
     `,
     examples: [
-      { text: `J'espère, que dis-je ? Je suis sûr qu'on vous rendra justice.` },
+      {
+        text: `J'espère, que dis-je ? Je suis sûr qu'on vous rendra justice.`,
+        source: `Jean-Baptiste Chassignet, Mespris de la vie et consolation contre la mort`,
+      },
       { text: `Votre prudence ou plutôt votre lâcheté nous ont perdu.` },
     ],
     sources: [
@@ -276,7 +283,10 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     parataxe fait sonner la seconde partie comme la conséquence de la première.
     `,
     examples: [
-      { text: `Vous n'êtes point gentilhomme, vous n'aurez pas ma fille.` },
+      {
+        text: `Vous n'êtes point gentilhomme, vous n'aurez pas ma fille.`,
+        source: `Molière, Le Bourgeois Gentilhomme, Scène XII`,
+      },
       {
         text: `Il faisait beau. Le Soleil illuminait la pièce. Au dehors, le chant des oiseaux résonnait dans la clairière.`,
       },
@@ -422,7 +432,7 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     le lecteur se représenter ce qui est réellement entendu.
     `,
     examples: [
-      { text: `Ce soir, nous dînons en Enfer !` },
+      { text: `Ce soir, nous dînons en Enfer !`, source: `300` },
       { text: `Il ne sera pas là ce matin, il a trop bu hier.` },
       { text: `Comme tu as grandi !` },
     ],
