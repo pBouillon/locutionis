@@ -17,9 +17,12 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     avoir compris le premier.
     `,
     examples: [
-      `Le cœur a ses raisons que la raison ne connaît point.`,
-      `Adieu, monsieur l'homme d'affaires, qui n'avez fait celles de personne.`,
-      `Les étudiants, c'est comme le linge, quand il fait beau, ça sèche.`,
+      { text: `Le cœur a ses raisons que la raison ne connaît point.`, source: 'Pascal' },
+      {
+        text: `Adieu, monsieur l'homme d'affaires, qui n'avez fait celles de personne.`,
+        source: 'Marivaux, Madame Argante I, X, La Mère confidente',
+      },
+      { text: `Les étudiants, c'est comme le linge, quand il fait beau, ça sèche.` },
     ],
     sources: [
       {
@@ -50,9 +53,15 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     souligner leurs points communs pour imager ses propos.
     `,
     examples: [
-      `Et cette terre était proche, et elle lui apparaissait comme un bouclier sur la mer sombre.`,
-      `Tu es fait comme un rat!`,
-      `Sa barbe était d'argent comme un ruisseau d'avril.`,
+      {
+        text: `Et cette terre était proche, et elle lui apparaissait comme un bouclier sur la mer sombre.`,
+        source: `Homère, L'Odyssée, Chapitre 5`,
+      },
+      { text: `Tu es fait comme un rat!` },
+      {
+        text: `Sa barbe était d'argent comme un ruisseau d'avril.`,
+        source: `Victor Hugo, Booz endormi`,
+      },
     ],
     sources: [
       {
@@ -86,8 +95,11 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     de rechercher la précision.
     `,
     examples: [
-      `J'espère, que dis-je ? Je suis sûr qu'on vous rendra justice.`,
-      `Votre prudence ou plutôt votre lâcheté nous ont perdu.`,
+      {
+        text: `J'espère, que dis-je ? Je suis sûr qu'on vous rendra justice.`,
+        source: `Jean-Baptiste Chassignet, Mespris de la vie et consolation contre la mort`,
+      },
+      { text: `Votre prudence ou plutôt votre lâcheté nous ont perdu.` },
     ],
     sources: [
       {
@@ -114,9 +126,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     ou expression.
     `,
     examples: [
-      `Il n'est plus que l'ombre de lui-même.`,
-      `Il me casse les pieds.`,
-      `Il est mort dans la fleur de l'âge.`,
+      { text: `Il n'est plus que l'ombre de lui-même.` },
+      { text: `Il me casse les pieds.` },
+      { text: `Il est mort dans la fleur de l'âge.` },
     ],
     sources: [
       {
@@ -151,14 +163,14 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     notre discours concerne l'entièreté des habitants de France.
     `,
     examples: [
-      `Tu veux boire un verre ?`,
-      `Je n'ai plus de batterie.`,
-      `La France a obtenu une médaille d'or aux Jeux Olympiques.`,
+      { text: `Tu veux boire un verre ?` },
+      { text: `Je n'ai plus de batterie.` },
+      { text: `La France a obtenu une médaille d'or aux Jeux Olympiques.` },
     ],
     sources: [
       {
         name: 'linternaute',
-        href: 'https://www.linternaute.fr/dictionnaire/fr/definition/metonymie/'
+        href: 'https://www.linternaute.fr/dictionnaire/fr/definition/metonymie/',
       },
       {
         name: 'Wikipédia',
@@ -185,9 +197,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     verre.
     `,
     examples: [
-      `J'ai abîmé la plume de mon stylo en appuyant trop fort.`,
-      `Les ailes de cet avion sont sales !`,
-      `Le pied de la table a été rongé par les thermites.`,
+      { text: `J'ai abîmé la plume de mon stylo en appuyant trop fort.` },
+      { text: `Les ailes de cet avion sont sales !` },
+      { text: `Le pied de la table a été rongé par les thermites.` },
     ],
     sources: [
       {
@@ -215,8 +227,8 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     personne qui l'écoute.
     `,
     examples: [
-      `Je ne suis vraiment pas beau ce matin ...`,
-      `Je ne maîtrise pas très bien le sujet mais je peux quand même regarder.`,
+      { text: `Je ne suis vraiment pas beau ce matin ...` },
+      { text: `Je ne maîtrise pas très bien le sujet mais je peux quand même regarder.` },
     ],
     sources: [
       {
@@ -237,10 +249,12 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     formuler facilement un contre-argument, ces derniers n'en finissant pas.
     `,
     examples: [
-      `Martial est fils de noble, puisque son père est quasi-baron, étant donné
-      que sa mère était une fille Angenaux, qui étaient reconnus comme maîtres
-      des terres, et que sa belle-mère avait des accointances avec les De
-      Bellot, à qui appartient le château...`,
+      {
+        text: `Martial est fils de noble, puisque son père est quasi-baron, étant donné
+        que sa mère était une fille Angenaux, qui étaient reconnus comme maîtres
+        des terres, et que sa belle-mère avait des accointances avec les De
+        Bellot, à qui appartient le château...`,
+      },
     ],
     sources: [
       {
@@ -269,9 +283,13 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     parataxe fait sonner la seconde partie comme la conséquence de la première.
     `,
     examples: [
-      `Vous n'êtes point gentilhomme, vous n'aurez pas ma fille.`,
-      `Il faisait beau. Le Soleil illuminait la pièce. Au dehors, le chant des
-      oiseaux résonnait dans la clairière.`,
+      {
+        text: `Vous n'êtes point gentilhomme, vous n'aurez pas ma fille.`,
+        source: `Molière, Le Bourgeois Gentilhomme, Scène XII`,
+      },
+      {
+        text: `Il faisait beau. Le Soleil illuminait la pièce. Au dehors, le chant des oiseaux résonnait dans la clairière.`,
+      },
     ],
     sources: [
       {
@@ -296,10 +314,10 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     spécifique.
     `,
     examples: [
-      `J'irais acheter des sandwichs pour notre pique-nique de demain midi.`,
-      `L'Arc de Triomphe a été rénové.`,
-      `Peux-tu me passer le Sopalin ?`,
-      `Encore un rendez-vous amoureux ? Quel Don Juan !`,
+      { text: `J'irais acheter des sandwichs pour notre pique-nique de demain midi.` },
+      { text: `L'Arc de Triomphe a été rénové.` },
+      { text: `Peux-tu me passer le Sopalin ?` },
+      { text: `Encore un rendez-vous amoureux ? Quel Don Juan !` },
     ],
     sources: [
       {
@@ -329,9 +347,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     se refuse à décrire.
     `,
     examples: [
-      `Je n'ai pas besoin de te rappeler que je dois envoyer ce document ce soir.`,
-      `Je ne vous dirais pas que le coût de la vie est trop élevé (...)`,
-      `Madame Y, pour ne pas la citer, (...)`,
+      { text: `Je n'ai pas besoin de te rappeler que je dois envoyer ce document ce soir.` },
+      { text: `Je ne vous dirais pas que le coût de la vie est trop élevé (...)` },
+      { text: `Madame Y, pour ne pas la citer, (...)` },
     ],
     sources: [
       {
@@ -357,9 +375,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     mauvais" signifie bien généralement qu'il était très bon.
     `,
     examples: [
-      `Pas mauvais ce repas !`,
-      `Vous n'êtes pas sans savoir (...)`,
-      `Ça n'était pas le match du siècle.`,
+      { text: `Pas mauvais ce repas !` },
+      { text: `Vous n'êtes pas sans savoir (...)` },
+      { text: `Ça n'était pas le match du siècle.` },
     ],
     sources: [
       {
@@ -384,9 +402,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     utilisée de manière sarcastique.
     `,
     examples: [
-      `La Russie a engagé une opération militaire spéciale en Ukraine.`,
-      `Je ne roule pas sur l'or.`,
-      `Il a passé l'arme à gauche il y a trois ans.`,
+      { text: `La Russie a engagé une opération militaire spéciale en Ukraine.` },
+      { text: `Je ne roule pas sur l'or.` },
+      { text: `Il a passé l'arme à gauche il y a trois ans.` },
     ],
     sources: [
       {
@@ -402,7 +420,8 @@ const figuresOfSpeech: FigureOfSpeech[] = [
         href: 'http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=3202',
       },
     ],
-  },{
+  },
+  {
     name: 'Métalepse',
     description: `
     Une métalepse est une figure de style dans laquelle on remplace la cause
@@ -413,9 +432,9 @@ const figuresOfSpeech: FigureOfSpeech[] = [
     le lecteur se représenter ce qui est réellement entendu.
     `,
     examples: [
-      `Ce soir, nous dînons en Enfer !`,
-      `Il ne sera pas là ce matin, il a trop bu hier.`,
-      `Comme tu as grandi !`,
+      { text: `Ce soir, nous dînons en Enfer !`, source: `300` },
+      { text: `Il ne sera pas là ce matin, il a trop bu hier.` },
+      { text: `Comme tu as grandi !` },
     ],
     sources: [
       {
