@@ -1,4 +1,4 @@
-const r=[{name:"Antanaclase",description:`
+const i=[{name:"Antanaclase",description:`
     On parle d'antanaclase lorsque l'on emploie deux fois un m\xEAme mot mais avec
     un sens diff\xE9rent: on parle alors de polys\xE9mie (plusieurs sens). Si le mot
     n'est pas r\xE9p\xE9t\xE9 il est alors question d'antanaclase elliptique.
@@ -117,4 +117,16 @@ const r=[{name:"Antanaclase",description:`
     `,goal:`
     La m\xE9talepse permet de passer sous silence une id\xE9e et de laisser
     le lecteur se repr\xE9senter ce qui est r\xE9ellement entendu.
-    `,examples:[{text:"Ce soir, nous d\xEEnons en Enfer !",source:"300"},{text:"Il ne sera pas l\xE0 ce matin, il a trop bu hier."},{text:"Comme tu as grandi !"}],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M\xE9talepse"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/m%C3%A9talepse/50831"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=1344"}]}],s=(t=void 0)=>{let e=r;return t&&(e=e.filter(a=>a.name===t)),e.sort((a,i)=>a.name.localeCompare(i.name))};export{s as g};
+    `,examples:[{text:"Ce soir, nous d\xEEnons en Enfer !",source:"300"},{text:"Il ne sera pas l\xE0 ce matin, il a trop bu hier."},{text:"Comme tu as grandi !"}],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/M\xE9talepse"},{name:"Larousse",href:"https://www.larousse.fr/dictionnaires/francais/m%C3%A9talepse/50831"},{name:"Youtube - Point Culture",href:"https://youtu.be/ByDNEsBNf24?t=1344"}]},{name:"Alit\xE9ration",description:`
+    L'alit\xE9ration est la r\xE9p\xE9tition d'une ou de plusieurs consonnes ou plus
+    g\xE9n\xE9ralement d'un m\xEAme son consonne.
+    `,goal:`
+    Le sens de la r\xE9p\xE9tition du son se trouve dans le contexte dans lequel il
+    est utilis\xE9. Par exemple, pour d\xE9crire un \xE9boulement, un son [r] r\xE9p\xE9t\xE9
+    rappellera les roulements des rochers qui tombent.
+    `,examples:[{text:"Pour qui sont ces serpents qui sifflent sur vos t\xEAtes ?",source:"Racine, Andromaque, acte V, sc\xE8ne 5"},{text:`
+        (...) l'onde de choc fractura le f\xE9mur d'enceinte et le
+        vent sabla cru le village \xE0 travers les jointures b\xE9antes du granit.
+        Sous mon casque, le son atroce du roc ponc\xE9 perce, mes dents vibrent -
+        je plie contre Pietro, des aiguilles de quartz crissent sur son masque de contre.
+        `,source:"La horde du contrevent, Alain Damasio"},{text:"Tamtam sculpt\xE9, tamtam tendu qui gronde sous les doigts du vainqueur.",source:"L\xE9opold S\xE9dar Senghor, La femme noire"}],sources:[{name:"Wikip\xE9dia",href:"https://fr.wikipedia.org/wiki/Alit\xE9ration"},{name:"La Culture G\xE9n\xE9rale",href:"https://www.laculturegenerale.com/alliteration-definition-exemples/"}]}],s=(a=void 0)=>{let e=i;return a&&(e=e.filter(t=>t.name===a)),e.sort((t,r)=>t.name.localeCompare(r.name))};export{s as g};
