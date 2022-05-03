@@ -13,6 +13,6 @@
   </p>
 
   <p class="text-xs text-slate-600 dark:text-slate-300">
-    Créé par <a href="pbouillon.github.io" class="text-primary">Pierre Bouillon</a>
+    Créé par <a href="https://pbouillon.github.io" class="text-primary">Pierre Bouillon</a>
   </p>
 </footer>
