@@ -1,7 +1,3 @@
-<script lang="ts">
-  import { base } from '$app/paths';
-</script>
-
 <svelte:head>
   <title>Locutionis - Petit référentiel des figures de style</title>
 </svelte:head>
@@ -18,7 +14,7 @@
 
   <div class="flex justify-center">
     <a
-      href="{base}/glossary"
+      href="glossary"
       class="flex items-center justify-center w-full h-12 px-6 font-semibold text-white rounded-lg bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-1/4"
     >
       Voir le glossaire
