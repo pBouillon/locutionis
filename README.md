@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href=https://pbouillon.github.io/locutionis/>Locutionis</a>
+  <a href="https://locutionis.vercel.app/">Locutionis</a>
 </h1>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 <hr />
 
-[Locutionis](https://pbouillon.github.io/locutionis) is a simple website on which french speakers can learn more about some figures of speech, their usages and where to find more about it.
+[Locutionis](https://locutionis.vercel.app/) is a simple website on which french speakers can learn more about some figures of speech, their usages and where to find more about it.
 
 ## Contributing
 
@@ -32,19 +32,19 @@ For major changes, please [open an issue](https://github.com/pBouillon/locutioni
 
 #### Clone the repository
 
-```
+```bash
 git clone https://github.com/pbouillon/locutionis.git
 ```
 
 #### Install the dependencies
 
-```
+```bash
 npm install
 ```
 
 #### Start the dev server
 
-```
+```bash
 npm run dev
 ```
 
@@ -52,7 +52,7 @@ You can now navigate to [localhost:3000](http://localhost:3000/) and start codin
 
 ## Architecture
 
-- **Hosting** - [GitHub Pages](https://pages.github.com/)
+- **Hosting** - [Vercel](https://vercel.com/)
 - **Styling**
   - [Tailwind CSS](https://tailwindcss.com/)
   - [Bootstrap Icons](https://icons.getbootstrap.com/)
