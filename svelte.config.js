@@ -15,9 +15,6 @@ const config = {
       assets: 'docs',
       fallback: 'index.html',
     }),
-    paths: {
-      base: dev ? '' : '/locutionis',
-    },
   }
 };
 

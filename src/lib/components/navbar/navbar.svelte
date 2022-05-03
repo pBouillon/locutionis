@@ -1,13 +1,12 @@
 <script lang="ts">
-  import { base } from '$app/paths';
   import { theme } from '$lib/functions/theme';
   import MobileNavbar from './mobile-navbar.svelte';
 
   let showMobileMenu = false;
 
   const links = [
-    { href: `${base}/`, label: 'Accueil' },
-    { href: `${base}/glossary`, label: 'Glossaire' },
+    { href: '/', label: 'Accueil' },
+    { href: '/glossary', label: 'Glossaire' },
     { href: 'https://github.com/pbouillon/locutionis', label: 'GitHub' },
   ];
 </script>
@@ -15,7 +14,7 @@
 <nav class="flex items-baseline justify-between p-5">
   <div class="flex items-baseline gap-3">
     <a
-      href="{base}/"
+      href="/"
       class="text-2xl font-bold tracking-wide text-transparent md:text-4xl bg-clip-text bg-gradient-to-br from-indigo-600 to-primary"
     >
       <i class="bi bi-journal-text" />
