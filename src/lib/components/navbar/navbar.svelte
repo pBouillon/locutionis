@@ -22,7 +22,7 @@
     </a>
 
     <p class="hidden font-medium tracking-tight lg:block text-primary">
-      Petit référentiel des figures de style
+      Petit référentiel de figures de style
     </p>
   </div>
 

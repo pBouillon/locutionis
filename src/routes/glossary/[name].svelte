@@ -19,8 +19,21 @@
 
 <svelte:head>
   <title>
-    {definition.name} | Locutionis - Petit référentiel des figures de style
+    {definition.name} | Locutionis - Petit référentiel de figures de style
   </title>
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://locutionis.vercel.app/glossary/Alitération">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{definition.name} | Locutionis - Petit référentiel de figures de style">
+  <meta property="og:description" content="{definition.description}">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="pbouillon.github.io">
+  <meta property="twitter:url" content="https://locutionis.vercel.app/glossary/Alitération">
+  <meta name="twitter:title" content="{definition.name} | Locutionis - Petit référentiel de figures de style">
+  <meta name="twitter:description" content="{definition.description}">
 </svelte:head>
 
 {#if firstExample}

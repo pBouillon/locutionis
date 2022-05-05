@@ -12,7 +12,7 @@
   </p>
 
   {#if quote.source}
-    <p class="italic text-center text-gray-600 dark:text-slate-400 md:max-w-3xl md:text-xl">
+    <p class="italic text-center text-gray-600 dark:text-slate-400 md:max-w-md md:text-xl">
       — {quote.source}
     </p>
   {/if}

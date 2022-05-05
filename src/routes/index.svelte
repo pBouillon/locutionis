@@ -1,10 +1,23 @@
 <svelte:head>
-  <title>Locutionis - Petit référentiel des figures de style</title>
+  <title>Locutionis - Petit référentiel de figures de style</title>
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://locutionis.vercel.app">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Locutionis - Petit référentiel de figures de style">
+  <meta property="og:description" content="Locutionis est un petit référentiel amateur de figures de style françaises visant à vulgariser">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="pbouillon.github.io">
+  <meta property="twitter:url" content="https://locutionis.vercel.app">
+  <meta name="twitter:title" content="Locutionis - Petit référentiel de figures de style">
+  <meta name="twitter:description" content="Locutionis est un petit référentiel amateur de figures de style françaises visant à vulgariser">
 </svelte:head>
 
 <section class="flex flex-col gap-10">
   <h1 class="text-4xl font-bold tracking-tight text-center sm:text-5xl lg:text-6xl dark:text-white">
-    Petit référentiel des figures de style.
+    Petit référentiel de figures de style.
   </h1>
 
   <p class="max-w-3xl mx-auto text-lg text-center text-slate-600 dark:text-slate-400">
