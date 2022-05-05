@@ -501,5 +501,9 @@ export const get = (name: string | undefined = undefined): FigureOfSpeech[] => {
     definitions = definitions.filter((definition) => definition.name === name);
   }
 
-  return definitions.sort((a, b) => a.name.localeCompare(b.name));
+  return definitions.map(figureOfSpeech => ({
+    ...figureOfSpeech,
+    description: figureOfSpeech.description.trim(),
+    goal: figureOfSpeech.goal.trim(),
+  })).sort((a, b) => a.name.localeCompare(b.name));
 };
