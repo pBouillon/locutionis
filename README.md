@@ -30,25 +30,15 @@ For major changes, please [open an issue](https://github.com/pBouillon/locutioni
 - [Node.js](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
 
-#### Clone the repository
+#### Setup
 
 ```bash
 git clone https://github.com/pbouillon/locutionis.git
-```
-
-#### Install the dependencies
-
-```bash
 npm install
-```
-
-#### Start the dev server
-
-```bash
 npm run dev
 ```
 
-You can now navigate to [localhost:3000](http://localhost:3000/) and start coding in your favorite code editor.
+You can now navigate to [localhost:3000](http://localhost:3000/) and start coding in your favorite editor.
 
 ## Architecture
 
@@ -57,4 +47,3 @@ You can now navigate to [localhost:3000](http://localhost:3000/) and start codin
   - [Tailwind CSS](https://tailwindcss.com/)
   - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - **Framework** - [Svelte](svelte.dev/) with [SvelteKit](https://kit.svelte.dev/) using [TypeScript](https://www.typescriptlang.org/)
-- **Tools** - Deployment script made in Python
