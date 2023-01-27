@@ -15,7 +15,7 @@ import {
     <button
       tabindex="0"
       role="button"
-      class="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-400 text-gray-500 dark:border-gray-200 dark:bg-gray-600 dark:text-gray-200"
+      class="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-500 text-gray-500 hover:border-sky-500 hover:text-sky-500 dark:border-gray-200 dark:bg-gray-600 dark:text-gray-200"
       (click)="toggleDarkMode.emit()"
     >
       <i *ngIf="!isDarkModeEnabled" class="bi bi-moon-stars text-base"></i>

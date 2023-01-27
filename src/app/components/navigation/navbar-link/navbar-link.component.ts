@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router'
     <ng-template #externalUrl>
       <a
         [href]="navigateTo"
-        class="text-lg md:text-base tracking-wide dark:text-slate-300 hover:cursor-pointer border-b-2 border-transparent hover:border-sky-500"
+        class=" md:text-lg text-base tracking-wide dark:text-slate-300 hover:cursor-pointer border-b-2 border-transparent hover:border-sky-500"
       >
         <ng-container *ngTemplateOutlet="linkContentTemplate"/>
         <span class="text-sm">
@@ -25,7 +25,7 @@ import { RouterModule } from '@angular/router'
       <a
         [routerLink]="navigateTo"
         routerLinkActive="underline"
-        class="text-lg md:text-base tracking-wide dark:text-slate-300 hover:cursor-pointer decoration-sky-500 decoration-2 hover:underline"
+        class=" md:text-lg text-base tracking-wide dark:text-slate-300 hover:cursor-pointer decoration-sky-500 decoration-2 hover:underline"
       >
         <ng-container *ngTemplateOutlet="linkContentTemplate"/>
       </a>

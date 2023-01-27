@@ -48,7 +48,7 @@ import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
           </app-navbar-link>
         </nav>
 
-        <div class="pl-5 border-l">
+        <div class="pl-5 border-l border-slate-500">
           <app-dark-mode-toggler-icon
             [isDarkModeEnabled]="isDarkModeEnabled"
             (toggleDarkMode)="toggleDarkMode.emit()"
