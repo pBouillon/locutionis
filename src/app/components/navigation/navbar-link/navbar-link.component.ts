@@ -25,6 +25,7 @@ import { RouterModule } from '@angular/router'
       <a
         [routerLink]="navigateTo"
         routerLinkActive="underline"
+        [routerLinkActiveOptions]="{ exact: true }"
         class=" md:text-lg text-base tracking-wide dark:text-slate-300 hover:cursor-pointer decoration-sky-500 decoration-2 hover:underline"
       >
         <ng-container *ngTemplateOutlet="linkContentTemplate"/>
