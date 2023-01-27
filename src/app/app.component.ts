@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
 import { FooterComponent } from './components/footer/footer.component'
 import { NavbarBlockComponent, NavbarComponent } from './components/navigation'
-import { DarkModeService } from './services/dark-mode.service'
+import { DarkModeService } from './services/dark-mode/dark-mode.service'
 
 @Component({
   selector: 'app-root',
