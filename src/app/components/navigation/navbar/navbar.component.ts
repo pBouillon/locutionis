@@ -33,7 +33,7 @@ import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
         </a>
 
         <p class="hidden font-medium text-sky-500 lg:block">
-          Petit référentiel des figures de style
+          Petit référentiel de figures de style
         </p>
       </div>
 

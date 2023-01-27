@@ -7,3 +7,7 @@
 html {
   font-family: 'Helvetica', sans-serif;
 }
+
+em {
+  @apply not-italic font-semibold text-sky-500;
+}

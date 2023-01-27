@@ -7,8 +7,13 @@ import { NavbarComponent } from './components/navigation'
   standalone: true,
   imports: [RouterOutlet, NavbarComponent],
   template: `
-  <app-navbar [links]="links"></app-navbar>
-  <router-outlet></router-outlet>
+    <div class="flex min-h-screen flex-col dark:bg-gray-900">
+      <app-navbar [links]="links" />
+
+      <main class="my-5 flex-grow px-5 pt-2">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
   `
 })
 export class AppComponent {
