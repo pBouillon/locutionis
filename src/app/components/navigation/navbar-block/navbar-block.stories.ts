@@ -2,12 +2,12 @@ import { NgFor } from '@angular/common'
 import { RouterTestingModule } from '@angular/router/testing'
 import { moduleMetadata, type Meta, type Story } from '@storybook/angular'
 import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
-import { NavbarComponent } from './navbar.component'
+import { NavbarBlockComponent } from './navbar-block.component'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-  title: 'Components/Navigation/Navbars/Main',
-  component: NavbarComponent,
+  title: 'Components/Navigation/Navbars/Block',
+  component: NavbarBlockComponent,
   decorators: [
     moduleMetadata({
       imports: [NgFor, RouterTestingModule, NavbarLinkComponent]
@@ -15,7 +15,7 @@ export default {
   ]
 } as Meta
 
-const Template: Story<NavbarComponent> = (args: NavbarComponent) => ({
+const Template: Story<NavbarBlockComponent> = (args: NavbarBlockComponent) => ({
   props: args
 })
 

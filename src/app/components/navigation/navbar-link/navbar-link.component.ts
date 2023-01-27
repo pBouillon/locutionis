@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router'
     <ng-template #externalUrl>
       <a
         [href]="navigateTo"
-        class="text-lg tracking-wide border-b-2 border-transparent hover:cursor-pointer hover:border-sky-500 dark:text-slate-300"
+        class="text-lg md:text-base tracking-wide dark:text-slate-300 hover:cursor-pointer border-b-2 border-transparent hover:border-sky-500"
       >
         <ng-container *ngTemplateOutlet="linkContentTemplate"/>
         <span class="text-sm">
@@ -25,7 +25,7 @@ import { RouterModule } from '@angular/router'
       <a
         [routerLink]="navigateTo"
         routerLinkActive="underline"
-        class="text-lg tracking-wide decoration-sky-500 decoration-2 hover:cursor-pointer hover:underline dark:text-slate-300"
+        class="text-lg md:text-base tracking-wide dark:text-slate-300 hover:cursor-pointer decoration-sky-500 decoration-2 hover:underline"
       >
         <ng-container *ngTemplateOutlet="linkContentTemplate"/>
       </a>
@@ -46,7 +46,7 @@ export class NavbarLinkComponent {
   /**
    * Whether this URL is an internal one or not
    */
-  isExternalUrl(): boolean {
+  isExternalUrl (): boolean {
     return this.navigateTo?.startsWith('http') ?? false
   }
 }

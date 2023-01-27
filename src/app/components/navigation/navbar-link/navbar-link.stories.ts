@@ -4,7 +4,7 @@ import { NavbarLinkComponent } from './navbar-link.component'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-  title: 'Components/Navigation/NavbarLink',
+  title: 'Components/Navigation/Navbar Link',
   component: NavbarLinkComponent,
   decorators: [
     moduleMetadata({
