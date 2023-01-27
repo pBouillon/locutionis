@@ -1,25 +1,56 @@
-import { Component } from '@angular/core'
+import { AsyncPipe, NgIf } from '@angular/common'
+import { Component, inject } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
-import { NavbarComponent } from './components/navigation'
+import { NavbarBlockComponent, NavbarComponent } from './components/navigation'
+import { DarkModeService } from './services/dark-mode.service'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent],
+  imports: [
+    NgIf,
+    AsyncPipe,
+    RouterOutlet,
+    NavbarComponent,
+    NavbarBlockComponent
+  ],
   template: `
     <div class="flex min-h-screen flex-col dark:bg-gray-900">
-      <app-navbar [links]="links" />
+      <app-navbar
+        [links]="links"
+        [isDarkModeEnabled]="(isDarkModeEnabled$ | async) ?? false"
+        (burgerMenuClick)="showMobileNavbar = true"
+        (toggleDarkMode)="toggleDarkMode()"
+      />
+
+      <app-navbar-block
+        *ngIf="showMobileNavbar"
+        [links]="links"
+        (close)="showMobileNavbar = false"
+        [isDarkModeEnabled]="(isDarkModeEnabled$ | async) ?? false"
+        (toggleDarkMode)="toggleDarkMode()"
+      />
 
       <main class="my-5 flex-grow px-5 pt-2">
-        <router-outlet></router-outlet>
+        <router-outlet />
       </main>
     </div>
   `
 })
 export class AppComponent {
+  private readonly _darkModeService = inject(DarkModeService)
+
+  readonly isDarkModeEnabled$ = this._darkModeService.isDarkModeEnabled$
+
+  showMobileNavbar = false
+
   readonly links = [
     { name: 'Accueil', navigateTo: '' },
     { name: 'Glossaire', navigateTo: 'glossaire' },
     { name: 'GitHub', navigateTo: 'https://github.com/pbouillon/locutionis' }
   ]
+
+  toggleDarkMode (): void {
+    this._darkModeService.toggleDarkMode()
+  }
 }

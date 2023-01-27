@@ -43,7 +43,8 @@ import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
 
         <div class="pt-6 mt-6 border-t border-gray-400">
           <app-dark-mode-toggler-selector
-            (onToggleDarkMode)="toggleDarkMode.emit()"
+            [isDarkModeEnabled]="isDarkModeEnabled"
+            (toggleDarkMode)="toggleDarkMode.emit()"
           />
         </div>
       </div>
@@ -52,6 +53,11 @@ import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarBlockComponent {
+  /**
+   * Whether the dark mode is enabled or not
+   */
+  @Input() isDarkModeEnabled: boolean = false
+
   /**
    * The links to be displayed
    */
