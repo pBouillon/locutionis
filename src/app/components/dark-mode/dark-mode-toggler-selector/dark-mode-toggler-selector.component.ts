@@ -13,7 +13,7 @@ import {
   imports: [NgClass],
   template: `
     <div class="flex max-w-xs items-center justify-between">
-      <label class="text-lg tracking-wide" for="theme"> Thème </label>
+      <label class="text-lg tracking-wide" for="theme">Thème</label>
 
       <div
         class="relative flex items-center rounded-lg p-2 text-base shadow-sm ring-1 ring-gray-400 dark:border-gray-200 dark:bg-gray-600 dark:text-gray-200"
@@ -50,7 +50,7 @@ export class DarkModeTogglerSelectorComponent {
   /**
    * Emitted when the user clicks to toggle the dark mode
    */
-  @Output() onToggleDarkMode = new EventEmitter<void>()
+  @Output() toggleDarkMode = new EventEmitter<void>()
 
   /**
    * Emitted when the user clicks to toggle the dark mode
@@ -64,7 +64,7 @@ export class DarkModeTogglerSelectorComponent {
       (theme === 'dark' && !this.isDarkModeEnabled)
 
     if (hasValueChanged) {
-      this.onToggleDarkMode.emit()
+      this.toggleDarkMode.emit()
     }
   }
 }

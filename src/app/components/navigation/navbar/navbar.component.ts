@@ -7,15 +7,21 @@ import {
   Output
 } from '@angular/core'
 import { RouterModule } from '@angular/router'
+import { DarkModeTogglerIconComponent } from '../../dark-mode'
 import { type NavbarLink } from '../navbar-link/navbar-link'
 import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgFor, RouterModule, NavbarLinkComponent],
+  imports: [
+    NgFor,
+    RouterModule,
+    NavbarLinkComponent,
+    DarkModeTogglerIconComponent
+  ],
   template: `
-    <nav class="flex items-baseline justify-between p-5">
+    <div class="flex items-baseline justify-between p-5">
       <!-- Title -->
       <div class="flex items-baseline gap-3">
         <a
@@ -33,27 +39,41 @@ import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
 
       <!-- Links -->
       <div class="hidden gap-5 md:flex">
-        <app-navbar-link
-          *ngFor="let link of links"
-          [navigateTo]="link.navigateTo"
-        >
-          {{ link.name }}
-        </app-navbar-link>
+        <nav class="flex items-center gap-8 text-xl">
+          <app-navbar-link
+            *ngFor="let link of links"
+            [navigateTo]="link.navigateTo"
+          >
+            {{ link.name }}
+          </app-navbar-link>
+        </nav>
+
+        <div class="pl-5 border-l">
+          <app-dark-mode-toggler-icon
+            [isDarkModeEnabled]="isDarkModeEnabled"
+            (toggleDarkMode)="toggleDarkMode.emit()"
+          />
+        </div>
       </div>
 
       <!-- Navbar toggler -->
       <button
         type="button"
         class="focus:ring-primary/25 flex items-center justify-center rounded px-1 text-2xl text-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-50 dark:text-slate-300 md:hidden"
-        (click)="burgerMenuClicked.emit()"
+        (click)="burgerMenuClick.emit()"
       >
         <i class="bi bi-list"></i>
       </button>
-    </nav>
+    </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent {
+  /**
+   * Whether the dark mode is enabled or not
+   */
+  @Input() isDarkModeEnabled: boolean = false
+
   /**
    * The links to be displayed
    */
@@ -62,5 +82,10 @@ export class NavbarComponent {
   /**
    * Emits whenever the burger menu icon is clicked
    */
-  @Output() burgerMenuClicked = new EventEmitter<void>()
+  @Output() burgerMenuClick = new EventEmitter<void>()
+
+  /**
+   * Emitted when the user clicks to toggle the dark mode
+   */
+  @Output() toggleDarkMode = new EventEmitter<void>()
 }

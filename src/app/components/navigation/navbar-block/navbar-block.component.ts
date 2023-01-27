@@ -6,13 +6,14 @@ import {
   Input,
   Output
 } from '@angular/core'
+import { DarkModeTogglerSelectorComponent } from '../../dark-mode'
 import { type NavbarLink } from '../navbar-link/navbar-link'
 import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
 
 @Component({
   selector: 'app-navbar-block',
   standalone: true,
-  imports: [NgFor, NavbarLinkComponent],
+  imports: [NgFor, NavbarLinkComponent, DarkModeTogglerSelectorComponent],
   template: `
     <div class="fixed inset-0 z-50">
       <!-- Backdrop -->
@@ -39,6 +40,12 @@ import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
             </app-navbar-link>
           </li>
         </ul>
+
+        <div class="pt-6 mt-6 border-t border-gray-400">
+          <app-dark-mode-toggler-selector
+            (onToggleDarkMode)="toggleDarkMode.emit()"
+          />
+        </div>
       </div>
     </div>
   `,
@@ -54,4 +61,9 @@ export class NavbarBlockComponent {
    * Emits whenever the user request the navbar to be closed
    */
   @Output() close = new EventEmitter<void>()
+
+  /**
+   * Emitted when the user clicks to toggle the dark mode
+   */
+  @Output() toggleDarkMode = new EventEmitter<void>()
 }

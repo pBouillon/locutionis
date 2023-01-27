@@ -16,7 +16,7 @@ import {
       tabindex="0"
       role="button"
       class="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-400 text-gray-500 dark:border-gray-200 dark:bg-gray-600 dark:text-gray-200"
-      (click)="onToggleDarkMode.emit()"
+      (click)="toggleDarkMode.emit()"
     >
       <i *ngIf="!isDarkModeEnabled" class="bi bi-moon-stars text-base"></i>
       <i *ngIf="isDarkModeEnabled" class="bi bi-sun text-lg"></i>
@@ -33,5 +33,5 @@ export class DarkModeTogglerIconComponent {
   /**
    * Emitted when the user clicks to toggle the dark mode
    */
-  @Output() onToggleDarkMode = new EventEmitter<void>()
+  @Output() toggleDarkMode = new EventEmitter<void>()
 }

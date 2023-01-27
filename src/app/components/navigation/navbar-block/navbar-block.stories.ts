@@ -1,6 +1,7 @@
 import { NgFor } from '@angular/common'
 import { RouterTestingModule } from '@angular/router/testing'
 import { moduleMetadata, type Meta, type Story } from '@storybook/angular'
+import { DarkModeTogglerSelectorComponent } from '../../dark-mode'
 import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
 import { NavbarBlockComponent } from './navbar-block.component'
 
@@ -10,7 +11,12 @@ export default {
   component: NavbarBlockComponent,
   decorators: [
     moduleMetadata({
-      imports: [NgFor, RouterTestingModule, NavbarLinkComponent]
+      imports: [
+        NgFor,
+        RouterTestingModule,
+        NavbarLinkComponent,
+        DarkModeTogglerSelectorComponent
+      ]
     })
   ]
 } as Meta
