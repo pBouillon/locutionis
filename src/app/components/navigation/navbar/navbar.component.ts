@@ -18,8 +18,8 @@ import { NavbarLinkComponent } from '../navbar-link/navbar-link.component'
           Locutionis
         </a>
 
-        <p class="text-primary hidden font-medium dark:text-slate-300 lg:block">
-          Petit référentiel de figures de style
+        <p class="text-sky-500 hidden font-medium dark:text-slate-300 lg:block">
+          Petit référentiel des figures de style
         </p>
       </div>
 
