@@ -1,6 +1,7 @@
 import { AsyncPipe, NgIf } from '@angular/common'
 import { Component, inject } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
+import { FooterComponent } from './components/footer/footer.component'
 import { NavbarBlockComponent, NavbarComponent } from './components/navigation'
 import { DarkModeService } from './services/dark-mode.service'
 
@@ -12,7 +13,8 @@ import { DarkModeService } from './services/dark-mode.service'
     AsyncPipe,
     RouterOutlet,
     NavbarComponent,
-    NavbarBlockComponent
+    NavbarBlockComponent,
+    FooterComponent
   ],
   template: `
     <div class="flex min-h-screen flex-col dark:bg-gray-900">
@@ -34,6 +36,8 @@ import { DarkModeService } from './services/dark-mode.service'
       <main class="my-5 flex-grow px-5 pt-2">
         <router-outlet />
       </main>
+
+      <app-footer />
     </div>
   `
 })
