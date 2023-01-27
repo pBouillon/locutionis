@@ -1,10 +1,16 @@
-import { type Story, type Meta } from '@storybook/angular/types-6-0'
+import { RouterTestingModule } from '@angular/router/testing'
+import { moduleMetadata, type Meta, type Story } from '@storybook/angular'
 import { NavbarComponent } from './navbar.component'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'Navigation/Navbar',
-  component: NavbarComponent
+  component: NavbarComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [RouterTestingModule]
+    })
+  ]
 } as Meta
 
 const Template: Story<NavbarComponent> = (args: NavbarComponent) => ({
