@@ -15,6 +15,7 @@ export interface FigureOfSpeech {
 /**
  * Define the preview of a {@link FigureOfSpeech}
  */
-export type FigureOfSpeechPreview =
-  | Pick<FigureOfSpeech, 'name'>
-  | { preview: string }
+export interface FigureOfSpeechPreview {
+  name: string
+  preview: string
+}
