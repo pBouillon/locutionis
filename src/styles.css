@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+
+html {
+  font-family: 'Helvetica', sans-serif;
+}
