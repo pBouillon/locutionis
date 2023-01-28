@@ -15,8 +15,8 @@ export default {
 } as Meta
 
 const preview: FigureOfSpeechPreview = {
-  name: 'Métalepse',
-  preview: 'Une métalepse est une figure de style dans laquell...'
+  name: 'Alitération',
+  preview: "L'alitération est la répétition d'une ou de plusieurs consonnes ou plus généralement d'un même son c..."
 }
 
 const Template: Story<GlossaryEntryComponent> = (
