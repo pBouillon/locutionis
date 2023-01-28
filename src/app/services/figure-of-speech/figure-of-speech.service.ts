@@ -96,7 +96,7 @@ class FigureOfSpeechDataService {
    */
   get (name: string): Observable<FigureOfSpeech> {
     return this._http.get<FigureOfSpeech>(
-      `${environment.apiUri}/api/figures-of-speech?name=${name}`
+      `${environment.apiUri}/api/figures-of-speech/${name}`
     )
   }
 
