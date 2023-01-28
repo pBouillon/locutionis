@@ -40,7 +40,7 @@ export class FigureOfSpeechService {
    */
   loadDefinitionOf (name: string): void {
     const current = this._current$.getValue()
-    if (current !== null) return
+    if (current?.name === name) return
 
     this._isLoading$.next(true)
 
