@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http'
 import { inject, Injectable } from '@angular/core'
-import { BehaviorSubject, type Observable } from 'rxjs'
+import { BehaviorSubject, map, type Observable } from 'rxjs'
 import {
   type FigureOfSpeech,
   type FigureOfSpeechPreview
@@ -19,6 +19,19 @@ export class FigureOfSpeechService {
 
   private readonly _previews$ = new BehaviorSubject<FigureOfSpeechPreview[]>([])
   readonly previews$ = this._previews$.asObservable()
+
+  readonly glossary$ = this.previews$.pipe(
+    map((previews) => previews.reduce((map, preview) => {
+      const key = preview.name[0]
+        .toLocaleLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+
+      const entries = map.get(key) ?? []
+
+      return map.set(key, [...entries, preview])
+    }, new Map<string, FigureOfSpeechPreview[]>()))
+  )
 
   /**
    * Load the definition of a specific figure of speech
