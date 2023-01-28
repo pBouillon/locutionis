@@ -9,7 +9,7 @@ import { type FigureOfSpeechPreview } from 'src/app/models'
   template: `
     <div class="max-w-lg">
       <a
-        [routerLink]="['glossary', entry.name ]"
+        [routerLink]="[ entry.name ]"
         class="decoration-sky-500 hover:text-sky-500 tracking-wide underline decoration-2 dark:text-gray-200"
       >
         {{ entry.name }}
