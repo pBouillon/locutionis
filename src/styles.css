@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+html {
+  font-family: 'Helvetica', sans-serif;
+}
+
+em {
+  @apply not-italic font-semibold text-sky-500;
+}
