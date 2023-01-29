@@ -16,7 +16,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
 
       <!-- Simulate an entry -->
       <div *ngFor="let _ of [0, 1]" class="space-y-2">
-        <div class="h-5 w-24 bg-white/75 rounded"></div>
+        <div class="h-5 w-24 bg-black/75 dark:bg-white/75 rounded"></div>
         <div class="h-4 w-full bg-gray-500/75 rounded"></div>
       </div>
     </div>
