@@ -2,12 +2,10 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { inject, Injectable } from '@angular/core'
 import { BehaviorSubject, map, type Observable } from 'rxjs'
 import {
-  Error,
-  ErrorType,
-  type FigureOfSpeech,
+  ErrorType, type Error, type FigureOfSpeech,
   type FigureOfSpeechPreview
 } from 'src/app/models'
-import { environment } from 'src/environments/environment.development'
+import { environment } from 'src/environments/environment'
 
 @Injectable()
 export class FigureOfSpeechService {
