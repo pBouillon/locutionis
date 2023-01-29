@@ -33,7 +33,9 @@ import { GlossaryLoadingComponent } from './components/glossary-loading/glossary
         />
 
         <ng-template #error>
-          <app-error *ngIf="vm.error" [error]="vm.error" />
+          <div class="sm:mx-auto sm:w-2/3 md:w-1/3">
+            <app-error *ngIf="vm.error" [error]="vm.error" />
+          </div>
         </ng-template>
       </ng-template>
     </ng-container>

@@ -8,7 +8,7 @@ import { HeroComponent } from './hero/hero.component'
   template: `
     <app-hero />
 
-    <section class="my-12 mx-auto max-w-7xl sm:px-6 md:px-8">
+    <section class="my-12 mx-auto max-w-4xl sm:px-6 md:px-8">
       <h2 class="text-2xl font-extrabold tracking-tight dark:text-slate-200">
         Objectif
       </h2>
@@ -37,7 +37,7 @@ import { HeroComponent } from './hero/hero.component'
       </p>
     </section>
 
-    <section class="my-12 mx-auto max-w-7xl sm:px-6 md:px-8">
+    <section class="my-12 mx-auto max-w-4xl sm:px-6 md:px-8">
       <h2 class="text-2xl font-extrabold tracking-tight dark:text-slate-200">
         Pourquoi Locutionis
       </h2>
