@@ -5,7 +5,7 @@ import { GlossaryEntryComponent } from './glossary-entry-component'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-  title: 'Components/Glossary/Entry',
+  title: 'Pages/Glossary/Entry',
   component: GlossaryEntryComponent,
   decorators: [
     moduleMetadata({

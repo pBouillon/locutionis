@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router'
 import { type Error, ErrorType } from 'src/app/models'
 
 @Component({
-  selector: 'app-details-error',
+  selector: 'app-error',
   standalone: true,
   imports: [NgClass, RouterLink],
   template: `
@@ -25,7 +25,7 @@ import { type Error, ErrorType } from 'src/app/models'
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DetailsErrorComponent {
+export class ErrorComponent {
   @Input() error!: Error
 
   get errorIconName (): string {

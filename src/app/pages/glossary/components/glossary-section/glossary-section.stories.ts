@@ -6,7 +6,7 @@ import { GlossarySectionComponent } from './glossary-section.component'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-  title: 'Components/Glossary/Section',
+  title: 'Pages/Glossary/Section',
   component: GlossarySectionComponent,
   decorators: [
     moduleMetadata({

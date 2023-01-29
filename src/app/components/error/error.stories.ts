@@ -1,12 +1,12 @@
 import { RouterTestingModule } from '@angular/router/testing'
 import { moduleMetadata, type Meta, type Story } from '@storybook/angular'
 import { ErrorType } from 'src/app/models'
-import { DetailsErrorComponent } from './details-error.component'
+import { ErrorComponent } from './error.component'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'Pages/Definition/Error',
-  component: DetailsErrorComponent,
+  component: ErrorComponent,
   decorators: [
     moduleMetadata({
       imports: [RouterTestingModule]
@@ -14,8 +14,8 @@ export default {
   ]
 } as Meta
 
-const Template: Story<DetailsErrorComponent> = (
-  args: DetailsErrorComponent
+const Template: Story<ErrorComponent> = (
+  args: ErrorComponent
 ) => ({
   props: args
 })

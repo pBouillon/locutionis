@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
 
 @Component({
-  selector: 'app-loading-details',
+  selector: 'app-details-loading',
   standalone: true,
   styles: [
     '.section-wrapper { @apply space-y-3 }',

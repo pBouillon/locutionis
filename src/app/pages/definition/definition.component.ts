@@ -10,17 +10,17 @@ import {
   type Observable
 } from 'rxjs'
 import { FigureOfSpeechService } from 'src/app/services/figure-of-speech/figure-of-speech.service'
-import { DetailsErrorComponent } from './components/details-error/details-error.component'
+import { ErrorComponent } from '../../components/error/error.component'
 import { DetailsLoadingComponent } from './components/details-loading/details-loading.component'
 import { DetailsComponent } from './components/details/details.component'
 
 @Component({
   selector: 'app-definition',
   standalone: true,
-  imports: [NgIf, NgFor, AsyncPipe, DetailsComponent, DetailsErrorComponent, DetailsLoadingComponent],
+  imports: [NgIf, NgFor, AsyncPipe, DetailsComponent, ErrorComponent, DetailsLoadingComponent],
   template: `
     <div *ngIf="vm$ | async as vm" class="sm:mx-auto sm:w-2/3 md:w-1/3">
-      <app-loading-details *ngIf="vm.isLoading; else display" />
+      <app-details-loading *ngIf="vm.isLoading; else display" />
 
       <ng-template #display>
         <app-details
@@ -29,10 +29,7 @@ import { DetailsComponent } from './components/details/details.component'
         />
 
         <ng-template #error>
-          <app-details-error
-            *ngIf="vm.error"
-            [error]="vm.error"
-          />
+          <app-error *ngIf="vm.error" [error]="vm.error" />
         </ng-template>
       </ng-template>
     </div>
