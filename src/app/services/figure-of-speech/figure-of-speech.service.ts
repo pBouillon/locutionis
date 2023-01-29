@@ -2,6 +2,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { inject, Injectable } from '@angular/core'
 import { BehaviorSubject, map, type Observable } from 'rxjs'
 import {
+  Error,
+  ErrorType,
   type FigureOfSpeech,
   type FigureOfSpeechPreview
 } from 'src/app/models'
@@ -14,8 +16,8 @@ export class FigureOfSpeechService {
   private readonly _current$ = new BehaviorSubject<FigureOfSpeech | null>(null)
   readonly current$ = this._current$.asObservable()
 
-  private readonly _errorMessage$ = new BehaviorSubject<string | null>(null)
-  readonly errorMessage$ = this._errorMessage$.asObservable()
+  private readonly _error$ = new BehaviorSubject<Error | null>(null)
+  readonly error$ = this._error$.asObservable()
 
   private readonly _isLoading$ = new BehaviorSubject<boolean>(false)
   readonly isLoading$ = this._isLoading$.asObservable()
@@ -51,16 +53,22 @@ export class FigureOfSpeechService {
       .get(name)
       .subscribe({
         next: (details: FigureOfSpeech) => {
-          this._errorMessage$.next(null)
+          this._error$.next(null)
           this._current$.next(details)
           this._isLoading$.next(false)
         },
         error: (error) => {
           if (error instanceof HttpErrorResponse) {
             if (error.status === 404) {
-              this._errorMessage$.next("Aucune figure de style de ce nom n'est enregistrée")
+              this._error$.next({
+                type: ErrorType.UnknownFigureOfSpeech,
+                message: `Aucune figure de style n'est enregistrée pour "${name}"`
+              })
             } else {
-              this._errorMessage$.next('Impossible de se connecter au serveur')
+              this._error$.next({
+                type: ErrorType.UnableToConnect,
+                message: 'Impossible de se connecter au serveur pour le moment'
+              })
             }
           }
 
@@ -84,13 +92,16 @@ export class FigureOfSpeechService {
       .getPreviews()
       .subscribe({
         next: (previews: FigureOfSpeechPreview[]) => {
-          this._errorMessage$.next(null)
+          this._error$.next(null)
           this._previews$.next(previews)
           this._isLoading$.next(false)
         },
         error: (error) => {
           if (error instanceof HttpErrorResponse) {
-            this._errorMessage$.next('Impossible de se connecter au serveur')
+            this._error$.next({
+              type: ErrorType.UnableToConnect,
+              message: 'Impossible de se connecter au serveur pour le moment'
+            })
           }
 
           this._previews$.next([])

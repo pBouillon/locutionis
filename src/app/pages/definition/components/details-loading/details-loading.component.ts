@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 
 @Component({
   selector: 'app-loading-details',
@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styles: [
     '.section-wrapper { @apply space-y-3 }',
     '.subtitle { @apply h-6 w-32 rounded bg-sky-600/75 }',
-    '.text { @apply h-4 rounded bg-gray-400/75 }',
+    '.text { @apply h-4 rounded bg-gray-400/75 }'
   ],
   template: `
     <!-- Loading quote -->
@@ -43,6 +43,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       </div>
     </div>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoadingDetailsComponent {}
+export class DetailsLoadingComponent {}
