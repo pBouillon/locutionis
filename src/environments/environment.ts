@@ -1,3 +1,3 @@
 export const environment = {
-  apiUri: 'https://locutionisapi-production.up.railway.app'
+  apiUri: 'https://locutionis-api.onrender.com'
 }
