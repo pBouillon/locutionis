@@ -16,6 +16,11 @@ const appRoutes: Route[] = [
     providers: [FigureOfSpeechService],
     loadChildren: () => import('./app/features/glossary/routes').then(m => m.routes)
   },
+  {
+    path: 'quiz',
+    providers: [],
+    loadChildren: () => import('./app/features/quiz/quiz').then(m => m.routes)
+  },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ]
 
