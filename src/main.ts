@@ -1,11 +1,10 @@
+/* eslint-disable @typescript-eslint/promise-function-async */
 import { provideHttpClient } from '@angular/common/http'
 import { bootstrapApplication } from '@angular/platform-browser'
 import { provideRouter, type Route } from '@angular/router'
 import { AppComponent } from './app/app.component'
-import { DefinitionComponent } from './app/pages/definition/definition.component'
-import { GlossaryComponent } from './app/pages/glossary/glossary.component'
-import { HomeComponent } from './app/pages/home/home.component'
-import { FigureOfSpeechService } from './app/services/figure-of-speech/figure-of-speech.service'
+import { FigureOfSpeechService } from './app/features/glossary/services/figure-of-speech/figure-of-speech.service'
+import { HomeComponent } from './app/features/home/pages/home/home.component'
 
 const appRoutes: Route[] = [
   {
@@ -15,16 +14,7 @@ const appRoutes: Route[] = [
   {
     path: 'glossaire',
     providers: [FigureOfSpeechService],
-    children: [
-      {
-        path: '',
-        component: GlossaryComponent
-      },
-      {
-        path: ':name',
-        component: DefinitionComponent
-      }
-    ]
+    loadChildren: () => import('./app/features/glossary/routes').then(m => m.routes)
   },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ]
