@@ -1,12 +1,17 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
+import { MainButtonLinkComponent } from 'src/app/components/main-button-link/main-button-link.component'
 import { HeroComponent } from './hero/hero.component'
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeroComponent],
+  imports: [MainButtonLinkComponent, HeroComponent],
   template: `
     <app-hero />
+
+    <app-main-button-link [navigateTo]="['glossaire']">
+      Voir le glossaire
+    </app-main-button-link>
 
     <section class="my-12 mx-auto max-w-4xl sm:px-6 md:px-8">
       <h2 class="text-2xl font-extrabold tracking-tight dark:text-slate-200">

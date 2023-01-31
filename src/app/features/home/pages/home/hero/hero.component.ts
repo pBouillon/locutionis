@@ -1,11 +1,10 @@
 import { Component } from '@angular/core'
-import { RouterModule } from '@angular/router'
 import { SubtitleComponent } from 'src/app/components/subtitle/subtitle.component'
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [RouterModule, SubtitleComponent],
+  imports: [SubtitleComponent],
   template: `
     <section
       class="my-12 mx-auto flex max-w-7xl flex-col gap-10 sm:px-6 md:px-8"
@@ -20,15 +19,6 @@ import { SubtitleComponent } from 'src/app/components/subtitle/subtitle.componen
         <em>Locutionis</em> est un petit référentiel amateur de figures de style
         françaises visant à vulgariser leurs définitions et usages.
       </app-subtitle>
-
-      <div class="flex justify-center">
-        <a
-          [routerLink]="['glossaire']"
-          class="flex h-12 w-full items-center justify-center rounded-lg bg-sky-500 px-6 font-semibold text-white hover:bg-sky-500/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-1/4"
-        >
-          Voir le glossaire
-        </a>
-      </div>
     </section>
   `
 })
