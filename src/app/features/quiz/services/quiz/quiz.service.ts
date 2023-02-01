@@ -60,7 +60,8 @@ export class QuizService {
           (questions: Question[]): Quiz => ({
             questions,
             goodAnswers: 0,
-            currentQuestionIndex: 0
+            currentQuestionIndex: 0,
+            isFinished: false
           })
         )
       )
