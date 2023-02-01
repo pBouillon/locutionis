@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common'
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
 import { RouterLink } from '@angular/router'
-import { type Error, ErrorType } from 'src/app/models'
+import { type Error, ErrorType } from 'src/app/models/error'
 
 @Component({
   selector: 'app-error',

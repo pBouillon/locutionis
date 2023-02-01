@@ -1,7 +1,7 @@
 import { KeyValuePipe, NgFor } from '@angular/common'
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
 import { TitleComponent } from 'src/app/components/title/title.component'
-import { type FigureOfSpeechPreview } from 'src/app/models'
+import { type FigureOfSpeechPreview } from 'src/app/features/glossary/models/figure-of-speech'
 import { GlossarySectionComponent } from '../glossary-section/glossary-section.component'
 
 @Component({

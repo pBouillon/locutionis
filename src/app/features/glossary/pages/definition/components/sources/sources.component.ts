@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common'
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
-import { type Source } from 'src/app/models'
+import { type Source } from 'src/app/features/glossary/models/source'
 
 @Component({
   selector: 'app-sources',

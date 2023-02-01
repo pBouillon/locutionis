@@ -1,6 +1,6 @@
 import { NgFor, NgIf } from '@angular/common'
 import { Component, Input } from '@angular/core'
-import { type Usage } from 'src/app/models'
+import { type Usage } from 'src/app/features/glossary/models/usage'
 
 @Component({
   selector: 'app-usages',

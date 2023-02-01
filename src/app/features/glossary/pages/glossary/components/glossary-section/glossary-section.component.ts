@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common'
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
-import { type FigureOfSpeechPreview } from 'src/app/models'
+import { type FigureOfSpeechPreview } from 'src/app/features/glossary/models/figure-of-speech'
 import { GlossaryEntryComponent } from '../glossary-entry/glossary-entry-component'
 
 @Component({

@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common'
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
-import { type FigureOfSpeech, type Usage } from 'src/app/models'
+import { type FigureOfSpeech } from 'src/app/features/glossary/models/figure-of-speech'
+import { type Usage } from 'src/app/features/glossary/models/usage'
 import { QuoteComponent } from '../quote/quote.component'
 import { SourcesComponent } from '../sources/sources.component'
 import { UsagesComponent } from '../usages/usages.component'

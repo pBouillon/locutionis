@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
 import { RouterModule } from '@angular/router'
-import { type FigureOfSpeechPreview } from 'src/app/models'
+import { FigureOfSpeechPreview } from 'src/app/features/glossary/models/figure-of-speech'
 
 @Component({
   selector: 'app-glossary-entry',
