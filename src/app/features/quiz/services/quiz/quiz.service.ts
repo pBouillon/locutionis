@@ -19,6 +19,26 @@ export class QuizService {
   private readonly _isLoading$ = new BehaviorSubject<boolean>(false)
   readonly isLoading$ = this._isLoading$.asObservable()
 
+  answerCurrentQuestion (answer: string): void {
+    const quiz = this._current$.getValue()
+
+    if (quiz === null) return
+
+    const question = quiz.questions[quiz.currentQuestionIndex]
+    const isAnswerValid = question.solution.localeCompare(answer) === 0
+    const goodAnswers = quiz.goodAnswers + (isAnswerValid ? 1 : 0)
+
+    const nextIndex = quiz.currentQuestionIndex + 1
+    const isFinished = quiz.questions.length === nextIndex
+
+    this._current$.next({
+      ...quiz,
+      currentQuestionIndex: nextIndex,
+      goodAnswers,
+      isFinished
+    })
+  }
+
   /**
    * Delete the currently ongoing quiz
    */
@@ -35,11 +55,15 @@ export class QuizService {
 
     this._dataService
       .generateQuestions(questionsCount)
-      .pipe(map((questions: Question[]): Quiz => ({
-        questions,
-        goodAnswers: 0,
-        currentQuestionIndex: 0
-      })))
+      .pipe(
+        map(
+          (questions: Question[]): Quiz => ({
+            questions,
+            goodAnswers: 0,
+            currentQuestionIndex: 0
+          })
+        )
+      )
       .subscribe({
         next: (quiz: Quiz) => {
           this._current$.next(quiz)
@@ -60,7 +84,6 @@ export class QuizService {
               })
             }
           }
-
 
           this._isLoading$.next(false)
         }

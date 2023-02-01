@@ -25,16 +25,21 @@ import { QuizGenerationComponent } from './components/quiz-generation/quiz-gener
       <div *ngIf="vm.isLoading; else display"></div>
 
       <ng-template #display>
-          <div *ngIf="vm.error; else quiz" class="sm:mx-auto sm:w-2/3 md:w-1/3">
-            <app-error *ngIf="vm.error" [error]="vm.error" />
-          </div>
+        <div *ngIf="vm.error; else quiz" class="sm:mx-auto sm:w-2/3 md:w-1/3">
+          <app-error *ngIf="vm.error" [error]="vm.error" />
+        </div>
 
-          <ng-template #quiz>
-            <app-quiz-generation
-              *ngIf="vm.current === null"
-              (generateQuiz)="generateQuiz($event)"
-            />
-          </ng-template>
+        <ng-template #quiz>
+          <!-- Generation -->
+          <app-quiz-generation
+            *ngIf="vm.current === null"
+            (generateQuiz)="generateQuiz($event)"
+          />
+
+          <!-- Ongoing -->
+
+          <!-- Done -->
+        </ng-template>
       </ng-template>
     </ng-container>
   `
