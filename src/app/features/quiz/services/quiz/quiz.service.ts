@@ -20,6 +20,13 @@ export class QuizService {
   readonly isLoading$ = this._isLoading$.asObservable()
 
   /**
+   * Delete the currently ongoing quiz
+   */
+  discardCurrentQuiz (): void {
+    this._current$.next(null)
+  }
+
+  /**
    * Generate a new quiz with a predefined number of questions
    * @param questionsCount The number of questions the quiz should have
    */
