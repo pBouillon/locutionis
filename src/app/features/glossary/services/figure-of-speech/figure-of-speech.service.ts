@@ -49,8 +49,8 @@ export class FigureOfSpeechService {
       .get(name)
       .subscribe({
         next: (details: FigureOfSpeech) => {
-          this._error$.next(null)
           this._current$.next(details)
+          this._error$.next(null)
           this._isLoading$.next(false)
         },
         error: (error) => {
