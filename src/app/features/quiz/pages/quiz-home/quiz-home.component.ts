@@ -46,17 +46,19 @@ import { QuizQuestionComponent } from './components/quiz-question/quiz-question.
 
           <!-- Ongoing -->
           <ng-template #ongoing>
-            <hr class="my-5 bg-gray-500 md:w-1/2 md:mx-auto" />
+            <hr class="my-5 bg-gray-500 md:mx-auto md:w-1/2" />
 
             <!-- Current Question -->
-            <app-quiz-question
-              *ngIf="!vm.current!.isFinished"
-              [question]="vm.currentQuestion!"
-              (answerSelected)="submitAnswer($event)"
-            />
+              <app-quiz-question
+                *ngIf="!vm.current!.isFinished"
+                [question]="vm.currentQuestion!"
+                (answerSelected)="submitAnswer($event)"
+                (nextQuestion)="moveToNextQuestion()"
+              />
 
             <!-- Done -->
-          </ng-template>
+
+            </ng-template>
         </ng-template>
       </ng-template>
     </ng-container>
@@ -81,6 +83,10 @@ export class QuizHomeComponent {
 
   generateQuiz (questionsCount: number): void {
     this._quizService.generateQuiz(questionsCount)
+  }
+
+  moveToNextQuestion (): void {
+    this._quizService.nextQuestion()
   }
 
   submitAnswer (answer: string): void {

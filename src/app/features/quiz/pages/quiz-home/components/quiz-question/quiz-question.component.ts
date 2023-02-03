@@ -1,12 +1,12 @@
-import { NgClass, NgFor } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { QuoteComponent } from 'src/app/features/glossary/pages/definition/components/quote/quote.component';
-import { type Question } from 'src/app/features/quiz/models/question';
+import { NgClass, NgFor, NgIf } from '@angular/common'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { QuoteComponent } from 'src/app/features/glossary/pages/definition/components/quote/quote.component'
+import { type Question } from 'src/app/features/quiz/models/question'
 
 @Component({
   selector: 'app-quiz-question',
   standalone: true,
-  imports: [NgFor, NgClass, QuoteComponent],
+  imports: [NgIf, NgFor, NgClass, QuoteComponent],
   template: `
     <app-quote [text]="question.toGuess" />
 
@@ -18,25 +18,38 @@ import { type Question } from 'src/app/features/quiz/models/question';
         [ngClass]="{
           'border-red-500': isAnswered && answer !== question.solution,
           'border-green-500 shadow shadow-green-300': isAnswered && answer === question.solution,
-          'hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-300':
-            !isAnswered
+          'hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-300': !isAnswered
         }"
         (click)="selectAnswer(answer)"
       >
         {{ answer }}
       </button>
     </div>
-  `,
+
+    <button
+      *ngIf="isAnswered"
+      type="button"
+      class="mx-auto flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-sky-500 px-6 font-semibold text-white hover:bg-sky-500/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 disabled:bg-sky-500/50 disabled:text-white/50 sm:w-1/2 md:w-1/4"
+      (click)="moveToNext()"
+    >
+      Question suivante
+    </button>
+  `
 })
 export class QuizQuestionComponent {
-  @Input() question!: Question;
-  @Output() answerSelected = new EventEmitter<string>();
+  @Input() question!: Question
+  @Output() answerSelected = new EventEmitter<string>()
+  @Output() nextQuestion = new EventEmitter<void>()
 
-  get isAnswered(): boolean {
-    return this.question.isCorrectlyAnswered !== undefined;
+  get isAnswered (): boolean {
+    return this.question.isCorrectlyAnswered !== undefined
   }
 
-  selectAnswer(answer: string): void {
-    this.answerSelected.emit(answer);
+  moveToNext (): void {
+    this.nextQuestion.emit()
+  }
+
+  selectAnswer (answer: string): void {
+    this.answerSelected.emit(answer)
   }
 }
