@@ -1,16 +1,25 @@
 import { AsyncPipe, NgIf } from '@angular/common'
-import { Component, inject, type OnInit } from '@angular/core'
+import { Component, inject } from '@angular/core'
 import { combineLatest, map } from 'rxjs'
 import { ErrorComponent } from 'src/app/components/error/error.component'
 import { SubtitleComponent } from 'src/app/components/subtitle/subtitle.component'
 import { TitleComponent } from 'src/app/components/title/title.component'
 import { QuizService } from '../../services/quiz/quiz.service'
 import { QuizGenerationComponent } from './components/quiz-generation/quiz-generation.component'
+import { QuizQuestionComponent } from './components/quiz-question/quiz-question.component'
 
 @Component({
   selector: 'app-quiz-home',
   standalone: true,
-  imports: [NgIf, AsyncPipe, ErrorComponent, TitleComponent, SubtitleComponent, QuizGenerationComponent],
+  imports: [
+    NgIf,
+    AsyncPipe,
+    ErrorComponent,
+    TitleComponent,
+    SubtitleComponent,
+    QuizQuestionComponent,
+    QuizGenerationComponent
+  ],
   template: `
     <app-title>Quiz</app-title>
 
@@ -20,7 +29,6 @@ import { QuizGenerationComponent } from './components/quiz-generation/quiz-gener
     </app-subtitle>
 
     <ng-container *ngIf="vm$ | async as vm">
-
       <!-- TODO: Loading -->
       <div *ngIf="vm.isLoading; else display"></div>
 
@@ -32,32 +40,43 @@ import { QuizGenerationComponent } from './components/quiz-generation/quiz-gener
         <ng-template #quiz>
           <!-- Generation -->
           <app-quiz-generation
-            *ngIf="vm.current === null"
+            *ngIf="vm.current === null; else ongoing"
             (generateQuiz)="generateQuiz($event)"
           />
 
           <!-- Ongoing -->
+          <ng-template #ongoing>
+            <hr class="my-5 bg-gray-500 md:w-1/2 md:mx-auto" />
 
-          <!-- Done -->
+            <!-- Current Question -->
+            <app-quiz-question
+              *ngIf="!vm.current!.isFinished"
+              [question]="vm.currentQuestion!"
+            />
+
+            <!-- Done -->
+          </ng-template>
         </ng-template>
       </ng-template>
     </ng-container>
   `
 })
-export class QuizHomeComponent implements OnInit {
+export class QuizHomeComponent {
   private readonly _quizService = inject(QuizService)
 
   readonly vm$ = combineLatest([
     this._quizService.current$,
+    this._quizService.currentQuestion$,
     this._quizService.error$,
     this._quizService.isLoading$
   ]).pipe(
-    map(([current, error, isLoading]) => ({ current, error, isLoading }))
+    map(([current, currentQuestion, error, isLoading]) => ({
+      current,
+      currentQuestion,
+      error,
+      isLoading
+    }))
   )
-
-  ngOnInit (): void {
-    this._quizService.discardCurrentQuiz()
-  }
 
   generateQuiz (questionsCount: number): void {
     this._quizService.generateQuiz(questionsCount)

@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { inject, Injectable } from '@angular/core'
-import { BehaviorSubject, map, type Observable } from 'rxjs'
+import { BehaviorSubject, iif, map, type Observable } from 'rxjs'
 import { ErrorType, type Error } from 'src/app/models/error'
 import { environment } from 'src/environments/environment'
 import { type Question } from '../../models/question'
@@ -12,6 +12,12 @@ export class QuizService {
 
   private readonly _current$ = new BehaviorSubject<Quiz | null>(null)
   readonly current$ = this._current$.asObservable()
+
+  readonly currentQuestion$ = this._current$.pipe(
+    map((quiz) =>
+      quiz === null ? null : quiz.questions[quiz.currentQuestionIndex]
+    )
+  )
 
   private readonly _error$ = new BehaviorSubject<Error | null>(null)
   readonly error$ = this._error$.asObservable()
