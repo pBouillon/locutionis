@@ -30,18 +30,22 @@ export class QuizService {
 
     if (quiz === null) return
 
-    const question = quiz.questions[quiz.currentQuestionIndex]
-    const isAnswerValid = question.solution.localeCompare(answer) === 0
-    const goodAnswers = quiz.goodAnswers + (isAnswerValid ? 1 : 0)
+    const currentQuestion = quiz.questions[quiz.currentQuestionIndex]
+    const isCorrectlyAnswered = currentQuestion.solution.localeCompare(answer) === 0
 
-    const nextIndex = quiz.currentQuestionIndex + 1
-    const isFinished = quiz.questions.length === nextIndex
+    const questions = quiz.questions.map((question, index) => {
+      return index === quiz.currentQuestionIndex
+        ? { ...question, isCorrectlyAnswered }
+        : question
+    })
+
+
+    const goodAnswers = quiz.goodAnswers + (isCorrectlyAnswered ? 1 : 0)
 
     this._current$.next({
       ...quiz,
-      currentQuestionIndex: nextIndex,
-      goodAnswers,
-      isFinished
+      questions,
+      goodAnswers
     })
   }
 
@@ -95,6 +99,21 @@ export class QuizService {
           this._isLoading$.next(false)
         }
       })
+  }
+
+  nextQuestion (): void {
+    const quiz = this._current$.getValue()
+
+    if (quiz === null) return
+
+    const nextIndex = quiz.currentQuestionIndex + 1
+    const isFinished = quiz.questions.length === nextIndex
+
+    this._current$.next({
+      ...quiz,
+      currentQuestionIndex: nextIndex,
+      isFinished
+    })
   }
 
   /**

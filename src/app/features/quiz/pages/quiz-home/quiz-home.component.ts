@@ -52,6 +52,7 @@ import { QuizQuestionComponent } from './components/quiz-question/quiz-question.
             <app-quiz-question
               *ngIf="!vm.current!.isFinished"
               [question]="vm.currentQuestion!"
+              (answerSelected)="submitAnswer($event)"
             />
 
             <!-- Done -->
@@ -80,5 +81,9 @@ export class QuizHomeComponent {
 
   generateQuiz (questionsCount: number): void {
     this._quizService.generateQuiz(questionsCount)
+  }
+
+  submitAnswer (answer: string): void {
+    this._quizService.answerCurrentQuestion(answer)
   }
 }
