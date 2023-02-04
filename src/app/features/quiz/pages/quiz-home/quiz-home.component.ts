@@ -5,10 +5,11 @@ import { ErrorComponent } from 'src/app/components/error/error.component'
 import { ProgressBarComponent } from 'src/app/components/progress-bar/progress-bar.component'
 import { SubtitleComponent } from 'src/app/components/subtitle/subtitle.component'
 import { TitleComponent } from 'src/app/components/title/title.component'
-import { Quiz } from '../../models/quiz'
+import { type Quiz } from '../../models/quiz'
 import { QuizService } from '../../services/quiz/quiz.service'
 import { QuizGenerationComponent } from './components/quiz-generation/quiz-generation.component'
 import { QuizQuestionComponent } from './components/quiz-question/quiz-question.component'
+import { QuizResultComponent } from './components/quiz-result/quiz-result.component'
 
 @Component({
   selector: 'app-quiz-home',
@@ -20,6 +21,7 @@ import { QuizQuestionComponent } from './components/quiz-question/quiz-question.
     ProgressBarComponent,
     QuizQuestionComponent,
     QuizGenerationComponent,
+    QuizResultComponent,
     SubtitleComponent,
     TitleComponent
   ],
@@ -50,20 +52,29 @@ import { QuizQuestionComponent } from './components/quiz-question/quiz-question.
           <!-- Ongoing -->
           <ng-template #ongoing>
             <div class="my-5">
-              <app-progress-bar [completionRatio]="getCompletionRatio(vm.current!)" />
+              <app-progress-bar
+                [completionRatio]="getCompletionRatio(vm.current!)"
+              />
             </div>
 
             <!-- Current Question -->
-              <app-quiz-question
-                *ngIf="!vm.current!.isFinished"
-                [question]="vm.currentQuestion!"
-                (answerSelected)="submitAnswer($event)"
-                (nextQuestion)="moveToNextQuestion()"
-              />
+            <app-quiz-question
+              *ngIf="!vm.current!.isFinished; else results"
+              [question]="vm.currentQuestion!"
+              (answerSelected)="submitAnswer($event)"
+              (nextQuestion)="moveToNextQuestion()"
+            />
 
             <!-- Done -->
-
+            <ng-template #results>
+              <app-quiz-result
+                *ngIf="vm.current as quiz"
+                [questionsCount]="quiz.questions.length"
+                [correctAnswersCount]="quiz.goodAnswers"
+                (restart)="onRestart()"
+              />
             </ng-template>
+          </ng-template>
         </ng-template>
       </ng-template>
     </ng-container>
@@ -96,6 +107,10 @@ export class QuizHomeComponent {
 
   moveToNextQuestion (): void {
     this._quizService.nextQuestion()
+  }
+
+  onRestart (): void {
+    this._quizService.discardCurrentQuiz()
   }
 
   submitAnswer (answer: string): void {

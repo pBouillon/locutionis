@@ -39,7 +39,6 @@ export class QuizService {
         : question
     })
 
-
     const goodAnswers = quiz.goodAnswers + (isCorrectlyAnswered ? 1 : 0)
 
     this._current$.next({

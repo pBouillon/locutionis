@@ -1,7 +1,7 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core'
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms'
-import { RouterLink } from '@angular/router'
-import { MainButtonLinkComponent } from 'src/app/components/main-button-link/main-button-link.component'
+import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+import { MainButtonLinkComponent } from 'src/app/components/main-button-link/main-button-link.component';
 
 @Component({
   selector: 'app-quiz-generation',
@@ -53,45 +53,47 @@ import { MainButtonLinkComponent } from 'src/app/components/main-button-link/mai
         </p>
       </div>
 
-      <button
-        type="submit"
-        class="flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-sky-500 px-6 font-semibold text-white hover:bg-sky-500/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 disabled:bg-sky-500/50 disabled:text-white/50 sm:w-1/2 md:w-1/4"
-        [disabled]="quizGenerationForm.invalid"
-      >
-        <i class="bi bi-joystick pr-2"></i>
-        Lancer le quiz !
-      </button>
-
-      <p class="mx-auto text-center text-sm text-gray-400">
-        Ou
-        <a
-          [routerLink]="['glossaire']"
-          [relativeTo]="null"
-          class="text-sky-500"
+      <div>
+        <button
+          type="submit"
+          class="flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-sky-500 px-6 font-semibold text-white hover:bg-sky-500/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 disabled:bg-sky-500/50 disabled:text-white/50 sm:w-1/2 md:w-1/4"
+          [disabled]="quizGenerationForm.invalid"
         >
-          potasser encore un peu
-        </a>
-      </p>
+          <i class="bi bi-joystick pr-2"></i>
+          Lancer le quiz !
+        </button>
+
+        <p class="mt-2 mx-auto text-center text-xs md:text-sm text-gray-400">
+          Ou
+          <a
+            [routerLink]="['glossaire']"
+            [relativeTo]="null"
+            class="text-sky-500"
+          >
+            potasser encore un peu
+          </a>
+        </p>
+      </div>
     </form>
-  `
+  `,
 })
 export class QuizGenerationComponent {
-  private static readonly DEFAULT_QUESTIONS_COUNT = 5
+  private static readonly DEFAULT_QUESTIONS_COUNT = 5;
 
-  @Output() generateQuiz = new EventEmitter<number>()
+  @Output() generateQuiz = new EventEmitter<number>();
 
   quizGenerationForm = inject(FormBuilder).group({
     questionsCount: [
       QuizGenerationComponent.DEFAULT_QUESTIONS_COUNT,
-      [Validators.required, Validators.min(0), Validators.max(10)]
-    ]
-  })
+      [Validators.required, Validators.min(0), Validators.max(10)],
+    ],
+  });
 
-  onSubmit (): void {
+  onSubmit(): void {
     const questionsCount =
       this.quizGenerationForm.controls.questionsCount.value ??
-      QuizGenerationComponent.DEFAULT_QUESTIONS_COUNT
+      QuizGenerationComponent.DEFAULT_QUESTIONS_COUNT;
 
-    this.generateQuiz.emit(questionsCount)
+    this.generateQuiz.emit(questionsCount);
   }
 }
