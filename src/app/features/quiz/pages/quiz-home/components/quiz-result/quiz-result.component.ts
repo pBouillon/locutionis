@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
   standalone: true,
   imports: [PercentPipe],
   template: `
-    <section class="my-12 mx-auto max-w-4xl sm:px-6 md:px-8">
+    <section class="mx-auto max-w-4xl sm:px-6 md:px-8">
       <h2 class="text-2xl font-extrabold tracking-tight dark:text-slate-200">
         Résultats
       </h2>
