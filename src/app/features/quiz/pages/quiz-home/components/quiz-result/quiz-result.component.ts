@@ -27,7 +27,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
 
       <button
         type="button"
-        class="mt-5 flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-sky-500 px-6 font-semibold text-white hover:bg-sky-500/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 disabled:bg-sky-500/50 disabled:text-white/50 sm:w-1/2 md:w-1/4"
+        class="mx-auto mt-5 flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-sky-500 px-6 font-semibold text-white hover:bg-sky-500/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 disabled:bg-sky-500/50 disabled:text-white/50 sm:w-1/2 md:mt-10 md:w-1/4"
         (click)="onRestart()"
       >
         <i class="bi bi-arrow-counterclockwise pr-2"></i>

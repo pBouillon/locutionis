@@ -51,7 +51,7 @@ import { QuizResultComponent } from './components/quiz-result/quiz-result.compon
 
           <!-- Ongoing -->
           <ng-template #ongoing>
-            <div class="my-5">
+            <div class="my-5 sm:mx-auto sm:w-2/3 md:w-1/3">
               <app-progress-bar
                 [completionRatio]="getCompletionRatio(vm.current!)"
               />

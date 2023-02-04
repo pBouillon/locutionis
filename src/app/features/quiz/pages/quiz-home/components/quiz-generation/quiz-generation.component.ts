@@ -22,7 +22,7 @@ import { MainButtonLinkComponent } from 'src/app/components/main-button-link/mai
     </section>
 
     <form
-      class="flex flex-col items-center gap-8"
+      class="flex flex-col items-center gap-5"
       [formGroup]="quizGenerationForm"
       (submit)="onSubmit()"
     >
@@ -53,10 +53,10 @@ import { MainButtonLinkComponent } from 'src/app/components/main-button-link/mai
         </p>
       </div>
 
-      <div>
+      <div class="w-full">
         <button
           type="submit"
-          class="flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-sky-500 px-6 font-semibold text-white hover:bg-sky-500/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 disabled:bg-sky-500/50 disabled:text-white/50 sm:w-1/2 md:w-1/4"
+          class="flex mx-auto h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-sky-500 px-6 font-semibold text-white hover:bg-sky-500/90 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 disabled:bg-sky-500/50 disabled:text-white/50 sm:w-1/2 md:w-1/4"
           [disabled]="quizGenerationForm.invalid"
         >
           <i class="bi bi-joystick pr-2"></i>
