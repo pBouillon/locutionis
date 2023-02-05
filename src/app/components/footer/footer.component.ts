@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
   standalone: true,
   template: `
     <footer
-      class="flex flex-col items-center gap-2 border-t py-3 dark:border-slate-600 md:mx-80"
+      class="flex min-w-max flex-col items-center gap-2 border-t py-3 dark:border-slate-600 md:mx-80"
     >
       <p class="flex gap-1 text-xs text-slate-600 dark:text-slate-300">
         <a href="https://github.com/pbouillon/locutionis" class="text-sky-500">

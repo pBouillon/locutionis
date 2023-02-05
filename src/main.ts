@@ -1,37 +1,23 @@
 import { provideHttpClient } from '@angular/common/http'
+import { isDevMode } from '@angular/core'
 import { bootstrapApplication } from '@angular/platform-browser'
-import { provideRouter, type Route } from '@angular/router'
-import { AppComponent } from './app/app.component'
-import { DefinitionComponent } from './app/pages/definition/definition.component'
-import { GlossaryComponent } from './app/pages/glossary/glossary.component'
-import { HomeComponent } from './app/pages/home/home.component'
-import { FigureOfSpeechService } from './app/services/figure-of-speech/figure-of-speech.service'
+import { provideRouter } from '@angular/router'
+import { provideEffects } from '@ngrx/effects'
+import { provideStore } from '@ngrx/store'
+import { provideStoreDevtools } from '@ngrx/store-devtools'
 
-const appRoutes: Route[] = [
-  {
-    path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'glossaire',
-    providers: [FigureOfSpeechService],
-    children: [
-      {
-        path: '',
-        component: GlossaryComponent
-      },
-      {
-        path: ':name',
-        component: DefinitionComponent
-      }
-    ]
-  },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
-]
+import { AppComponent } from './app/app.component'
+import { routes } from './app/routes'
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(appRoutes), provideHttpClient()]
-}).catch((err) => {
-  console.error(err)
-})
+    provideRouter(routes),
+    provideHttpClient(),
+    provideStore(),
+    provideStoreDevtools({
+      maxAge: 25,
+      logOnly: !isDevMode()
+    }),
+    provideEffects()
+  ]
+}).catch((err) => { console.error(err) })

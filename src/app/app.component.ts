@@ -51,6 +51,7 @@ export class AppComponent {
   readonly links = [
     { name: 'Accueil', navigateTo: '' },
     { name: 'Glossaire', navigateTo: 'glossaire' },
+    { name: 'Quiz', navigateTo: 'quiz' },
     { name: 'GitHub', navigateTo: 'https://github.com/pbouillon/locutionis' }
   ]
 

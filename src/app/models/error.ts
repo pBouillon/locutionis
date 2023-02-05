@@ -1,6 +1,7 @@
 export enum ErrorType {
-  UnknownFigureOfSpeech,
   UnableToConnect,
+  UnableToGenerateQuestions,
+  UnknownFigureOfSpeech,
 }
 
 export interface Error {
