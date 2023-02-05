@@ -2,7 +2,6 @@ import { AsyncPipe, NgFor, NgIf } from '@angular/common'
 import { Component, inject, type OnDestroy, type OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import {
-  combineLatest,
   distinctUntilChanged,
   map,
   Subject,
@@ -10,7 +9,7 @@ import {
   type Observable
 } from 'rxjs'
 import { ErrorComponent } from 'src/app/components/error/error.component'
-import { FigureOfSpeechService } from 'src/app/features/glossary/services/figure-of-speech/figure-of-speech.service'
+import { injectFigureOfSpeech } from 'src/app/store/figures-of-speech'
 import { DetailsLoadingComponent } from './components/details-loading/details-loading.component'
 import { DetailsComponent } from './components/details/details.component'
 
@@ -24,8 +23,8 @@ import { DetailsComponent } from './components/details/details.component'
 
       <ng-template #display>
         <app-details
-          *ngIf="vm.current as current; else error"
-          [definition]="current"
+          *ngIf="vm.figureOfSpeech as figureOfSpeech; else error"
+          [definition]="figureOfSpeech"
         />
 
         <ng-template #error>
@@ -38,6 +37,9 @@ import { DetailsComponent } from './components/details/details.component'
 export class DefinitionComponent implements OnInit, OnDestroy {
   private readonly _componentDestroyed$ = new Subject()
 
+  private readonly _figureOfSpeechFeature = injectFigureOfSpeech()
+  readonly vm$ = this._figureOfSpeechFeature.vm$
+
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   private readonly _current: Observable<string> = inject(
     ActivatedRoute
@@ -46,24 +48,10 @@ export class DefinitionComponent implements OnInit, OnDestroy {
     distinctUntilChanged()
   )
 
-  private readonly _figureOfSpeechService = inject(FigureOfSpeechService)
-
-  readonly vm$ = combineLatest([
-    this._figureOfSpeechService.current$,
-    this._figureOfSpeechService.error$,
-    this._figureOfSpeechService.isLoading$
-  ]).pipe(
-    map(([current, error, isLoading]) => {
-      return { current, error, isLoading }
-    })
-  )
-
   ngOnInit (): void {
     this._current
       .pipe(takeUntil(this._componentDestroyed$))
-      .subscribe((name) => {
-        this._figureOfSpeechService.loadDefinitionOf(name)
-      })
+      .subscribe((name) => { this._figureOfSpeechFeature.load(name) })
   }
 
   ngOnDestroy (): void {

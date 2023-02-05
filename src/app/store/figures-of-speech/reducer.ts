@@ -112,3 +112,10 @@ export const selectPreviewsVueModel = createSelector(
   figuresOfSpeechFeature.selectError,
   (glossary, isLoading, error) => ({ glossary, isLoading, error })
 )
+
+export const selectFigureOfSpeechVueModel = createSelector(
+  figuresOfSpeechFeature.selectCurrent,
+  figuresOfSpeechFeature.selectIsLoading,
+  figuresOfSpeechFeature.selectError,
+  (figureOfSpeech, isLoading, error) => ({ figureOfSpeech, isLoading, error })
+)

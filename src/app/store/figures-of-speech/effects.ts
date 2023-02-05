@@ -1,7 +1,7 @@
 import { HttpClient, type HttpErrorResponse } from '@angular/common/http'
 import { inject } from '@angular/core'
 import { Actions, createEffect, ofType } from '@ngrx/effects'
-import { catchError, exhaustMap, map, of } from 'rxjs'
+import { catchError, exhaustMap, map, of, switchMap } from 'rxjs'
 
 import { type FigureOfSpeech, type FigureOfSpeechPreview } from 'src/app/features/glossary/models/figure-of-speech'
 import { ErrorType, type Error } from 'src/app/models/error'
@@ -35,7 +35,7 @@ export const loadFigureOfSpeech$ = createEffect((actions$ = inject(Actions)) => 
 
   return actions$.pipe(
     ofType(FiguresOfSpeechActions.figureOfSpeechSelected),
-    exhaustMap(({ name }) =>
+    switchMap(({ name }) =>
       http.get<FigureOfSpeech>(`${environment.apiUri}/api/figures-of-speech/${name}`)
         .pipe(
           map((figureOfSpeech) => FiguresOfSpeechActions.selectedLoadedSuccess({ figureOfSpeech })),

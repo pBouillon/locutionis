@@ -8,7 +8,6 @@ import { provideStoreDevtools } from '@ngrx/store-devtools'
 
 import { AppComponent } from './app/app.component'
 import { routes } from './app/routes'
-import { provideFiguresOfSpeechFeature } from './app/store/figures-of-speech'
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -19,7 +18,6 @@ bootstrapApplication(AppComponent, {
       maxAge: 25,
       logOnly: !isDevMode()
     }),
-    provideEffects(),
-    provideFiguresOfSpeechFeature()
+    provideEffects()
   ]
 }).catch((err) => { console.error(err) })
