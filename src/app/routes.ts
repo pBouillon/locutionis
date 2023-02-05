@@ -1,7 +1,7 @@
 import { type Route } from '@angular/router'
 import { HomeComponent } from './features/home/pages/home/home.component'
-import { QuizService } from './features/quiz/services/quiz/quiz.service'
 import { provideFiguresOfSpeechFeature } from './store/figures-of-speech'
+import { provideQuizFeature } from './store/quiz'
 
 /* eslint-disable @typescript-eslint/promise-function-async */
 export const routes: Route[] = [
@@ -16,7 +16,7 @@ export const routes: Route[] = [
   },
   {
     path: 'quiz',
-    providers: [QuizService],
+    providers: [provideQuizFeature()],
     loadChildren: () => import('./features/quiz/quiz').then(m => m.routes)
   },
   { path: '**', pathMatch: 'full', redirectTo: '' }

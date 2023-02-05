@@ -1,7 +1,7 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterLink } from '@angular/router';
-import { MainButtonLinkComponent } from 'src/app/components/main-button-link/main-button-link.component';
+import { Component, EventEmitter, inject, Output } from '@angular/core'
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms'
+import { RouterLink } from '@angular/router'
+import { MainButtonLinkComponent } from 'src/app/components/main-button-link/main-button-link.component'
 
 @Component({
   selector: 'app-quiz-generation',
@@ -49,7 +49,7 @@ import { MainButtonLinkComponent } from 'src/app/components/main-button-link/mai
           id="helper-text-explanation"
           class="mt-2 text-sm text-gray-500 dark:text-gray-400"
         >
-          Choisissez la longueur du quiz, de 1 à 10 questions
+          Choisissez la longueur du quiz, de 5 à 10 questions
         </p>
       </div>
 
@@ -75,25 +75,25 @@ import { MainButtonLinkComponent } from 'src/app/components/main-button-link/mai
         </p>
       </div>
     </form>
-  `,
+  `
 })
 export class QuizGenerationComponent {
-  private static readonly DEFAULT_QUESTIONS_COUNT = 5;
+  private static readonly DEFAULT_QUESTIONS_COUNT = 10
 
-  @Output() generateQuiz = new EventEmitter<number>();
+  @Output() generateQuiz = new EventEmitter<number>()
 
   quizGenerationForm = inject(FormBuilder).group({
     questionsCount: [
       QuizGenerationComponent.DEFAULT_QUESTIONS_COUNT,
-      [Validators.required, Validators.min(0), Validators.max(10)],
-    ],
-  });
+      [Validators.required, Validators.min(5), Validators.max(10)]
+    ]
+  })
 
-  onSubmit(): void {
+  onSubmit (): void {
     const questionsCount =
       this.quizGenerationForm.controls.questionsCount.value ??
-      QuizGenerationComponent.DEFAULT_QUESTIONS_COUNT;
+      QuizGenerationComponent.DEFAULT_QUESTIONS_COUNT
 
-    this.generateQuiz.emit(questionsCount);
+    this.generateQuiz.emit(questionsCount)
   }
 }

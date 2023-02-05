@@ -1,14 +1,14 @@
 import { AsyncPipe, NgIf } from '@angular/common'
-import { Component, inject } from '@angular/core'
-import { combineLatest, map } from 'rxjs'
+import { Component } from '@angular/core'
+
 import { ErrorComponent } from 'src/app/components/error/error.component'
 import { ProgressBarComponent } from 'src/app/components/progress-bar/progress-bar.component'
 import { SubtitleComponent } from 'src/app/components/subtitle/subtitle.component'
 import { TitleComponent } from 'src/app/components/title/title.component'
-import { type Quiz } from '../../models/quiz'
-import { QuizService } from '../../services/quiz/quiz.service'
+import { injectQuiz } from 'src/app/store/quiz'
+import { QuestionLoadingComponent } from './components/question/question-loading/question-loading.component'
 import { QuizGenerationComponent } from './components/quiz-generation/quiz-generation.component'
-import { QuizQuestionComponent } from './components/quiz-question/quiz-question.component'
+import { QuestionComponent } from './components/question/question.component'
 import { QuizResultComponent } from './components/quiz-result/quiz-result.component'
 
 @Component({
@@ -19,23 +19,24 @@ import { QuizResultComponent } from './components/quiz-result/quiz-result.compon
     AsyncPipe,
     ErrorComponent,
     ProgressBarComponent,
-    QuizQuestionComponent,
+    QuestionComponent,
     QuizGenerationComponent,
     QuizResultComponent,
     SubtitleComponent,
-    TitleComponent
+    TitleComponent,
+    QuestionLoadingComponent
   ],
   template: `
     <app-title>Quiz</app-title>
 
-    <app-subtitle>
-      Les figures de style n'ont plus de secret pour vous ?
-      <em>Challengez vous</em> pour tester vos connaissances !
-    </app-subtitle>
-
     <ng-container *ngIf="vm$ | async as vm">
-      <!-- TODO: Loading -->
-      <div *ngIf="vm.isLoading; else display"></div>
+
+      <app-subtitle *ngIf="!vm.error">
+        Les figures de style n'ont plus de secret pour vous ?
+        <em>Challengez vous</em> pour tester vos connaissances !
+      </app-subtitle>
+
+      <app-question-loading *ngIf="vm.isLoading; else display" />
 
       <ng-template #display>
         <div *ngIf="vm.error; else quiz" class="sm:mx-auto sm:w-2/3 md:w-1/3">
@@ -45,7 +46,7 @@ import { QuizResultComponent } from './components/quiz-result/quiz-result.compon
         <ng-template #quiz>
           <!-- Generation -->
           <app-quiz-generation
-            *ngIf="vm.current === null; else ongoing"
+            *ngIf="vm.currentQuestion === null; else ongoing"
             (generateQuiz)="generateQuiz($event)"
           />
 
@@ -53,24 +54,22 @@ import { QuizResultComponent } from './components/quiz-result/quiz-result.compon
           <ng-template #ongoing>
             <div class="my-5 sm:mx-auto sm:w-2/3 md:w-1/3">
               <app-progress-bar
-                [completionRatio]="getCompletionRatio(vm.current!)"
+                [completionRatio]="vm.completionRatio!"
               />
             </div>
 
             <!-- Current Question -->
-            <app-quiz-question
-              *ngIf="!vm.current!.isFinished; else results"
+            <app-question
+              *ngIf="!vm.isFinished; else results"
               [question]="vm.currentQuestion!"
-              (answerSelected)="submitAnswer($event)"
+              (answerSelected)="onAnswerSelected($event)"
               (nextQuestion)="moveToNextQuestion()"
             />
 
             <!-- Done -->
             <ng-template #results>
               <app-quiz-result
-                *ngIf="vm.current as quiz"
-                [questionsCount]="quiz.questions.length"
-                [correctAnswersCount]="quiz.goodAnswers"
+                [successRatio]="vm.successRatio!"
                 (restart)="onRestart()"
               />
             </ng-template>
@@ -81,39 +80,22 @@ import { QuizResultComponent } from './components/quiz-result/quiz-result.compon
   `
 })
 export class QuizHomeComponent {
-  private readonly _quizService = inject(QuizService)
-
-  readonly vm$ = combineLatest([
-    this._quizService.current$,
-    this._quizService.currentQuestion$,
-    this._quizService.error$,
-    this._quizService.isLoading$
-  ]).pipe(
-    map(([current, currentQuestion, error, isLoading]) => ({
-      current,
-      currentQuestion,
-      error,
-      isLoading
-    }))
-  )
-
-  getCompletionRatio (quiz: Quiz): number {
-    return quiz.currentQuestionIndex / quiz.questions.length
-  }
+  private readonly _quizFeature = injectQuiz()
+  readonly vm$ = this._quizFeature.vm$
 
   generateQuiz (questionsCount: number): void {
-    this._quizService.generateQuiz(questionsCount)
+    this._quizFeature.generate(questionsCount)
   }
 
   moveToNextQuestion (): void {
-    this._quizService.nextQuestion()
+    this._quizFeature.moveOntoNextQuestion()
   }
 
   onRestart (): void {
-    this._quizService.discardCurrentQuiz()
+    this._quizFeature.restart()
   }
 
-  submitAnswer (answer: string): void {
-    this._quizService.answerCurrentQuestion(answer)
+  onAnswerSelected (answer: string): void {
+    this._quizFeature.submitAnswer(answer)
   }
 }

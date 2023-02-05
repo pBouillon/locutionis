@@ -15,7 +15,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
         class="mt-3 max-w-3xl space-y-6 tracking-wide text-slate-600 dark:text-slate-400"
       >
         Vous avez correctement identifié
-        <em>{{ getSuccessRatio() | percent }}</em>
+        <em>{{ successRatio | percent }}</em>
         des figures de style présentées
       </p>
 
@@ -37,32 +37,29 @@ import { Component, EventEmitter, Input, Output } from '@angular/core'
   `
 })
 export class QuizResultComponent {
-  @Input() correctAnswersCount!: number
-  @Input() questionsCount!: number
+  @Input() successRatio!: number
 
   @Output() restart = new EventEmitter<void>()
 
   getAppreciation (): string {
-    const successRatio = this.getSuccessRatio()
-
-    if (successRatio < 0.33) {
+    if (this.successRatio < 0.33) {
       return `
         Un petit tour sur le glossaire avant de viser plus haut ?
       `
     }
 
-    if (successRatio < 0.66) {
+    if (this.successRatio < 0.66) {
       return 'Encore quelques tours sur le glossaire et vous serez imbattable !'
+    }
+
+    if (this.successRatio < 0.95) {
+      return "Impressionnant ! Vous n'aurez bientôt plus rien à apprendre ici !"
     }
 
     return `
       Parfait, il ne vous reste plus qu'a proposer celles que vous connaissez et
       qui n'apparaissent pas encore ici !
     `
-  }
-
-  getSuccessRatio (): number {
-    return this.correctAnswersCount / this.questionsCount
   }
 
   onRestart (): void {

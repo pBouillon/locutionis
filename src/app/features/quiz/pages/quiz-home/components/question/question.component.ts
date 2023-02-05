@@ -4,7 +4,7 @@ import { QuoteComponent } from 'src/app/features/glossary/pages/definition/compo
 import { type Question } from 'src/app/features/quiz/models/question'
 
 @Component({
-  selector: 'app-quiz-question',
+  selector: 'app-question',
   standalone: true,
   imports: [NgIf, NgFor, NgClass, QuoteComponent],
   template: `
@@ -16,8 +16,7 @@ import { type Question } from 'src/app/features/quiz/models/question'
         type="button"
         class="rounded border border-sky-500 p-5 text-center dark:text-gray-300"
         [ngClass]="{
-          'border-red-500': isAnswered && answer !== question.solution,
-          'border-green-500 shadow shadow-green-300': isAnswered && answer === question.solution,
+          'border-green-500 shadow shadow-green-300': isAnswered && question.solution === answer,
           'hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-300': !isAnswered
         }"
         (click)="selectAnswer(answer)"
@@ -36,7 +35,7 @@ import { type Question } from 'src/app/features/quiz/models/question'
     </button>
   `
 })
-export class QuizQuestionComponent {
+export class QuestionComponent {
   @Input() question!: Question
   @Output() answerSelected = new EventEmitter<string>()
   @Output() nextQuestion = new EventEmitter<void>()
