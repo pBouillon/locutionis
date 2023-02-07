@@ -3,14 +3,14 @@ import { type EnvironmentProviders, inject, makeEnvironmentProviders } from '@an
 import { provideEffects } from '@ngrx/effects'
 import { provideState, Store } from '@ngrx/store'
 import { ThemeActions } from './actions'
-import { initialize$, toggleCurrentTheme$ } from './effects'
+import { initialize$, toggleCurrentTheme$, setDocumentClass$ } from './effects'
 
 import { selectThemeViewModel, themeFeature } from './reducer'
 
 export function provideThemeFeature (): EnvironmentProviders {
   return makeEnvironmentProviders([
     provideState(themeFeature),
-    provideEffects({ initialize$, toggleCurrentTheme$ })
+    provideEffects({ initialize$, toggleCurrentTheme$, setDocumentClass$ })
   ])
 }
 

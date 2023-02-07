@@ -15,18 +15,15 @@ export const initialize$ = createEffect(
         const savedPreference = localStorage['theme']
         const isTheme = ['light', 'dark'].includes(savedPreference)
 
-        if (isTheme) {
-          return ThemeActions.setTheme({ theme: savedPreference })
-        }
+        if (isTheme) return savedPreference
 
         const isDarkThemePreferred = window.matchMedia(
           '(prefers-color-scheme: dark)'
         ).matches
 
-        const preferredTheme = isDarkThemePreferred ? 'dark' : 'light'
-
-        return ThemeActions.setTheme({ theme: preferredTheme })
-      })
+        return isDarkThemePreferred ? 'dark' : 'light'
+      }),
+      map(theme => ThemeActions.setTheme({ theme }))
     )
   }, { functional: true })
 
@@ -35,9 +32,6 @@ export const toggleCurrentTheme$ = createEffect((actions$ = inject(Actions)) => 
 
   return actions$.pipe(
     ofType(ThemeActions.toggleCurrentTheme),
-    tap(() => {
-      document.documentElement.classList.toggle('dark')
-    }),
     concatLatestFrom(() => store.select(themeFeature.selectTheme)),
     map(([, current]) => {
       const next: Theme = current === 'dark' ? 'light' : 'dark'
@@ -46,11 +40,14 @@ export const toggleCurrentTheme$ = createEffect((actions$ = inject(Actions)) => 
   )
 }, { functional: true })
 
-export const saveToLocalStorage$ = createEffect((actions$ = inject(Actions)) => {
+export const setDocumentClass$ = createEffect((actions$ = inject(Actions)) => {
   return actions$.pipe(
     ofType(ThemeActions.setTheme),
     tap(({ theme }) => {
-      localStorage.setItem('theme', theme)
-    })
+      theme === 'dark'
+        ? document.documentElement.classList.add('dark')
+        : document.documentElement.classList.remove('dark')
+    }),
+    tap(({ theme }) => { localStorage.setItem('theme', theme) })
   )
 }, { functional: true, dispatch: false })
