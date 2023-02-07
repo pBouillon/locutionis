@@ -19,6 +19,7 @@ import { type Question } from 'src/app/features/quiz/models/question'
           'border-green-500 shadow shadow-green-300': isAnswered && question.solution === answer,
           'hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-300': !isAnswered
         }"
+        [disabled]="isAnswered"
         (click)="selectAnswer(answer)"
       >
         {{ answer }}
