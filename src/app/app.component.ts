@@ -1,9 +1,10 @@
 import { AsyncPipe, NgIf } from '@angular/common'
-import { Component, inject } from '@angular/core'
+import { Component, type OnInit } from '@angular/core'
 import { RouterOutlet } from '@angular/router'
+
 import { FooterComponent } from './components/footer/footer.component'
 import { NavbarBlockComponent, NavbarComponent } from './components/navigation'
-import { DarkModeService } from './services/dark-mode/dark-mode.service'
+import { injectTheme } from './store/theme'
 
 @Component({
   selector: 'app-root',
@@ -17,10 +18,10 @@ import { DarkModeService } from './services/dark-mode/dark-mode.service'
     FooterComponent
   ],
   template: `
-    <div class="flex min-h-screen flex-col dark:bg-gray-900">
+    <div *ngIf="vm$ | async as vm" class="flex min-h-screen flex-col dark:bg-gray-900">
       <app-navbar
         [links]="links"
-        [isDarkModeEnabled]="(isDarkModeEnabled$ | async) ?? false"
+        [isDarkModeEnabled]="vm.isDarkModeEnabled"
         (burgerMenuClick)="showMobileNavbar = true"
         (toggleDarkMode)="toggleDarkMode()"
       />
@@ -29,7 +30,7 @@ import { DarkModeService } from './services/dark-mode/dark-mode.service'
         *ngIf="showMobileNavbar"
         [links]="links"
         (close)="showMobileNavbar = false"
-        [isDarkModeEnabled]="(isDarkModeEnabled$ | async) ?? false"
+        [isDarkModeEnabled]="vm.isDarkModeEnabled"
         (toggleDarkMode)="toggleDarkMode()"
       />
 
@@ -41,10 +42,9 @@ import { DarkModeService } from './services/dark-mode/dark-mode.service'
     </div>
   `
 })
-export class AppComponent {
-  private readonly _darkModeService = inject(DarkModeService)
-
-  readonly isDarkModeEnabled$ = this._darkModeService.isDarkModeEnabled$
+export class AppComponent implements OnInit {
+  private readonly _themeFeature = injectTheme()
+  readonly vm$ = this._themeFeature.vm$
 
   showMobileNavbar = false
 
@@ -55,7 +55,11 @@ export class AppComponent {
     { name: 'GitHub', navigateTo: 'https://github.com/pbouillon/locutionis' }
   ]
 
+  ngOnInit (): void {
+    this._themeFeature.initialize()
+  }
+
   toggleDarkMode (): void {
-    this._darkModeService.toggleDarkMode()
+    this._themeFeature.toggle()
   }
 }

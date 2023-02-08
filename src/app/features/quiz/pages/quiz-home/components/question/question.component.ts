@@ -16,9 +16,11 @@ import { type Question } from 'src/app/features/quiz/models/question'
         type="button"
         class="rounded border border-sky-500 p-5 text-center dark:text-gray-300"
         [ngClass]="{
-          'border-green-500 shadow shadow-green-300': isAnswered && question.solution === answer,
-          'hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-300': !isAnswered
+          'border-green-500 shadow shadow-green-300': isAnswered && isSolution(answer),
+          'border-red-500 shadow shadow-red-300': isAnswered && !isSolution(answer) && isSelected(answer),
+          'hover:-translate-y-1 hover:shadow-md hover:shadow-sky-300': !isAnswered
         }"
+        [disabled]="isAnswered"
         (click)="selectAnswer(answer)"
       >
         {{ answer }}
@@ -40,8 +42,18 @@ export class QuestionComponent {
   @Output() answerSelected = new EventEmitter<string>()
   @Output() nextQuestion = new EventEmitter<void>()
 
+  submittedAnswer?: string
+
   get isAnswered (): boolean {
     return this.question.isCorrectlyAnswered !== undefined
+  }
+
+  isSelected (answer: string): boolean {
+    return this.submittedAnswer === answer
+  }
+
+  isSolution (answer: string): boolean {
+    return this.question.solution === answer
   }
 
   moveToNext (): void {
@@ -49,6 +61,7 @@ export class QuestionComponent {
   }
 
   selectAnswer (answer: string): void {
+    this.submittedAnswer = answer
     this.answerSelected.emit(answer)
   }
 }
