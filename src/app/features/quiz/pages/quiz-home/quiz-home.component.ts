@@ -1,5 +1,5 @@
 import { AsyncPipe, NgIf } from '@angular/common'
-import { Component } from '@angular/core'
+import { Component, type OnDestroy } from '@angular/core'
 
 import { ErrorComponent } from 'src/app/components/error/error.component'
 import { ProgressBarComponent } from 'src/app/components/progress-bar/progress-bar.component'
@@ -79,7 +79,7 @@ import { QuizResultComponent } from './components/quiz-result/quiz-result.compon
     </ng-container>
   `
 })
-export class QuizHomeComponent {
+export class QuizHomeComponent implements OnDestroy {
   private readonly _quizFeature = injectQuiz()
   readonly vm$ = this._quizFeature.vm$
 
@@ -89,6 +89,10 @@ export class QuizHomeComponent {
 
   moveToNextQuestion (): void {
     this._quizFeature.moveOntoNextQuestion()
+  }
+
+  ngOnDestroy (): void {
+    this._quizFeature.restart()
   }
 
   onRestart (): void {
