@@ -41,7 +41,7 @@ import { MainButtonLinkComponent } from 'src/app/components/main-button-link/mai
           formControlName="questionsCount"
           class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg focus:border-sky-500 focus:ring-sky-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
           min="0"
-          max="10"
+          max="20"
           required
         />
 
