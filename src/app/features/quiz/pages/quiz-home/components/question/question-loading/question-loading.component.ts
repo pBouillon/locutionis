@@ -24,7 +24,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core'
     <!-- Loading answer buttons -->
     <div class="my-5 grid animate-pulse grid-cols-2 gap-3 md:mx-auto md:w-1/2">
       <div
-        *ngFor="let _ of [0, 1, 2, 3]"
+        *ngFor="let _ of [0, 1, 2, 3, 4, 5]"
         class="h-12 w-full rounded-lg border border-sky-500 bg-sky-500/25"
       ></div>
     </div>
