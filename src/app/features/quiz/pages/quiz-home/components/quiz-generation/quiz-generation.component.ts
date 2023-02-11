@@ -49,7 +49,7 @@ import { MainButtonLinkComponent } from 'src/app/components/main-button-link/mai
           id="helper-text-explanation"
           class="mt-2 text-sm text-gray-500 dark:text-gray-400"
         >
-          Choisissez la longueur du quiz, de 5 à 10 questions
+          Choisissez la longueur du quiz, de 5 à 20 questions
         </p>
       </div>
 
@@ -85,7 +85,7 @@ export class QuizGenerationComponent {
   quizGenerationForm = inject(FormBuilder).group({
     questionsCount: [
       QuizGenerationComponent.DEFAULT_QUESTIONS_COUNT,
-      [Validators.required, Validators.min(5), Validators.max(10)]
+      [Validators.required, Validators.min(5), Validators.max(20)]
     ]
   })
 
