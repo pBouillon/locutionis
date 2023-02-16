@@ -29,7 +29,6 @@ export const themeFeature = createFeature({
   })
 })
 
-export const selectThemeViewModel = createSelector(
-  themeFeature.isDarkModeEnabled,
-  (isDarkModeEnabled) => ({ isDarkModeEnabled })
-)
+export const selectThemeViewModel = createSelector({
+  isDarkModeEnabled: themeFeature.isDarkModeEnabled
+})

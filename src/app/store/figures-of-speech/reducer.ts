@@ -106,16 +106,14 @@ export const figuresOfSpeechFeature = createFeature({
   })
 })
 
-export const selectPreviewsVueModel = createSelector(
-  figuresOfSpeechFeature.selectGlossary,
-  figuresOfSpeechFeature.selectIsLoading,
-  figuresOfSpeechFeature.selectError,
-  (glossary, isLoading, error) => ({ glossary, isLoading, error })
-)
+export const selectPreviewsVueModel = createSelector({
+  glossary: figuresOfSpeechFeature.selectGlossary,
+  isLoading: figuresOfSpeechFeature.selectIsLoading,
+  error: figuresOfSpeechFeature.selectError
+})
 
-export const selectFigureOfSpeechVueModel = createSelector(
-  figuresOfSpeechFeature.selectCurrent,
-  figuresOfSpeechFeature.selectIsLoading,
-  figuresOfSpeechFeature.selectError,
-  (figureOfSpeech, isLoading, error) => ({ figureOfSpeech, isLoading, error })
-)
+export const selectFigureOfSpeechVueModel = createSelector({
+  figureOfSpeech: figuresOfSpeechFeature.selectCurrent,
+  isLoading: figuresOfSpeechFeature.selectIsLoading,
+  error: figuresOfSpeechFeature.selectError
+})

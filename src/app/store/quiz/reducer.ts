@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common'
 import { createFeature, createReducer, createSelector, on } from '@ngrx/store'
 
 import { type Quiz } from 'src/app/features/quiz/models/quiz'
@@ -150,26 +151,11 @@ export const quizFeature = createFeature({
   })
 })
 
-export const selectQuizVueModel = createSelector(
-  quizFeature.selectCurrentQuestion,
-  quizFeature.selectIsFinished,
-  quizFeature.selectCompletionRatio,
-  quizFeature.selectSuccessRatio,
-  quizFeature.selectIsLoading,
-  quizFeature.selectError,
-  (
-    currentQuestion,
-    isFinished,
-    completionRatio,
-    successRatio,
-    isLoading,
-    error
-  ) => ({
-    currentQuestion,
-    isFinished,
-    completionRatio,
-    successRatio,
-    isLoading,
-    error
-  })
-)
+export const selectQuizVueModel = createSelector({
+  currentQuestion: quizFeature.selectCurrentQuestion,
+  isFinished: quizFeature.selectIsFinished,
+  completionRatio: quizFeature.selectCompletionRatio,
+  successRatio: quizFeature.selectSuccessRatio,
+  isLoading: quizFeature.selectIsLoading,
+  error: quizFeature.selectError
+})
