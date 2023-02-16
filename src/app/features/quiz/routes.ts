@@ -1,9 +1,9 @@
 import { type Route } from '@angular/router'
 import { QuizHomeComponent } from './pages/quiz-home/quiz-home.component'
 
-export const routes: Route[] = [
+export default [
   {
     path: '',
     component: QuizHomeComponent
   }
-]
+] as Route[]

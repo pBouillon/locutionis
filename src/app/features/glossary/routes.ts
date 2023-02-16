@@ -2,7 +2,7 @@ import { type Route } from '@angular/router'
 import { DefinitionComponent } from './pages/definition/definition.component'
 import { GlossaryComponent } from './pages/glossary/glossary.component'
 
-export const routes: Route[] = [
+export default [
   {
     path: '',
     component: GlossaryComponent
@@ -11,4 +11,4 @@ export const routes: Route[] = [
     path: ':name',
     component: DefinitionComponent
   }
-]
+] as Route[]

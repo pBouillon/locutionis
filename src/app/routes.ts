@@ -12,12 +12,12 @@ export const routes: Route[] = [
   {
     path: 'glossaire',
     providers: [provideFiguresOfSpeechFeature()],
-    loadChildren: () => import('./features/glossary/routes').then(m => m.routes)
+    loadChildren: () => import('./features/glossary/routes')
   },
   {
     path: 'quiz',
     providers: [provideQuizFeature()],
-    loadChildren: () => import('./features/quiz/quiz').then(m => m.routes)
+    loadChildren: () => import('./features/quiz/routes')
   },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ]
