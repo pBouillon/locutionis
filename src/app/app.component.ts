@@ -51,7 +51,7 @@ export class AppComponent implements OnInit {
   readonly links = [
     { name: 'Accueil', navigateTo: '' },
     { name: 'Glossaire', navigateTo: 'glossaire' },
-    { name: 'Quiz', navigateTo: 'quiz' },
+    { name: 'Quiz', navigateTo: 'quiz/nouveau' },
     { name: 'GitHub', navigateTo: 'https://github.com/pbouillon/locutionis' }
   ]
 

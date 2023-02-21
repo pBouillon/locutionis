@@ -1,8 +1,10 @@
 import { HttpClient, type HttpErrorResponse } from '@angular/common/http'
 import { inject } from '@angular/core'
+import { Router } from '@angular/router'
+
 import { Actions, concatLatestFrom, createEffect, ofType } from '@ngrx/effects'
 import { Store } from '@ngrx/store'
-import { catchError, filter, map, of, switchMap } from 'rxjs'
+import { catchError, filter, map, of, switchMap, tap } from 'rxjs'
 
 import { type Question } from 'src/app/features/quiz/models/question'
 import { type Quiz } from 'src/app/features/quiz/models/quiz'
@@ -71,3 +73,40 @@ export const generateQuiz$ = createEffect((actions$ = inject(Actions)) => {
     )
   )
 }, { functional: true })
+
+export const generateQuizSuccessRedirectToGame$ = createEffect((actions$ = inject(Actions)) => {
+  const router = inject(Router)
+
+  return actions$.pipe(
+    ofType(QuizActions.generateQuizSuccess),
+    tap(() => {
+      void router.navigate(['/', 'quiz'])
+    })
+  )
+}, { functional: true, dispatch: false })
+
+export const moveToResultsIfNoQuestionIsRemaining$ = createEffect((actions$ = inject(Actions)) => {
+  const store = inject(Store)
+  const router = inject(Router)
+
+  return actions$.pipe(
+    ofType(QuizActions.moveOntoNextQuestion),
+    concatLatestFrom(() => store.select(quizFeature.selectIsFinished)),
+    tap(([_, isFinished]) => {
+      if (isFinished !== false) {
+        void router.navigate(['/', 'quiz', 'résultats'])
+      }
+    })
+  )
+}, { functional: true, dispatch: false })
+
+export const restartQuiz$ = createEffect((actions$ = inject(Actions)) => {
+  const router = inject(Router)
+
+  return actions$.pipe(
+    ofType(QuizActions.restartQuiz),
+    tap(() => {
+      void router.navigate(['/', 'quiz', 'nouveau'])
+    })
+  )
+}, { functional: true, dispatch: false })

@@ -1,5 +1,6 @@
 import { type Route } from '@angular/router'
-import { canActivateOngoingQuizGuard } from './guards/can-activate.ongoing-quiz.guard'
+import { canActivateOngoingQuizGuard } from './guards'
+import { QuizGenerationComponent } from './pages/quiz-generation/quiz-generation.component'
 import { QuizHomeComponent } from './pages/quiz-home/quiz-home.component'
 import { QuizResultComponent } from './pages/quiz-result/quiz-result.component'
 
@@ -11,7 +12,7 @@ export default [
   },
   {
     path: 'nouveau',
-    component: QuizHomeComponent
+    component: QuizGenerationComponent
   },
   {
     path: 'résultats',

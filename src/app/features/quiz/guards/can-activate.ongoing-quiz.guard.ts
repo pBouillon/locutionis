@@ -1,18 +1,20 @@
 import { inject } from '@angular/core'
-import { Router } from '@angular/router'
+import { Router, type UrlTree } from '@angular/router'
 import { Store } from '@ngrx/store'
-import { type Observable, tap } from 'rxjs'
+import { map, type Observable } from 'rxjs'
 import { quizFeature } from 'src/app/store/quiz'
 
-export const canActivateOngoingQuizGuard = (): Observable<any> => {
+export const canActivateOngoingQuizGuard = (): Observable<boolean | UrlTree> => {
   const router = inject(Router)
   const store = inject(Store)
 
   return store.select(quizFeature.selectIsFinished).pipe(
-    tap((isFinished?: boolean) => {
+    map((isFinished?: boolean) => {
       if (isFinished !== false) {
-        void router.navigate(['/', 'quiz', 'nouveau'])
+        return router.parseUrl('/quiz/nouveau')
       }
+
+      return true
     })
   )
 }

@@ -1,4 +1,3 @@
-import { CurrencyPipe } from '@angular/common'
 import { createFeature, createReducer, createSelector, on } from '@ngrx/store'
 
 import { type Quiz } from 'src/app/features/quiz/models/quiz'
@@ -41,6 +40,9 @@ export const quizFeature = createFeature({
         isLoading: false
       }
     }),
+    on(QuizActions.resetQuiz, (state): State => {
+      return { ...state, quiz: null }
+    }),
     on(QuizActions.restartQuiz, (state): State => {
       return { ...state, quiz: null }
     }),
@@ -64,10 +66,11 @@ export const quizFeature = createFeature({
         return { ...state }
       }
 
-      const questions = quiz.questions.map(
-        (question, index) => index === quiz.currentQuestionIndex
+      const questions = quiz.questions.map((question, index) =>
+        index === quiz.currentQuestionIndex
           ? { ...question, isCorrectlyAnswered: true }
-          : question)
+          : question
+      )
 
       return {
         ...state,
@@ -85,10 +88,11 @@ export const quizFeature = createFeature({
         return { ...state }
       }
 
-      const questions = quiz.questions.map(
-        (question, index) => index === quiz.currentQuestionIndex
+      const questions = quiz.questions.map((question, index) =>
+        index === quiz.currentQuestionIndex
           ? { ...question, isCorrectlyAnswered: false }
-          : question)
+          : question
+      )
 
       return {
         ...state,
@@ -117,39 +121,59 @@ export const quizFeature = createFeature({
     })
   ),
   extraSelectors: (state) => ({
-    selectCompletionRatio: createSelector(
-      state.selectQuiz,
-      (quiz) => {
-        if (quiz === null) return null
+    selectCompletionRatio: createSelector(state.selectQuiz, (quiz) => {
+      if (quiz === null) return null
 
-        const { questions, currentQuestionIndex } = quiz
-        return currentQuestionIndex / questions.length
-      }
-    ),
-    selectCurrentQuestion: createSelector(
-      state.selectQuiz,
-      (quiz) => {
-        if (quiz === null) return null
+      const { questions, currentQuestionIndex } = quiz
+      return currentQuestionIndex / questions.length
+    }),
+    selectCurrentQuestion: createSelector(state.selectQuiz, (quiz) => {
+      if (quiz === null) return null
 
-        const { currentQuestionIndex, questions } = quiz
-        return questions[currentQuestionIndex]
-      }
-    ),
+      const { currentQuestionIndex, questions } = quiz
+      return questions[currentQuestionIndex]
+    }),
     selectIsFinished: createSelector(
       state.selectQuiz,
       (quiz) => quiz?.isFinished
     ),
-    selectSuccessRatio: createSelector(
-      state.selectQuiz,
-      (quiz) => {
-        if (quiz === null) return null
+    selectGoodAnswersCount: createSelector(state.selectQuiz, (quiz) =>
+      quiz === null ? null : quiz.goodAnswers
+    ),
+    selectSuccessRatio: createSelector(state.selectQuiz, (quiz) => {
+      if (quiz === null) return null
 
-        const { questions, goodAnswers } = quiz
-        return goodAnswers / questions.length
-      }
+      const { questions, goodAnswers } = quiz
+      return goodAnswers / questions.length
+    }),
+    selectQuestionsCount: createSelector(state.selectQuiz, (quiz) =>
+      quiz === null ? null : quiz.questions.length
     )
   })
 })
+
+const selectAppreciationSelector = createSelector(
+  quizFeature.selectCompletionRatio,
+  (successRatio) => {
+    if (successRatio === null) return null
+
+    if (successRatio < 0.33) {
+      return 'Un petit tour sur le glossaire avant de viser plus haut ?'
+    }
+
+    if (successRatio < 0.66) {
+      return 'Encore quelques tours sur le glossaire et vous serez imbattable !'
+    }
+
+    if (successRatio < 0.95) {
+      return "Impressionnant ! Vous n'aurez bientôt plus rien à apprendre ici !"
+    }
+
+    return `
+      Parfait, il ne vous reste plus qu'a proposer celles que vous connaissez et
+      qui n'apparaissent pas encore ici !
+    `
+  })
 
 export const selectQuizVueModel = createSelector({
   currentQuestion: quizFeature.selectCurrentQuestion,
@@ -158,4 +182,13 @@ export const selectQuizVueModel = createSelector({
   successRatio: quizFeature.selectSuccessRatio,
   isLoading: quizFeature.selectIsLoading,
   error: quizFeature.selectError
+})
+
+export const selectQuizResultsViewModel = createSelector({
+  goodAnswersCount: quizFeature.selectGoodAnswersCount,
+  appreciation: selectAppreciationSelector,
+  isLoading: quizFeature.selectIsLoading,
+  successRatio: quizFeature.selectSuccessRatio,
+  questionsCount: quizFeature.selectQuestionsCount,
+  isFinished: quizFeature.selectIsFinished
 })

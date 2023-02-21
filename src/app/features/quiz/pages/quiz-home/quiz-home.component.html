@@ -1,0 +1,33 @@
+<app-title>Quiz</app-title>
+
+<ng-container *ngIf="vm$ | async as vm">
+  <app-subtitle *ngIf="!vm.error; else error">
+    Les figures de style n'ont plus de secret pour vous ?
+    <em>Challengez vous</em> pour tester vos connaissances !
+  </app-subtitle>
+
+  <ng-template #error>
+    <div class="sm:mx-auto sm:w-2/3 md:w-1/3">
+      <app-error [error]="vm.error!" />
+    </div>
+  </ng-template>
+
+  <!-- Loading placeholder -->
+  <app-question-loading *ngIf="vm.isLoading; else display" />
+
+  <!-- Question display -->
+  <ng-template #display>
+    <!-- Progress -->
+    <div class="my-5 sm:mx-auto sm:w-2/3 md:w-1/3">
+      <app-progress-bar [completionRatio]="vm.completionRatio!" />
+    </div>
+
+    <!-- Current Question -->
+    <app-question
+      *ngIf="vm.currentQuestion as currentQuestion"
+      [question]="currentQuestion"
+      (answerSelected)="onAnswerSelected($event)"
+      (nextQuestion)="moveToNextQuestion()"
+    />
+  </ng-template>
+</ng-container>

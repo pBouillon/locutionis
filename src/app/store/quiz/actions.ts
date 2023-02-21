@@ -10,6 +10,7 @@ export const QuizActions = createActionGroup({
     'Generate Quiz Success': props<{ quiz: Quiz }>(),
     'Generate Quiz Failure': props<{ error: Error }>(),
     'Restart Quiz': emptyProps(),
+    'Reset Quiz': emptyProps(),
 
     'Answer Submitted': props<{ answer: string }>(),
     'Valid Answer Submitted': emptyProps(),
