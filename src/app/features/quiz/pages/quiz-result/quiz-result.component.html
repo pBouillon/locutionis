@@ -1,20 +1,18 @@
 <app-title>Résultats</app-title>
 
-<ng-container *ngIf="vm$ | async as vm">
+<div class="space-y-5" *ngIf="vm$ | async as vm">
   <app-subtitle>
-    Vous avez correctement identifié <em>{{ vm.goodAnswersCount ?? 5 }}</em>
-    des <em>{{ vm.questionsCount ?? 10 }}</em> figures de style présentées
+    Vous avez correctement identifié <em>{{ vm.goodAnswersCount ?? 5 }}</em> des
+    <em>{{ vm.questionsCount ?? 10 }}</em> figures de style présentées
   </app-subtitle>
 
-  <p class="text-4xl text-center text-slate-600 dark:text-slate-400">
-    <em>{{ vm.successRatio ?? .50 | percent }}</em>
-    <span>de bonnes réponses</span>
-  </p>
+  <div class="flex flex-col py-5 items-center">
+    <em class="text-6xl">{{ vm.successRatio ?? 0.5 | percent }}</em>
+    <span class="text-slate-600 dark:text-slate-400 text-2xl">de bonnes réponses</span>
+  </div>
 
-  <p
-    class="text-center mt-3 tracking-wide text-slate-600 dark:text-slate-400"
-  >
-    {{ vm.appreciation ?? "Impressionnant ! Vous n'aurez bientôt plus rien à apprendre ici !" }}
+  <p class="mt-3 text-center tracking-wide text-slate-600 dark:text-slate-400">
+    {{ vm.appreciation ?? "Un petit tour sur le glossaire avant de viser plus haut ?" }}
   </p>
 
   <button
@@ -25,4 +23,4 @@
     <i class="bi bi-arrow-counterclockwise pr-2"></i>
     Recommencer
   </button>
-</ng-container>
+</div>
