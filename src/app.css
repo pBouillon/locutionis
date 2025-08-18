@@ -1,2 +1,8 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@import 'bootstrap-icons';
+
+html {
+  background-color: hsl(200 10 98);
+}
