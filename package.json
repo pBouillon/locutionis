@@ -41,5 +41,8 @@
 			"@tailwindcss/oxide",
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"bootstrap-icons": "^1.13.1"
 	}
 }
