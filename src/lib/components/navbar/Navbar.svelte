@@ -10,9 +10,9 @@
 </script>
 
 <nav
-  class="fixed inset-0 mb-5 flex h-18 items-center justify-between px-5 py-3 text-main-foreground"
+  class="fixed inset-0 mb-5 flex h-18 items-center justify-between px-5 py-3 text-main-foreground md:px-12"
 >
-  <div class="flex flex-col sm:flex-row sm:gap-2">
+  <div class="flex flex-col items-baseline sm:flex-row sm:gap-3">
     <a href="/" class="tracking-bold text-xl font-semibold">Locutionis</a>
     <small class="text-sm text-secondary-foreground sm:text-sm"
       >Petit référentiel de figures de style</small
@@ -21,7 +21,7 @@
 
   <ul class="hidden sm:block">
     <li>
-      <a href="/" class="text-xl" class:font-semibold={page.url.pathname === '/'}>Accueil</a>
+      <a href="/" class="text-lg" class:font-semibold={page.url.pathname === '/'}>Accueil</a>
     </li>
   </ul>
 
