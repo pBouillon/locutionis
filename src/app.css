@@ -3,6 +3,8 @@
 
 @import 'bootstrap-icons';
 
+@import './styles/theme.css';
+
 html {
   background-color: hsl(200 10 98);
 }
