@@ -9,15 +9,19 @@
   };
 </script>
 
-<nav class="mb-5 flex h-16 items-center justify-between rounded-xl border-b-2 px-5 py-3 shadow">
-  <div class="space-x-1 sm:space-x-2">
+<nav
+  class="fixed inset-0 mb-5 flex h-18 items-center justify-between px-5 py-3 text-main-foreground"
+>
+  <div class="flex flex-col sm:flex-row sm:gap-2">
     <a href="/" class="tracking-bold text-xl font-semibold">Locutionis</a>
-    <small class="text-xs sm:text-sm">Petit référentiel de figures de style</small>
+    <small class="text-sm text-secondary-foreground sm:text-sm"
+      >Petit référentiel de figures de style</small
+    >
   </div>
 
   <ul class="hidden sm:block">
     <li>
-      <a href="/" class="text-lg" class:font-semibold={page.url.pathname === '/'}>Accueil</a>
+      <a href="/" class="text-xl" class:font-semibold={page.url.pathname === '/'}>Accueil</a>
     </li>
   </ul>
 
@@ -25,7 +29,7 @@
     type="button"
     aria-label="Toggle mobile menu"
     onclick={toggleMobileMenu}
-    class="block size-10 sm:hidden"
+    class="block size-10 text-main-foreground sm:hidden"
   >
     <i class="bi bi-list text-2xl"></i>
   </button>

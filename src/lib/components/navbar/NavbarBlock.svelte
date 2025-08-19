@@ -7,7 +7,7 @@
 
 <NavbarBackdrop {toggle}>
   <div
-    class="fixed top-4 right-4 w-full max-w-xs rounded-lg bg-white p-6 text-base font-semibold shadow-lg"
+    class="fixed top-4 right-4 w-full max-w-xs rounded-lg border border-accent-foreground/30 bg-main-background p-6 text-base font-semibold shadow-lg shadow-accent-foreground/20"
   >
     <button
       type="button"
@@ -22,7 +22,9 @@
       <li>
         <a
           href="/"
-          class="border-b-2 {page.url.pathname === '/' ? 'border-sky-500' : 'border-transparent'}"
+          class="border-b-2 {page.url.pathname === '/'
+            ? 'border-accent-foreground'
+            : 'border-transparent'}"
           onclick={toggle}>Accueil</a
         >
       </li>
