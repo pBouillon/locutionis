@@ -10,7 +10,7 @@
 </script>
 
 <nav
-  class="fixed inset-0 mb-5 flex h-18 items-center justify-between px-5 py-3 text-main-foreground md:px-12"
+  class="fixed inset-0 flex h-18 items-center justify-between px-5 py-3 text-main-foreground md:px-12"
 >
   <div class="flex flex-col items-baseline sm:flex-row sm:gap-3">
     <a href="/" class="tracking-bold text-xl font-semibold">Locutionis</a>
