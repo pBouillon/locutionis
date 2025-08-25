@@ -1,49 +1,38 @@
-<h1 align="center">
-  <a href="https://locutionis.vercel.app/">Locutionis</a>
-</h1>
+# sv
 
-<p align="center">
-    Small, online reference of figures of speech
-</p>
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-<div align="center">
-  <img
-    alt="Locutionis homepage screenshot"
-    src="https://user-images.githubusercontent.com/22640284/158055918-2573173e-8eac-440f-ad5b-8fcd111f6224.png"
-    style="height: 400px;"/>
-</div>
+## Creating a project
 
-<hr />
+If you're seeing this, you've probably already done this step. Congrats!
 
-[Locutionis](https://locutionis.vercel.app/) is a simple website on which french speakers can learn more about some figures of speech, their usages and where to find more about it.
+```sh
+# create a new project in the current directory
+npx sv create
 
-## Contributing
-
-Pull requests are welcome either to add more content or to improve the actual code quality.
-
-For major changes, please [open an issue](https://github.com/pBouillon/locutionis/issues/new) first to discuss what you would like to change.
-
-## Development
-
-### Requirements
-
-- [Node.js](https://nodejs.org/en/)
-- [Git](https://git-scm.com/)
-
-#### Setup
-
-```bash
-git clone https://github.com/pbouillon/locutionis.git
-npm install
-npm run start
+# create a new project in my-app
+npx sv create my-app
 ```
 
-You can now navigate to [localhost:4200](http://localhost:4200/) and start coding in your favorite editor.
+## Developing
 
-## Architecture
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-- **Hosting** - [Vercel](https://vercel.com/)
-- **Styling**
-  - [Tailwind CSS](https://tailwindcss.com/)
-  - [Bootstrap Icons](https://icons.getbootstrap.com/)
-- **Framework** - [Angular](https://angular.io/) (15.1.0)
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

@@ -1,0 +1,29 @@
+:root {
+  --color-main-background: hsl(220, 20%, 95%);
+  --color-main-foreground: hsl(220, 90%, 12%);
+
+  --color-secondary-background: hsl(220, 10%, 88%);
+  --color-secondary-foreground: hsl(220, 70%, 30%);
+
+  --color-accent-background: hsl(280, 60%, 90%);
+  --color-accent-foreground: hsl(280, 70%, 40%);
+}
+
+@theme {
+  --color-main-background: var(--color-main-background);
+  --color-main-foreground: var(--color-main-foreground);
+
+  --color-secondary-background: var(--color-secondary-background);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+
+  --color-accent-background: var(--color-accent-background);
+  --color-accent-foreground: var(--color-accent-foreground);
+
+  --color-background-main: var(--color-main-background);
+  --color-background-secondary: var(--color-secondary-background);
+  --color-background-accent: var(--color-accent-background);
+
+  --color-text-main: var(--color-main-foreground);
+  --color-text-secondary: var(--color-secondary-foreground);
+  --color-text-accent: var(--color-accent-foreground);
+}
