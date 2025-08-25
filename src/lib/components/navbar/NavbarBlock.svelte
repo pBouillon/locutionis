@@ -28,6 +28,16 @@
           onclick={toggle}>Accueil</a
         >
       </li>
+
+      <li>
+        <a
+          href="/glossaire"
+          class="border-b-2 {page.url.pathname === '/glossaire'
+            ? 'border-accent-foreground'
+            : 'border-transparent'}"
+          onclick={toggle}>Glossaire</a
+        >
+      </li>
     </ul>
   </div>
 </NavbarBackdrop>
