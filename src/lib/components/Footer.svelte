@@ -1,3 +1,7 @@
+<script>
+  import { resolve } from '$app/paths';
+</script>
+
 <footer class=" px-5 py-12 text-main-foreground">
   <div class="mx-auto max-w-4xl">
     <div class="flex flex-col gap-6">
@@ -14,11 +18,11 @@
         <nav>
           <ul class="mx-5 flex flex-col gap-2 text-sm">
             <li>
-              <a class="underline hover:no-underline" href="/">Accueil</a>
+              <a class="underline hover:no-underline" href={resolve('/')}>Accueil</a>
             </li>
 
             <li>
-              <a class="underline hover:no-underline" href="/glossaire">Glossaire</a>
+              <a class="underline hover:no-underline" href={resolve('/glossaire')}>Glossaire</a>
             </li>
           </ul>
         </nav>

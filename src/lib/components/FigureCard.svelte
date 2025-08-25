@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
+
   const {
     icon,
     title,
@@ -10,12 +12,13 @@
     title: string;
     description: string;
     example: string;
-    href: string;
+    // FIXME - Use proper typing
+    href: any;
   } = $props();
 </script>
 
 <a
-  {href}
+  href={resolve(href)}
   class="group relative overflow-hidden rounded-2xl border border-secondary-foreground/20 bg-main-background p-8 transition-all duration-300 hover:border-accent-foreground/50 hover:shadow-xl hover:shadow-accent-foreground/10"
 >
   <div

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
   import { page } from '$app/state';
   import NavbarBlock from './NavbarBlock.svelte';
 
@@ -12,7 +13,7 @@
 <nav
   class="absolute inset-0 flex h-18 items-center justify-between px-5 py-3 text-main-foreground md:px-12"
 >
-  <a href="/" class="flex flex-col items-baseline sm:flex-row sm:gap-3">
+  <a href={resolve('/')} class="flex flex-col items-baseline sm:flex-row sm:gap-3">
     <p class="tracking-bold text-xl font-semibold">Locutionis</p>
     <small class="text-sm text-secondary-foreground sm:text-sm"
       >Petit référentiel de figures de style</small
@@ -21,12 +22,16 @@
 
   <ul class="hidden sm:flex sm:gap-5">
     <li>
-      <a href="/" class="text-lg" class:font-semibold={page.url.pathname === '/'}>Accueil</a>
+      <a href={resolve('/')} class="text-lg" class:font-semibold={page.url.pathname === '/'}
+        >Accueil</a
+      >
     </li>
 
     <li>
-      <a href="/glossaire" class="text-lg" class:font-semibold={page.url.pathname === '/glossaire'}
-        >Glossaire</a
+      <a
+        href={resolve('/glossaire')}
+        class="text-lg"
+        class:font-semibold={page.url.pathname === '/glossaire'}>Glossaire</a
       >
     </li>
   </ul>

@@ -1,4 +1,5 @@
 <script>
+  import { resolve } from '$app/paths';
   import FeatureCard from '../lib/components/FeatureCard.svelte';
   import FigureCard from '../lib/components/FigureCard.svelte';
 </script>
@@ -33,7 +34,7 @@
     class="mb-32 grid w-full max-w-lg grid-cols-1 justify-center gap-6 sm:max-w-2xl md:grid-cols-2"
   >
     <a
-      href="/glossaire"
+      href={resolve('/glossaire')}
       class="group relative overflow-hidden rounded-xl bg-accent-background px-8 py-4 text-center font-semibold text-accent-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-foreground/20"
     >
       <div
@@ -49,7 +50,7 @@
     </a>
 
     <a
-      href="/glossaire"
+      href={resolve('/glossaire')}
       class="group relative overflow-hidden rounded-xl border-2 border-secondary-foreground/30 bg-main-background px-8 py-4 text-center font-semibold text-secondary-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:border-accent-foreground/50 hover:shadow-xl hover:shadow-accent-foreground/15"
     >
       <div
@@ -113,7 +114,7 @@
         title="Métaphore"
         description="Comparaison sans outil de comparaison."
         example="Tu me casse les pieds."
-        href="/metaphore"
+        href={resolve('/metaphore')}
       />
 
       <FigureCard
@@ -121,7 +122,7 @@
         title="Homéotéleute"
         description="Utiliser des mots ayant la même syllabe finale."
         example="Le cheval c'est trop génial !"
-        href="/homeoteleute"
+        href={resolve('/homeoteleute')}
       />
 
       <FigureCard
@@ -129,13 +130,13 @@
         title="Litote"
         description="Atténuer une idée pour suggérer davantage."
         example="Ça n'était pas le match du siècle."
-        href="litote"
+        href={resolve('/litote')}
       />
     </div>
 
     <div class="mt-8 text-center">
       <a
-        href="/glossaire"
+        href={resolve('/glossaire')}
         class="inline-flex items-center rounded-lg bg-accent-background px-6 py-3 font-medium text-accent-foreground transition-all duration-300 hover:scale-105 hover:bg-accent-background/90"
       >
         Voir toutes le glossaire
