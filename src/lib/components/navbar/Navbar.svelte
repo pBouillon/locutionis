@@ -22,9 +22,7 @@
 
   <ul class="hidden sm:flex sm:gap-5">
     <li>
-      <a href="{base}/href" class="text-lg" class:font-semibold={page.url.pathname === '/'}
-        >Accueil</a
-      >
+      <a href={base} class="text-lg" class:font-semibold={page.url.pathname === '/'}>Accueil</a>
     </li>
 
     <li>
