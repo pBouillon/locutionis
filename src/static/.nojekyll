@@ -1,0 +1,2 @@
+# This file tells GitHub Pages to bypass Jekyll processing
+# Required for SvelteKit apps that may have files starting with underscores
