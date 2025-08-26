@@ -8,7 +8,7 @@ const config = {
   kit: {
     adapter: adapter(),
     paths: {
-      base: process.env.NODE_ENV === 'production' ? '/locutionis' : ''
+      base: process.env.GITHUB_PAGES ? '/locutionis' : ''
     }
   },
   extensions: ['.svelte', '.svx'],
