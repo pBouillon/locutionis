@@ -24,7 +24,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10.15.0
           run_install: false
 
       - name: Setup Node.js
@@ -43,7 +43,7 @@ jobs:
 
       - name: Build
         env:
-          BASE_PATH: '/locutionis'
+          NODE_ENV: production
         run: pnpm run build
 
       - name: Upload artifact
