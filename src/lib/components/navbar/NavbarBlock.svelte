@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { resolve } from '$app/paths';
+  import { base } from '$app/paths';
   import { page } from '$app/state';
   import NavbarBackdrop from './NavbarBackdrop.svelte';
 
@@ -22,7 +22,7 @@
     <ul class="flex flex-col gap-2">
       <li>
         <a
-          href={resolve('/')}
+          href={base}
           class="border-b-2 {page.url.pathname === '/'
             ? 'border-accent-foreground'
             : 'border-transparent'}"
@@ -32,7 +32,7 @@
 
       <li>
         <a
-          href={resolve('/glossaire')}
+          href="{base}/glossaire"
           class="border-b-2 {page.url.pathname === '/glossaire'
             ? 'border-accent-foreground'
             : 'border-transparent'}"
