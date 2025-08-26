@@ -34,7 +34,7 @@
     class="mb-32 grid w-full max-w-lg grid-cols-1 justify-center gap-6 sm:max-w-2xl md:grid-cols-2"
   >
     <a
-      href="{base}'/glossaire'"
+      href="{base}/glossaire"
       class="group relative overflow-hidden rounded-xl bg-accent-background px-8 py-4 text-center font-semibold text-accent-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-foreground/20"
     >
       <div
