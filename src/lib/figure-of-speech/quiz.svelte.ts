@@ -117,7 +117,7 @@ const questions: Question[] = [
       'Compare sans outil de comparaison.',
       'Utilise un mot sous plusieurs formes dans une même phrase.'
     ],
-    answerIndex: 3
+    answerIndex: 0
   }
 ];
 
