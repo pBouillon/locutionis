@@ -114,7 +114,7 @@
         title="Métaphore"
         description="Comparaison sans outil de comparaison."
         example="Tu me casse les pieds."
-        href={resolve('/metaphore')}
+        href="/metaphore"
       />
 
       <FigureCard
@@ -122,7 +122,7 @@
         title="Homéotéleute"
         description="Utiliser des mots ayant la même syllabe finale."
         example="Le cheval c'est trop génial !"
-        href={resolve('/homeoteleute')}
+        href="/homeoteleute"
       />
 
       <FigureCard
@@ -130,7 +130,7 @@
         title="Litote"
         description="Atténuer une idée pour suggérer davantage."
         example="Ça n'était pas le match du siècle."
-        href={resolve('/litote')}
+        href="/litote"
       />
     </div>
 
