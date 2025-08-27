@@ -39,6 +39,16 @@
           onclick={toggle}>Glossaire</a
         >
       </li>
+
+      <li>
+        <a
+          href={resolve('/quiz')}
+          class="border-b-2 {page.url.pathname === '/quiz'
+            ? 'border-accent-foreground'
+            : 'border-transparent'}"
+          onclick={toggle}>Quiz</a
+        >
+      </li>
     </ul>
   </div>
 </NavbarBackdrop>

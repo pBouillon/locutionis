@@ -26,12 +26,6 @@ La métalepse permet de passer sous silence une idée et de laisser le lecteur s
 
 **Ici:** La personne n'est pas absente parce qu'elle a trop bu hier (cause), mais parce qu'à cause de ça elle est probablement malade aujourd'hui (conséquence).
 
----
-
-> Comme tu as grandi !
-
-**Ici:** C'est moins la taille de la personne qui est remarquée (conséquence) que celle qu'elle ai continué à grandir depuis la dernière fois (cause).
-
 ## Pour aller plus loin
 
 - [Wikipédia](https://fr.wikipedia.org/wiki/Métalepse)

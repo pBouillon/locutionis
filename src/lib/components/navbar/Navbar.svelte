@@ -34,6 +34,12 @@
         class:font-semibold={page.url.pathname === '/glossaire'}>Glossaire</a
       >
     </li>
+
+    <li>
+      <a href={resolve('/quiz')} class="text-lg" class:font-semibold={page.url.pathname === '/quiz'}
+        >Quiz</a
+      >
+    </li>
   </ul>
 
   <button

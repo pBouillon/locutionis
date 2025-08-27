@@ -30,7 +30,7 @@ On peut s'en servir pour avoir un effet comique, exprimée une idée atténuée,
 
 > Vous n'êtes pas sans savoir (...)
 
-**Ici:** On rappelee une information de manière polie et subtile.
+**Ici:** On rappelle une information de manière polie et subtile.
 
 ## Pour aller plus loin
 
