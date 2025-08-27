@@ -23,7 +23,11 @@
       <span class="text-sm tracking-wide text-accent-foreground uppercase">Quiz</span>
       <h1 class="text-3xl font-bold md:text-4xl">Testez vos connaissances</h1>
       <p class="text-secondary-foreground">
-        Question {quiz.currrentQuestionIndex + 1} sur {quiz.questionsCount}
+        {#if quiz.isCompleted}
+          Quiz terminé !
+        {:else}
+          Question {quiz.currrentQuestionIndex + 1} sur {quiz.questionsCount}
+        {/if}
       </p>
     </div>
 
