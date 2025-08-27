@@ -17,7 +17,9 @@
   });
 </script>
 
-<div class="flex h-6 w-6 items-center justify-center rounded-full border-2 {indicatorClasses}">
+<div
+  class="flex size-6 flex-shrink-0 items-center justify-center rounded-full border-2 {indicatorClasses}"
+>
   {#if status === 'selected' || status === 'correct'}
     <i class="bi bi-check text-sm text-white"></i>
   {:else if status === 'incorrect'}
