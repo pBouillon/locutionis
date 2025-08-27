@@ -39,7 +39,7 @@ jobs:
           static_site_generator: sveltekit
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build
         env:
