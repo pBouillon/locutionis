@@ -13,18 +13,18 @@
     if (score === questionsCount) {
       return {
         icon: 'bi-patch-check-fill',
-        message: 'Bravo ! Un score parfait - vous maîtrisez parfaitement les figures de style !'
+        message: 'Excellent ! Un score parfait - vous maîtrisez parfaitement les figures de style !'
       };
     }
     if (goodAnswersRate >= 70) {
       return {
-        icon: 'bi-hand-thumbs-up-fill',
-        message: 'Très bon travail ! Vous êtes sur la bonne voie, réussirez-vous le score parfait ?'
+        icon: 'bi-stars',
+        message: 'Bravo ! Vous êtes sur la bonne voie, réussirez-vous le score parfait ?'
       };
     }
     if (goodAnswersRate >= 50) {
       return {
-        icon: 'bi-emoji-smile-fill',
+        icon: 'bi-hand-thumbs-up',
         message: 'Pas mal ! Encore un peu plus de pratique et vous serez incollable !'
       };
     }
@@ -61,7 +61,7 @@
   <!-- Action Buttons -->
   <div class="flex flex-col justify-center gap-4 sm:flex-row">
     <button
-      on:click={retry}
+      onclick={retry}
       class="rounded-lg bg-accent-background px-6 py-3 font-semibold text-accent-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg"
     >
       <i class="bi bi-arrow-clockwise mr-2"></i>

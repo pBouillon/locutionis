@@ -70,7 +70,7 @@ const questions: Question[] = [
   },
   {
     label: 'Dans « Ancrée dans nos traditions innovantes » on note :',
-    options: ['Une Hyperbole', 'Une parataxe', 'Une allitération', 'Une Oxymore'],
+    options: ['Une hyperbole', 'Une parataxe', 'Une allitération', 'Une oxymore'],
     answerIndex: 3,
     explanation:
       'Une tradition est coutume appartenant au passé, on parle en revanche d\'innovation pour des idées nouvelles. Une "tradition innovante" regroupe donc bien deux mots aux sens contraires'
