@@ -9,6 +9,17 @@ const config = {
     adapter: adapter(),
     paths: {
       base: process.env.NODE_ENV === 'production' ? '/locutionis/' : '/'
+    },
+    prerender: {
+      handleHttpError: ({ path, referrer, message }) => {
+        const isBasePathError = path === '/' && message.includes('does not begin with `base`');
+
+        if (isBasePathError) {
+          return;
+        }
+
+        throw new Error(message);
+      }
     }
   },
   extensions: ['.svelte', '.svx'],
