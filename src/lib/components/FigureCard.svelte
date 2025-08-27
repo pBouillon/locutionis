@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { base, resolve } from '$app/paths';
+  import { resolve } from '$app/paths';
 
   const {
     icon,
@@ -18,7 +18,7 @@
 </script>
 
 <a
-  href="{base}/{href}"
+  href={resolve(href)}
   class="group relative overflow-hidden rounded-2xl border border-secondary-foreground/20 bg-main-background p-8 transition-all duration-300 hover:border-accent-foreground/50 hover:shadow-xl hover:shadow-accent-foreground/10"
 >
   <div

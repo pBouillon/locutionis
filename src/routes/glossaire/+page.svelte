@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { base } from '$app/paths';
+  import { resolve } from '$app/paths';
   import HeadingLetter from '$lib/components/HeadingLetter.svelte';
   import type { Figure } from '$lib/figure-of-speech/figure-of-speech';
   import type { PageData } from './$types';
@@ -57,7 +57,7 @@
       <div class="grid grid-cols-1 gap-8 pt-8 md:grid-cols-2 xl:grid-cols-3">
         {#each figures as figure}
           <a
-            href="{base}/{figure.slug}"
+            href={resolve(`/${figure.slug}`)}
             class="group rounded-xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-background"
           >
             <h2

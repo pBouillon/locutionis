@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import { resolve } from '$app/paths';
 </script>
 
 <main class="mx-6 mt-32 flex flex-col items-center justify-center gap-8 text-center sm:mt-48">
@@ -11,7 +11,7 @@
 
   <section id="cta" class="mt-12 mb-32 flex w-full max-w-lg justify-center sm:max-w-2xl">
     <a
-      href="{base}/glossaire"
+      href={resolve('/glossaire')}
       class="group relative overflow-hidden rounded-xl bg-accent-background px-8 py-4 text-center font-semibold text-accent-foreground shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-accent-foreground/20"
     >
       <div
