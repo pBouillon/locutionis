@@ -1,38 +1,27 @@
-# sv
+<div>
+  <h1 align="center">Locutionis</h1>
+  <h3 align="center">Petit glossaire en ligne de figures de style.</h3>
+</div>
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+> Locutionis est un petit annuaire des figures de styles françaises connues et moins connues, pour les bacheliers·ères et les curieux·ses !
 
-## Creating a project
+<div align="center">
+  <img width="450" height="auto" alt="Locutionis Preview" src="https://github.com/user-attachments/assets/5725210e-b880-49ce-a56c-7f2553b84058" />
+</div>
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Fonctionnalités
 
-```sh
-# create a new project in the current directory
-npx sv create
+- **Consultez [le glossaire](https://pbouillon.github.io/locutionis/glossaire?utm_source=gh-readme)** classé par ordre alphabétique
+- **Regardez [les définitions](https://pbouillon.github.io/locutionis/alliteration?utm_source=gh-readme)** de figures de style plus ou moins connues: comment les utiliser, les reconnaître, et quelques exemples
+- **[Testez-vous](https://pbouillon.github.io/locutionis/quiz?utm_source=gh-readme)** avec un petit quiz sur 10 questions
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Pour qui ?
 
-## Developing
+Le but de Locutionis est de rendre accessible quelque chose qui ne l'est pas toujours. Aussi, c'est un bon endroit pour en apprendre plus aussi bien pour les étudiants qui préparent un examen
+que pour les curieux et curieuses qui veulent y jeter un oeil !
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+👉 [Découvrez Locutionis sur GitHub Pages](https://pbouillon.github.io/locutionis?utm_source=gh-readme)
 
-```sh
-npm run dev
+## Contribution
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Les contributions sont les bienvenues ! N'hésitez pas à proposer des améliorations, corriger des erreurs, ou suggérer de nouvelles figures de style !
