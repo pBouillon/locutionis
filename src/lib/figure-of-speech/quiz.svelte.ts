@@ -45,10 +45,9 @@ const questions: Question[] = [
   },
   {
     label: "« Ton bulletin n'est pas brillant » est un exemple de :",
-    options: ['Euphémisme', 'Litote', 'Ironie', 'Antiphrase'],
-    answerIndex: 0,
-    explanation:
-      "Au lieu de dire que le bulletin est mauvais, on atténue l'idée en disant qu'il n'est pas brillant."
+    options: ['Euphémisme', 'Litote', 'Parataxe', 'Antiphrase'],
+    answerIndex: 1,
+    explanation: "On veut ici dire l'inverse du contraire, à savoir « Ton bulletin est mauvais »."
   },
   {
     label: '« Est-ce que vous avez du feu » est une:',
