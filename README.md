@@ -25,3 +25,7 @@ que pour les curieux et curieuses qui veulent y jeter un oeil !
 ## Contribution
 
 Les contributions sont les bienvenues ! N'hésitez pas à proposer des améliorations, corriger des erreurs, ou suggérer de nouvelles figures de style !
+
+Voici un GIF de l'installation du projet pour bien démarrer:
+
+![setup](https://github.com/user-attachments/assets/d004d379-859e-4601-985f-e2f42347b38b)
