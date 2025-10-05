@@ -1,8 +1,10 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
+  import type { PageData } from './$types';
+
   import HeadingLetter from '$lib/components/HeadingLetter.svelte';
   import type { Figure } from '$lib/figure-of-speech/figure-of-speech';
-  import type { PageData } from './$types';
+  import { learningJourneyStore } from '$lib/figure-of-speech/learning-journey.svelte';
 
   let { data }: { data: PageData } = $props();
 
@@ -58,8 +60,16 @@
         {#each figures as figure}
           <a
             href={resolve(`/${figure.slug}`)}
-            class="group rounded-xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-background"
+            class="group relative rounded-xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-background"
           >
+            {#if learningJourneyStore.hasBeenLearned(figure.title)}
+              <div
+                class="absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-green-100"
+              >
+                <i class="bi bi-check-lg text-green-600"></i>
+              </div>
+            {/if}
+
             <h2
               class="text-foreground mb-4 text-xl leading-snug font-semibold transition-colors group-hover:text-accent-foreground"
             >
