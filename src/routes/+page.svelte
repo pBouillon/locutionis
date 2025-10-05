@@ -113,7 +113,7 @@
         icon="bi-cloud-moon"
         title="Métaphore"
         description="Comparaison sans outil de comparaison."
-        example="Tu me casse les pieds."
+        example="Tu me casses les pieds."
         href="/metaphore"
       />
 
