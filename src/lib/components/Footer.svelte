@@ -9,9 +9,8 @@
         <div class="flex flex-col gap-3">
           <h2 class="text-lg font-semibold">Locutionis</h2>
           <p class="text-sm">
-            Fait avec du café par <a href="https://pbouillon.github.io" class="underline"
-              >Pierre Bouillon</a
-            >.
+            Fait avec <i class="bi bi-arrow-through-heart"></i> par
+            <a href="https://pbouillon.github.io" class="underline">Pierre Bouillon</a>.
           </p>
         </div>
 
