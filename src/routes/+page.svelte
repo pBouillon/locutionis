@@ -85,15 +85,15 @@
       />
 
       <FeatureCard
-        icon="bi-eyeglasses"
-        title="Clair et accessible"
-        description="Chaque figure est expliquée avec des mots simples et des exemples faciles à retenir."
+        icon="bi-list-check"
+        title="Avancez à votre rythme"
+        description="Marquez les figures de style déjà apprises, et repérez d'un coup d'œil celles qu'il vous reste à découvrir."
       />
 
       <FeatureCard
-        icon="bi-chat-square-heart"
-        title="Pensé pour vous"
-        description="Ce site a pour but de rendre les figures de style faciles à comprendre pour tout le monde."
+        icon="bi-eyeglasses"
+        title="Clair et accessible"
+        description="Chaque figure est expliquée avec des mots simples et des exemples faciles à retenir."
       />
     </div>
   </section>
