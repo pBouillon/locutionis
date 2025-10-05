@@ -1,8 +1,9 @@
 <script lang="ts">
   import type { PageData } from './$types';
 
-  import { learningJourneyStore } from '$lib/figure-of-speech/learning-journey.svelte';
   import MarkedAsLearnedCta from '$lib/components/MarkedAsLearnedCta.svelte';
+  import { learningJourneyStore } from '$lib/figure-of-speech/learning-journey.svelte';
+  import { toaster } from '$lib/toasts/toaster.svelte';
 
   const { data }: { data: PageData } = $props();
   const { figure } = data;
@@ -12,8 +13,16 @@
   function toggleLearned() {
     if (isLearned) {
       learningJourneyStore.removeFromLearned(figure.title);
+      toaster.show({
+        type: 'success',
+        message: 'Retirée de vos acquis'
+      });
     } else {
       learningJourneyStore.markAsLearned(figure.title);
+      toaster.show({
+        type: 'success',
+        message: 'Marquée comme apprise !'
+      });
     }
   }
 </script>
