@@ -1,0 +1,48 @@
+name: Issue Report
+description: File an issue or suggest a feature
+title: '[Issue]: '
+labels: ['triage']
+assignees:
+  - pBouillon
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this issue report!
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Type
+      description: What type of issue is this?
+      options:
+        - Bug
+        - Feature Request
+        - Documentation
+        - Enhancement
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the issue or feature request.
+      placeholder: Describe the issue or feature request here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: thoughts
+    attributes:
+      label: Possible Solutions/Additional Context
+      description: Describe any ideas, potential solutions, or additional context.
+      placeholder: Share any thoughts or suggestions here.
+
+  - type: textarea
+    id: design
+    attributes:
+      label: Design/Layout (if applicable)
+      description: If this involves UI/UX changes, describe or sketch the design, or link to a mockup.
+      placeholder: Describe or link to any design changes here.
