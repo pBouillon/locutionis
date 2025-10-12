@@ -1,0 +1,91 @@
+name: Pull Request
+description: Submit a pull request
+title: '[PR]: '
+labels: ['review']
+assignees:
+  - pBouillon
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your contribution!
+
+  - type: input
+    id: linked-issue
+    attributes:
+      label: Linked Issue
+      description: Link to the related issue, if any.
+      placeholder: '#issue-number'
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal of This PR
+      description: Describe the purpose or problem this PR addresses.
+      placeholder: Describe the goal of this PR here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: work-done
+    attributes:
+      label: Work Done
+      description: Summarize the changes made.
+      placeholder: Summarize the changes made here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot (if relevant)
+      description: Add a screenshot or describe visual changes.
+      placeholder: Add a screenshot or describe visual changes here.
+
+  - type: checkboxes
+    id: testing
+    attributes:
+      label: Testing
+      description: Confirm that testing has been performed.
+      options:
+        - label: I have run the project locally and verified that affected pages are unchanged/working as expected
+          required: true
+
+  - type: checkboxes
+    id: ai-usage
+    attributes:
+      label: AI Agent Usage (if applicable)
+      description: Please indicate if any AI agent was used.
+      options:
+        - label: ChatGPT (OpenAI)
+        - label: Claude (Anthropic)
+        - label: Gemini (Google)
+        - label: Le Chat (Mistral)
+        - label: Copilot (GitHub/Microsoft)
+        - label: Other (please specify below)
+
+  - type: input
+    id: ai-other
+    attributes:
+      label: Other AI Tools
+      description: If you checked "Other" above, specify which AI tools were used.
+      placeholder: 'e.g., ChatGPT, Claude, Copilot, etc.'
+
+  - type: checkboxes
+    id: ai-tasks
+    attributes:
+      label: Tasks Performed by AI Agent
+      description: Select the tasks performed by the AI agent.
+      options:
+        - label: Documentation
+        - label: Code generation
+        - label: Code review
+        - label: Test creation
+        - label: Other (please specify below)
+
+  - type: input
+    id: ai-tasks-other
+    attributes:
+      label: Other AI Tasks
+      description: If you checked "Other" above, describe the tasks performed by AI.
+      placeholder: 'Describe other tasks here'
