@@ -1,0 +1,10 @@
+@hostname = 127.0.0.1
+@port = 8090
+@host = {{hostname}}:{{port}}
+
+###
+GET http://{{host}}/api/quiz/random HTTP/1.1
+
+###
+# @prompt id The id of the question
+GET http://{{host}}/api/quiz/question/{{id}}/solution
