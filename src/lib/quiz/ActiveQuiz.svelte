@@ -1,9 +1,9 @@
 <script lang="ts">
-  import QuestionCard from '$lib/quiz/components/question/QuestionCard.svelte';
-  import AnswerOptionList from './AnswerOptionList.svelte';
+  import AnswerOptionList from './components/answer/AnswerOptionList.svelte';
+  import QuestionCard from './components/question/QuestionCard.svelte';
+  import QuizActions from './components/question/QuizActions.svelte';
   import ExplanationPanel from './ExplanationPanel.svelte';
   import { QuizStore } from './quiz.store.svelte';
-  import QuizActions from './components/question/QuizActions.svelte';
   import QuizProgress from './QuizProgress.svelte';
 
   let { quizStore } = $props<{ quizStore: QuizStore }>();

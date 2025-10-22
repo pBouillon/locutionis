@@ -1,5 +1,5 @@
 <script lang="ts">
-  import AnswerOption from '$lib/quiz/AnswerOption.svelte';
+  import AnswerOption from './AnswerOption.svelte';
 
   const { options, isLoading, getOptionStatus, pickAnswer } = $props<{
     options: string[];

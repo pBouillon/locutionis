@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { AnswerStatus } from '$lib/figure-of-speech/quiz.svelte';
+  import type { AnswerStatus } from '../../../figure-of-speech/quiz.svelte';
   import AnswerOptionSelectorIndicator from './AnswerOptionSelectorIndicator.svelte';
 
   const {
