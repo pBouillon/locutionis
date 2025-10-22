@@ -1,16 +1,16 @@
 ---
 title: 'Adynaton'
-short_description: 'Exprimer l\'impossible par des comparaisons exagérées.'
+short_description: "Exprimer l'impossible avec des images métaphoriques poussées à l'extrême."
 slug: 'adynaton'
 ---
 
 ## En quoi ça consiste ?
 
-L'adynaton est une figure de style qui consiste à exprimer l'impossibilité d'une chose en la comparant à des événements ou des situations impossibles ou hautement improbables. C'est une forme d'hyperbole qui pousse l'exagération jusqu'à l'absurde.
+L'adynaton est une métaphore tellement exagérée qu'elle rend l'idée clairement impossible, parfois jusqu'au comique. En poussant l'image au-delà du crédible, on montre qu'une situation est irréalisable ou invraisemblable.
 
 ## Pourquoi l'utiliser ?
 
-L'adynaton permet de souligner l'impossibilité totale d'une situation en créant des images frappantes et mémorables. Il peut être utilisé pour exprimer des émotions fortes, créer un effet comique, ou simplement renforcer l'idée que quelque chose est absolument impossible.
+L'adynaton utilise des images impossibles pour souligner une idée avec humour, ironie ou emphase. Par exemple, pour dire qu'on a adoré un film, on peut entendre : « Je l'ai vu au moins mille fois ! ».
 
 ## Exemples
 

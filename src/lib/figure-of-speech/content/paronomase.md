@@ -1,22 +1,20 @@
 ---
 title: 'Paronomase'
-short_description: 'Utiliser des mots comportant des sonorités proches mais avec des sens différents au sein d’une même phrase.'
+short_description: 'Jouer sur des mots aux sonorités proches mais aux sens différents.'
 slug: 'paronomase'
 ---
 
 ## En quoi ça consiste ?
 
-La paronomase est une figure de style qui consiste à utiliser des mots ayant des sonorités proches mais des sens différents dans une même phrase ou un même texte. 
+La paronomase est une figure de style qui consiste à utiliser des mots ayant des sonorités proches mais des sens différents dans une même phrase ou un même texte.
 
 ## Pourquoi l'utiliser ?
 
-La paronomase permet de créer des effets sonores intéressants, de jouer avec les mots, et parfois de créer des effets comiques ou poétiques. Elle peut aussi servir à souligner des contrastes ou des rapprochements sémantiques entre des concepts. L’effet d’écho provoqué facilite la mémorisation et renforce l’expression d’un sentiment ou d’une pensée. 
+Utiliser les mêmes sons facilite la mémorisation, renforce l'idée exprimée et crée souvent un effet marquant — utile en publicité, dans les proverbes ou pour un trait d'esprit.
 
 ## Exemples
 
-> Qui se ressemble **s'assemble**.
-
-**Ici:** La proximité sonore entre "ressemble" et "s'assemble" crée un effet mnémotechnique et souligne l'idée que les personnes similaires ont tendance à se regrouper.
+> Entremont, c’est autrement **bon**.
 
 ---
 
@@ -27,4 +25,4 @@ La paronomase permet de créer des effets sonores intéressants, de jouer avec l
 ## Pour aller plus loin
 
 - [Wikipédia](https://fr.wikipedia.org/wiki/Paronymie#Paronomase)
-- [La langue française](https://www.lalanguefrancaise.com/linguistique/paronomase-figure-de-style)
+- [Le Robert](https://dictionnaire.lerobert.com/definition/paronomase)
