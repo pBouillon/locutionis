@@ -24,3 +24,4 @@ vite.config.ts.timestamp-*
 # Pocketbase
 pocketbase/**/*.exe
 pocketbase/**/*.db
+pocketbase/pb_data/

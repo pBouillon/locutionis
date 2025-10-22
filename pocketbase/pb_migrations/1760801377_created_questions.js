@@ -26,7 +26,7 @@ migrate((app) => {
         "min": 0,
         "name": "label",
         "pattern": "",
-        "presentable": false,
+        "presentable": true,
         "primaryKey": false,
         "required": true,
         "system": false,
@@ -41,41 +41,6 @@ migrate((app) => {
         "required": true,
         "system": false,
         "type": "json"
-      },
-      {
-        "hidden": false,
-        "id": "number1119673310",
-        "max": null,
-        "min": null,
-        "name": "answerIndex",
-        "onlyInt": false,
-        "presentable": false,
-        "required": false,
-        "system": false,
-        "type": "number"
-      },
-      {
-        "autogeneratePattern": "",
-        "hidden": false,
-        "id": "text2284106510",
-        "max": 0,
-        "min": 0,
-        "name": "explanation",
-        "pattern": "",
-        "presentable": false,
-        "primaryKey": false,
-        "required": false,
-        "system": false,
-        "type": "text"
-      },
-      {
-        "hidden": true,
-        "id": "bool2323052248",
-        "name": "isActive",
-        "presentable": false,
-        "required": false,
-        "system": false,
-        "type": "bool"
       },
       {
         "hidden": false,
