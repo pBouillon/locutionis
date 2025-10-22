@@ -62,7 +62,7 @@
   <div class="flex flex-col justify-center gap-4 sm:flex-row">
     <button
       onclick={retry}
-      class="rounded-lg bg-accent-background px-6 py-3 font-semibold text-accent-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg"
+      class="cursor-pointer rounded-lg bg-accent-background px-6 py-3 font-semibold text-accent-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg"
     >
       <i class="bi bi-arrow-clockwise mr-2"></i>
       Refaire le quiz
@@ -70,7 +70,7 @@
 
     <a
       href={resolve('/glossaire')}
-      class="rounded-lg border-2 border-secondary-foreground/30 px-6 py-3 font-semibold text-secondary-foreground transition-all duration-300 hover:border-accent-foreground/50 hover:text-accent-foreground"
+      class="cursor-pointer rounded-lg border-2 border-secondary-foreground/30 px-6 py-3 font-semibold text-secondary-foreground transition-all duration-300 hover:border-accent-foreground/50 hover:text-accent-foreground"
     >
       <i class="bi bi-book mr-2"></i>
       Consulter le glossaire
