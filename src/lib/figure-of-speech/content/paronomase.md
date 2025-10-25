@@ -14,7 +14,7 @@ Utiliser les mêmes sons facilite la mémorisation, renforce l'idée exprimée e
 
 ## Exemples
 
-> Entremont, c’est autrement **bon**.
+> Entre**mont**, c’est autrement **bon**.
 
 ---
 
