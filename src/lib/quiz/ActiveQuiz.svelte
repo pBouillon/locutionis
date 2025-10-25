@@ -27,7 +27,8 @@
 />
 
 {#if quizStore.currentQuestion}
-  <QuestionCard question={quizStore.currentQuestion}>
+  {#key quizStore.currentQuestion?.id}
+    <QuestionCard question={quizStore.currentQuestion}>
     <AnswerOptionList
       options={quizStore.currentQuestion.options}
       isLoading={quizStore.isAnswerBeingChecked}
@@ -39,15 +40,20 @@
       hasExplanation={!!quizStore.solution?.explanation}
       canSubmit={quizStore.canSubmitAnswer}
       isExplanationVisible={showExplanation}
-      onSubmit={quizStore.submitAnswer}
+      onSubmit={() => quizStore.submitAnswer()}
       onToggleExplanation={toggleExplanation}
       canMoveNext={quizStore.canMoveToNext}
-      onMoveNext={quizStore.moveOntoNextQuestion}
+      onMoveNext={() => {
+        // ensure explanation is hidden when moving onto the next question
+        showExplanation = false;
+        quizStore.moveOntoNextQuestion();
+      }}
       isLastQuestion={quizStore.isLastQuestion}
     />
 
     {#if showExplanation && quizStore.solution?.explanation}
       <ExplanationPanel explanation={quizStore.solution.explanation} />
     {/if}
-  </QuestionCard>
+    </QuestionCard>
+  {/key}
 {/if}
