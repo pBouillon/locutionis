@@ -1,6 +1,6 @@
 ---
 title: 'Adynaton'
-short_description: "Exprimer l'impossible avec des images métaphoriques poussées à l'extrême."
+short_description: "Exprimer l'impossible avec des situations improbables."
 slug: 'adynaton'
 ---
 
