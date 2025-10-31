@@ -47,7 +47,7 @@
     />
 
     {#if showExplanation && quizStore.solution?.explanation}
-      <ExplanationPanel explanation={quizStore.solution.explanation} />
+      <ExplanationPanel solution={quizStore.solution} />
     {/if}
   </QuestionCard>
 {/if}
