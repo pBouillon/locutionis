@@ -69,7 +69,8 @@ routerAdd(
 
       const solution = {
         answer: record.getString('answer'),
-        explanation: record.getString('explanation')
+        explanation: record.getString('explanation'),
+        glossaryEntrySlug: record.getString('glossaryEntrySlug')
       };
 
       $app.logger().info('Solution retrieved', 'questionId', questionId);
