@@ -38,7 +38,6 @@
       onclick={onMoveNext}
       class="cursor-pointer rounded-lg bg-accent-background px-6 py-3 font-semibold text-accent-foreground transition-all duration-300 hover:scale-105 hover:shadow-lg"
     >
-      <i class="bi bi-{isLastQuestion ? 'flag-checkered' : 'arrow-right'} mr-2"></i>
       {isLastQuestion ? 'Voir les résultats' : 'Question suivante'}
     </button>
   {:else}
