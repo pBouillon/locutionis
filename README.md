@@ -22,9 +22,17 @@ que pour les curieux et curieuses qui veulent y jeter un oeil !
 
 👉 [Découvrez Locutionis sur GitHub Pages](https://pbouillon.github.io/locutionis?utm_source=gh-readme)
 
-## Contribution
 
-Les contributions sont les bienvenues ! N'hésitez pas à proposer des améliorations, corriger des erreurs, ou suggérer de nouvelles figures de style !
+Configuration de PocketBase pour le développement local
+PocketBase est facile à utiliser, mais quelques étapes sont nécessaires pour démarrer localement :
+
+Télécharger PocketBase : Obtenez la dernière version directement depuis les releases GitHub. Téléchargez l'exécutable adapté à votre système d'exploitation.
+
+Créer un fichier d'environnement : Créez un nouveau fichier nommé .env.local dans le répertoire racine de ce projet. Copiez le contenu du fichier .env.example dans votre nouveau fichier .env.local.
+
+Mettre à jour l'URL de PocketBase : Ouvrez votre fichier .env.local et remplacez la variable POCKETBASE_URL (ou variable similaire) par http://localhost:8090 au lieu de la valeur par défaut.
+
+(Assurez-vous que PocketBase est en cours d'exécution localement avant de démarrer l'application principale.)
 
 Voici un GIF de l'installation du projet pour bien démarrer:
 
