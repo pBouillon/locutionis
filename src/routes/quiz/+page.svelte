@@ -1,8 +1,6 @@
 <script lang="ts">
-  import ActiveQuiz from '$lib/quiz/ActiveQuiz.svelte';
-  import { QuizStore } from '$lib/quiz/quiz.store.svelte';
-  import QuizConfigurator from '$lib/quiz/QuizConfigurator.svelte';
-  import QuizSummary from '$lib/quiz/QuizSummary.svelte';
+  import { QuizStore } from '$lib/quiz/data-access';
+  import { ActiveQuiz, QuizConfigurator, QuizSummary } from '$lib/quiz/feature';
 
   const quizStore = QuizStore.create();
 </script>

@@ -2,9 +2,9 @@
   import { resolve } from '$app/paths';
   import type { PageData } from './$types';
 
-  import HeadingLetter from '$lib/components/HeadingLetter.svelte';
-  import type { Figure } from '$lib/figure-of-speech/figure-of-speech';
-  import { learningJourneyStore } from '$lib/figure-of-speech/learning-journey.svelte';
+  import type { Figure } from '$lib/figure-of-speech/domain';
+  import { HeadingLetter } from '$lib/glossary/ui';
+  import { learningJourneyStore } from '$lib/learning-journey/data-access';
 
   let { data }: { data: PageData } = $props();
 
