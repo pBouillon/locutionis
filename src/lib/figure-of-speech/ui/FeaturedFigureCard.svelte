@@ -13,7 +13,7 @@
     description: string;
     example: string;
     // FIXME - Use proper typing
-    href: any;
+    href: unknown;
   } = $props();
 </script>
 

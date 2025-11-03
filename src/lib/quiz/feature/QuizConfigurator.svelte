@@ -41,7 +41,7 @@
       </legend>
 
       <div class="space-y-3" role="radiogroup">
-        {#each options as option}
+        {#each options as option (option.value)}
           <label
             class={`block w-full cursor-pointer rounded-lg border-2 p-4 text-left transition-all duration-300 ${
               selectedQuestionsCount === option.value

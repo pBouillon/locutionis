@@ -52,12 +52,12 @@
     </p>
   </header>
 
-  {#each glossary as { letter, figures }}
+  {#each glossary as { letter, figures } (letter)}
     <section class="mb-20">
       <HeadingLetter {letter} />
 
       <div class="grid grid-cols-1 gap-8 pt-8 md:grid-cols-2 xl:grid-cols-3">
-        {#each figures as figure}
+        {#each figures as figure (figure.slug)}
           <a
             href={resolve(`/${figure.slug}`)}
             class="group relative rounded-xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-accent-background"

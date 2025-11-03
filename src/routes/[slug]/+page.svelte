@@ -44,6 +44,7 @@
   <hr class="mx-auto my-12 w-2/3 rounded-full border-t border-secondary-foreground md:w-1/2" />
 
   <div class="mx-auto my-8 prose max-w-none md:w-2/3">
+    <!-- eslint-disable-next-line svelte/no-at-html-tags -->
     {@html figure.content}
   </div>
 

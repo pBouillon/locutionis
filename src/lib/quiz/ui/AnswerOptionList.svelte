@@ -9,13 +9,13 @@
   }: {
     options: string[];
     isLoading: boolean;
-    getOptionStatus: (label: string) => any;
+    getOptionStatus: (label: string) => OptionStatus;
     pickAnswer: (label: string) => void;
   } = $props();
 </script>
 
 <div class="space-y-4">
-  {#each options as label, index}
+  {#each options as label, index (index)}
     <AnswerOption
       {index}
       {label}

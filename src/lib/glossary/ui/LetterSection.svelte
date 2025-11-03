@@ -11,7 +11,7 @@
   <HeadingLetter {letter} />
 
   <div class="grid grid-cols-1 gap-8 pt-8 md:grid-cols-2 xl:grid-cols-3">
-    {#each figures as figure}
+    {#each figures as figure (figure.slug)}
       <FigureCard {figure} />
     {/each}
   </div>

@@ -13,7 +13,8 @@
   let showExplanation = $state(false);
 
   $effect(() => {
-    quizStore.currentQuestionIndex;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const trigger = quizStore.currentQuestionIndex;
     showExplanation = false;
   });
 
