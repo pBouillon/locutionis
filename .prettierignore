@@ -7,3 +7,9 @@ bun.lockb
 
 # Miscellaneous
 /static/
+
+# pocketbase
+pocketbase/
+
+# github
+.github/
