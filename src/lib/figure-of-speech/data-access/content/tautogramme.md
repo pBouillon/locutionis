@@ -8,7 +8,6 @@ slug: 'tautogramme'
 
 On parle de tautogramme quand tous les mots d'un texte commencent par la même lettre. C'est une contrainte souvent utilisée en poésie ou comme exercice d'écriture.
 
-
 ## Pourquoi l'utiliser ?
 
 Le tautogramme sert de jeu littéraire et d'exercice de style.
@@ -29,7 +28,6 @@ Le tautogramme permet aussi de construire des virelangues, c’est-à-dire un te
 — Georges Perec, "Chapitre cent-cinquante-cinq (copie certifiée conforme)"
 
 **Ici:** Perec utilise le tautogramme avec la lettre "c"
-
 
 ## Pour aller plus loin
 
