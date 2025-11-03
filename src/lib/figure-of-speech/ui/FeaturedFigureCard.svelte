@@ -1,5 +1,6 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
+  import type { Pathname } from '$app/types';
 
   const {
     icon,
@@ -12,8 +13,7 @@
     title: string;
     description: string;
     example: string;
-    // FIXME - Use proper typing
-    href: unknown;
+    href: Pathname;
   } = $props();
 </script>
 

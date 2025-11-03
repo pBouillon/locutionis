@@ -1,4 +1,6 @@
 <script lang="ts">
+  import type { OptionStatus } from '../domain';
+
   import AnswerOption from './AnswerOption.svelte';
 
   const {
