@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { onStart } = $props<{ onStart: (count: number) => void }>();
+  const { onStart }: { onStart: (count: number) => void } = $props();
 
   const options = [
     {

@@ -3,7 +3,7 @@
 
   import type { Toast } from '../domain';
 
-  const { toast, onDismiss } = $props<{ toast: Toast; onDismiss: () => void }>();
+  const { toast, onDismiss }: { toast: Toast; onDismiss: () => void } = $props();
 </script>
 
 <div

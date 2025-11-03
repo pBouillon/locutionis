@@ -8,7 +8,7 @@
     QuizProgress
   } from '../ui';
 
-  const { quizStore } = $props<{ quizStore: QuizStore }>();
+  const { quizStore }: { quizStore: QuizStore } = $props();
 
   let showExplanation = $state(false);
 

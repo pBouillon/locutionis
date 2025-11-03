@@ -4,7 +4,7 @@
   import type { Figure } from '$lib/figure-of-speech/domain';
   import { learningJourneyStore } from '$lib/learning-journey/data-access';
 
-  const { figure } = $props<{ figure: Figure }>();
+  const { figure }: { figure: Figure } = $props();
 
   const hasBeenLearned = $derived(learningJourneyStore.hasBeenLearned(figure.title));
 </script>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { OptionStatus } from '$lib/quiz/domain';
 
-  const { status } = $props<{ status: OptionStatus }>();
+  const { status }: { status: OptionStatus } = $props();
 
   const indicatorClasses = $derived.by(() => {
     switch (status as OptionStatus) {

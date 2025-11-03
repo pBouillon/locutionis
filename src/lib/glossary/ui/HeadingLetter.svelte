@@ -1,5 +1,5 @@
 <script lang="ts">
-  const { letter } = $props<{ letter: string }>();
+  const { letter }: { letter: string } = $props();
 </script>
 
 <div class="sticky top-0 z-10 rounded-b-lg backdrop-blur-sm md:static">

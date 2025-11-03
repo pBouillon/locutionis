@@ -1,12 +1,17 @@
 <script lang="ts">
   import AnswerOption from './AnswerOption.svelte';
 
-  const { options, isLoading, getOptionStatus, pickAnswer } = $props<{
+  const {
+    options,
+    isLoading,
+    getOptionStatus,
+    pickAnswer
+  }: {
     options: string[];
     isLoading: boolean;
     getOptionStatus: (label: string) => any;
     pickAnswer: (label: string) => void;
-  }>();
+  } = $props();
 </script>
 
 <div class="space-y-4">

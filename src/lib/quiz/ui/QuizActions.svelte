@@ -8,7 +8,7 @@
     onMoveNext,
     onSubmit,
     onToggleExplanation
-  } = $props<{
+  }: {
     hasExplanation: boolean;
     canMoveNext: boolean;
     canSubmit: boolean;
@@ -17,7 +17,7 @@
     onMoveNext: () => void;
     onSubmit: () => void;
     onToggleExplanation: () => void;
-  }>();
+  } = $props();
 </script>
 
 <div class="mt-8 flex flex-col justify-between gap-4 sm:flex-row">

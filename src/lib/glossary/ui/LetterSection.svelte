@@ -4,7 +4,7 @@
   import FigureCard from './FigureCard.svelte';
   import HeadingLetter from './HeadingLetter.svelte';
 
-  let { letter, figures } = $props<{ letter: string; figures: Figure[] }>();
+  let { letter, figures }: { letter: string; figures: Figure[] } = $props();
 </script>
 
 <section class="mb-20">

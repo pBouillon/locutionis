@@ -1,14 +1,20 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
 
-  const { icon, title, description, example, href } = $props<{
+  const {
+    icon,
+    title,
+    description,
+    example,
+    href
+  }: {
     icon: string;
     title: string;
     description: string;
     example: string;
     // FIXME - Use proper typing
     href: any;
-  }>();
+  } = $props();
 </script>
 
 <a

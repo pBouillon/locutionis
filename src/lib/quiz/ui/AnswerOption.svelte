@@ -9,13 +9,13 @@
     index,
     selectAnswer,
     isLoading = false
-  } = $props<{
+  }: {
     status: OptionStatus;
     label: string;
     index: number;
     selectAnswer: (index: number) => void;
     isLoading?: boolean;
-  }>();
+  } = $props();
 
   const optionClasses = $derived.by(() => {
     const baseClasses = (() => {

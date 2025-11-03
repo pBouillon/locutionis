@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { isLearned, ontoggle } = $props<{ isLearned: boolean; ontoggle: () => void }>();
+  let { isLearned, ontoggle }: { isLearned: boolean; ontoggle: () => void } = $props();
 </script>
 
 <div

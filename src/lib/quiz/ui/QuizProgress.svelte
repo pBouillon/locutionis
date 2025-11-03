@@ -1,9 +1,13 @@
 <script lang="ts">
-  const { currentQuestionIndex, totalQuestionsCount, completionRate } = $props<{
+  const {
+    currentQuestionIndex,
+    totalQuestionsCount,
+    completionRate
+  }: {
     currentQuestionIndex: number;
     totalQuestionsCount: number;
     completionRate: number;
-  }>();
+  } = $props();
 </script>
 
 <div class="w-full max-w-2xl space-y-6 text-center">

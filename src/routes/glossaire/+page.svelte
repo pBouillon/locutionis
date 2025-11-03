@@ -6,7 +6,7 @@
   import { HeadingLetter } from '$lib/glossary/ui';
   import { learningJourneyStore } from '$lib/learning-journey/data-access';
 
-  let { data } = $props<{ data: PageData }>();
+  const { data }: { data: PageData } = $props();
 
   const glossary = $derived.by(() => {
     return data.figures

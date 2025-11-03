@@ -5,7 +5,7 @@
 
   import type { Solution } from '../domain';
 
-  let { solution } = $props<{ solution: Solution }>();
+  let { solution }: { solution: Solution } = $props();
 </script>
 
 <div

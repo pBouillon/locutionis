@@ -3,10 +3,7 @@
 
   import type { Question } from '../domain';
 
-  const { question, children } = $props<{
-    question: Question;
-    children: Snippet;
-  }>();
+  const { question, children }: { question: Question; children: Snippet } = $props();
 </script>
 
 <div class="w-full max-w-2xl">

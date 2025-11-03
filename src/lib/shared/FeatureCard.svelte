@@ -1,9 +1,13 @@
 <script lang="ts">
-  let { icon, title, description } = $props<{
+  let {
+    icon,
+    title,
+    description
+  }: {
     icon: string;
     title: string;
     description: string;
-  }>();
+  } = $props();
 </script>
 
 <div class="space-y-4 text-center">

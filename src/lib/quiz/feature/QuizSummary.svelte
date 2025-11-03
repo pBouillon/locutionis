@@ -1,11 +1,15 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
 
-  const { score, questionsCount, retry } = $props<{
+  const {
+    score,
+    questionsCount,
+    retry
+  }: {
     score: number;
     questionsCount: number;
     retry: () => void;
-  }>();
+  } = $props();
 
   const goodAnswersRate = $derived(Math.round((score / questionsCount) * 100));
 
