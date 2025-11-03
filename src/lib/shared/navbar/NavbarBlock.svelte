@@ -1,6 +1,7 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
+
   import NavbarBackdrop from './NavbarBackdrop.svelte';
 
   const { toggle }: { toggle: () => void } = $props();

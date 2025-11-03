@@ -1,8 +1,9 @@
 <script lang="ts">
+  import { resolve } from '$app/paths';
   import { quintOut } from 'svelte/easing';
   import { slide } from 'svelte/transition';
-  import { resolve } from '$app/paths';
-  import type { Solution } from '../domain/solution';
+
+  import type { Solution } from '../domain';
 
   let { solution } = $props<{ solution: Solution }>();
 </script>

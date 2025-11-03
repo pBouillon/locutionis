@@ -5,7 +5,7 @@
 <footer class=" px-5 py-12 text-main-foreground">
   <div class="mx-auto max-w-4xl">
     <div class="flex flex-col gap-6">
-      <div class="flex items-center justify-between gap-6">
+      <div class="flex items-start justify-between gap-6 md:items-center">
         <div class="flex flex-col gap-3">
           <h2 class="text-lg font-semibold">Locutionis</h2>
           <p class="text-sm">
@@ -22,6 +22,10 @@
 
             <li>
               <a class="underline hover:no-underline" href={resolve('/glossaire')}>Glossaire</a>
+            </li>
+
+            <li>
+              <a class="underline hover:no-underline" href={resolve('/quiz')}>Quiz</a>
             </li>
           </ul>
         </nav>

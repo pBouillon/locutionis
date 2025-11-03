@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
   import { resolve } from '$app/paths';
+
   import { FeaturedFigureCard } from '$lib/figure-of-speech/ui';
   import { FeatureCard } from '$lib/shared';
 </script>
@@ -40,10 +41,12 @@
       <div
         class="absolute inset-0 bg-gradient-to-br from-accent-background to-accent-foreground/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       ></div>
+
       <div class="relative flex items-center justify-center space-x-2">
         <i class="bi bi-book text-lg"></i>
         <span class="text-lg">Voir le glossaire</span>
       </div>
+
       <div
         class="absolute -inset-1 -z-10 rounded-xl bg-accent-background opacity-30 blur transition duration-300 group-hover:opacity-60"
       ></div>

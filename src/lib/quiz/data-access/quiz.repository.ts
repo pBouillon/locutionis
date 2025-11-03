@@ -1,8 +1,8 @@
 import { PUBLIC_POCKETBASE_URL } from '$env/static/public';
 
 import PocketBase from 'pocketbase';
-import type { Question } from './question';
-import type { Solution } from './solution';
+
+import type { Question, Solution } from '../domain';
 
 export class QuizRepository {
   readonly #pb = new PocketBase(PUBLIC_POCKETBASE_URL);

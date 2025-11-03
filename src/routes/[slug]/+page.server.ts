@@ -1,6 +1,7 @@
-import { getAllSlugs, getFigureBySlug } from '$lib/figure-of-speech/data-access';
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageServerLoad } from './$types';
+
+import { getAllSlugs, getFigureBySlug } from '$lib/figure-of-speech/data-access';
 
 export const entries: EntryGenerator = async () => {
   const slugs = await getAllSlugs();

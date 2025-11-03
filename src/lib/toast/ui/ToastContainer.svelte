@@ -1,5 +1,6 @@
 <script lang="ts">
   import { toaster } from '../data-access';
+
   import Toast from './Toast.svelte';
 </script>
 

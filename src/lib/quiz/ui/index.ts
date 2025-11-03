@@ -1,6 +1,7 @@
+import AnswerOptionList from './AnswerOptionList.svelte';
 import ExplanationPanel from './ExplanationPanel.svelte';
+import QuestionCard from './QuestionCard.svelte';
+import QuizActions from './QuizActions.svelte';
 import QuizProgress from './QuizProgress.svelte';
-import QuestionCard from './question/QuestionCard.svelte';
-import QuizActions from './question/QuizActions.svelte';
 
-export { ExplanationPanel, QuestionCard, QuizActions, QuizProgress };
+export { AnswerOptionList, ExplanationPanel, QuestionCard, QuizActions, QuizProgress };

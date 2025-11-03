@@ -1,1 +1,1 @@
-export { QuizStore, type OptionStatus, type QuizStatus } from './quiz.store.svelte';
+export { QuizStore, type QuizStatus } from './quiz.store.svelte';

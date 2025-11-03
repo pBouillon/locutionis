@@ -1,5 +1,6 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
+
   import type { Figure } from '$lib/figure-of-speech/domain';
   import { learningJourneyStore } from '$lib/learning-journey/data-access';
 

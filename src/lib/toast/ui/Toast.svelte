@@ -1,8 +1,9 @@
 <script lang="ts">
   import { fly } from 'svelte/transition';
+
   import type { Toast } from '../domain';
 
-  let { toast, onDismiss }: { toast: Toast; onDismiss: () => void } = $props();
+  const { toast, onDismiss } = $props<{ toast: Toast; onDismiss: () => void }>();
 </script>
 
 <div

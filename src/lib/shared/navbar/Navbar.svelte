@@ -1,6 +1,7 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
+
   import NavbarBlock from './NavbarBlock.svelte';
 
   let showMobileMenu = $state<boolean>(false);

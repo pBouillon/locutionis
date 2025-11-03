@@ -1,7 +1,8 @@
 <script lang="ts">
-  import HeadingLetter from './HeadingLetter.svelte';
   import type { Figure } from '$lib/figure-of-speech/domain';
+
   import FigureCard from './FigureCard.svelte';
+  import HeadingLetter from './HeadingLetter.svelte';
 
   let { letter, figures } = $props<{ letter: string; figures: Figure[] }>();
 </script>

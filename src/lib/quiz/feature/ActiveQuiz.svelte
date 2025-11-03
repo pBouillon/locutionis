@@ -1,12 +1,14 @@
 <script lang="ts">
-  import { QuizStore } from '../data-access/quiz.store.svelte';
-  import ExplanationPanel from '../ui/ExplanationPanel.svelte';
-  import QuizProgress from '../ui/QuizProgress.svelte';
-  import AnswerOptionList from '../ui/answer/AnswerOptionList.svelte';
-  import QuestionCard from '../ui/question/QuestionCard.svelte';
-  import QuizActions from '../ui/question/QuizActions.svelte';
+  import type { QuizStore } from '../data-access';
+  import {
+    AnswerOptionList,
+    ExplanationPanel,
+    QuestionCard,
+    QuizActions,
+    QuizProgress
+  } from '../ui';
 
-  let { quizStore } = $props<{ quizStore: QuizStore }>();
+  const { quizStore } = $props<{ quizStore: QuizStore }>();
 
   let showExplanation = $state(false);
 
