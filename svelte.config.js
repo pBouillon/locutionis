@@ -11,7 +11,7 @@ const config = {
       base: process.env.NODE_ENV === 'production' ? '/locutionis' : ''
     },
     prerender: {
-      handleHttpError: ({ path, referrer, message }) => {
+      handleHttpError: ({ path, message }) => {
         const isBasePathError = path === '/' && message.includes('does not begin with `base`');
 
         if (isBasePathError) {

@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
   import { resolve } from '$app/paths';
-  import FeatureCard from '../lib/components/FeatureCard.svelte';
-  import FigureCard from '../lib/components/FigureCard.svelte';
+
+  import { FeaturedFigureCard } from '$lib/figure-of-speech/ui';
+  import { FeatureCard } from '$lib/shared';
 </script>
 
 <main class="mx-6 mt-32 flex flex-col items-center justify-center gap-18 sm:mt-48">
@@ -40,10 +41,12 @@
       <div
         class="absolute inset-0 bg-gradient-to-br from-accent-background to-accent-foreground/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       ></div>
+
       <div class="relative flex items-center justify-center space-x-2">
         <i class="bi bi-book text-lg"></i>
         <span class="text-lg">Voir le glossaire</span>
       </div>
+
       <div
         class="absolute -inset-1 -z-10 rounded-xl bg-accent-background opacity-30 blur transition duration-300 group-hover:opacity-60"
       ></div>
@@ -109,7 +112,7 @@
     </div>
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <FigureCard
+      <FeaturedFigureCard
         icon="bi-cloud-moon"
         title="Métaphore"
         description="Comparaison sans outil de comparaison."
@@ -117,7 +120,7 @@
         href="/metaphore"
       />
 
-      <FigureCard
+      <FeaturedFigureCard
         icon="bi-repeat"
         title="Homéotéleute"
         description="Utiliser des mots ayant la même syllabe finale."
@@ -125,7 +128,7 @@
         href="/homeoteleute"
       />
 
-      <FigureCard
+      <FeaturedFigureCard
         icon="bi-chat-square-text"
         title="Litote"
         description="Atténuer une idée pour suggérer davantage."

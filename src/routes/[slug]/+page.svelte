@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { PageData } from './$types';
 
-  import MarkedAsLearnedCta from '$lib/components/MarkedAsLearnedCta.svelte';
-  import { learningJourneyStore } from '$lib/figure-of-speech/learning-journey.svelte';
-  import { toaster } from '$lib/toasts/toaster.svelte';
+  import { learningJourneyStore } from '$lib/learning-journey/data-access';
+  import { MarkedAsLearnedCta } from '$lib/learning-journey/ui';
+  import { toaster } from '$lib/toast/data-access';
 
   const { data }: { data: PageData } = $props();
   const { figure } = data;
@@ -44,6 +44,7 @@
   <hr class="mx-auto my-12 w-2/3 rounded-full border-t border-secondary-foreground md:w-1/2" />
 
   <div class="mx-auto my-8 prose max-w-none md:w-2/3">
+    <!-- eslint-disable-next-line svelte/no-at-html-tags -->
     {@html figure.content}
   </div>
 
